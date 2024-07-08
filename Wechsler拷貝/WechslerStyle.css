@@ -1,0 +1,44 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+input, select {
+	font-size: 16px;
+}
+
+
+.dataTable {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+	font-size: 24px;
+}
+
+.buttonClass {
+	height: 200px;
+	width: 200px;
+	font-size: 40px;
+}
+
+table {
+	border: 1px solid;
+}
+
+th, td {
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+.null {
+	background-color: #3C3C3C;
+}
