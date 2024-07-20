@@ -37,6 +37,7 @@ input, select {
 
 .Cards {
 	border: 1px solid;
+	word-wrap: break-word; word-break: break-all;
 }
 
 .Cards td {
