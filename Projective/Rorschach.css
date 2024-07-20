@@ -1,0 +1,58 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+input, select {
+	font-size: 16px;
+}
+
+.fontSize20 {
+	font-size: 20px;
+}
+
+.dataTable {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+	font-size: 24px;
+}
+
+.buttonClass {
+	height: 200px;
+	width: 200px;
+	font-size: 40px;
+}
+
+.Cards {
+	border: 1px solid;
+}
+
+.Cards td {
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+
+
+.BG_col1 {
+	background-color: #E0E0E0;
+}
+
+.BG_col2 {
+	background-color: #F0F0F0;
+}
+
+.whiteText{
+	background-color: #3C3C3C;
+	color: #F0F0F0;
+}

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="psychology, clinical, testing">
+	<meta name="description" content="羅夏克計分頁面">
+	<title>Rorschach</title>
+	<link rel="stylesheet" type="text/css" href="Rorschach.css">
+	<script type="text/javascript" src="Rorschach.js"></script>
+</head>
+
+
+
+<dialog id="ConDialog">
+	<form>
+		<p>請選擇此反應中包含的所有內容</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="H" data-label="AllCon">H</td>
+					<td><input type="checkbox" name="Cont" value="(H)" data-label="AllCon">(H)</td>
+					<td><input type="checkbox" name="Cont" value="Hd" data-label="AllCon">Hd</td>
+					<td><input type="checkbox" name="Cont" value="(Hd)" data-label="AllCon">(Hd)</td>
+					<td><input type="checkbox" name="Cont" value="Hx" data-label="AllCon">Hx</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="A" data-label="AllCon">A</td>
+					<td><input type="checkbox" name="Cont" value="(A)" data-label="AllCon">(A)</td>
+					<td><input type="checkbox" name="Cont" value="Ad" data-label="AllCon">Ad</td>
+					<td><input type="checkbox" name="Cont" value="(Ad)" data-label="AllCon">(Ad)</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="An" data-label="AllCon">An</td>
+					<td><input type="checkbox" name="Cont" value="Art" data-label="AllCon">Art</td>
+					<td><input type="checkbox" name="Cont" value="Ay" data-label="AllCon">Ay</td>
+					<td><input type="checkbox" name="Cont" value="Bl" data-label="AllCon">Bl</td>
+					<td><input type="checkbox" name="Cont" value="Cg" data-label="AllCon">Cg</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="Ex" data-label="AllCon">Ex</td>
+					<td><input type="checkbox" name="Cont" value="Fi" data-label="AllCon">Fi</td>
+					<td><input type="checkbox" name="Cont" value="Fd" data-label="AllCon">Fd</td>
+					<td><input type="checkbox" name="Cont" value="Ge" data-label="AllCon">Ge</td>
+					<td><input type="checkbox" name="Cont" value="Hh" data-label="AllCon">Hh</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="Cl" data-label="AllCon">Cl</td>
+					<td><input type="checkbox" name="Cont" value="Sc" data-label="AllCon">Sc</td>
+					<td><input type="checkbox" name="Cont" value="Sx" data-label="AllCon">Sx</td>
+					<td><input type="checkbox" name="Cont" value="Xy" data-label="AllCon">Xy</td>
+					<td><input type="checkbox" name="Cont" value="Id" data-label="AllCon">Id</td></tr>
+				<tr>
+					<td><input type="radio" name="Cont" value="Bt" data-label="AllCon">Bt</td>
+					<td><input type="radio" name="Cont" value="Ls" data-label="AllCon">Ls</td>
+					<td><input type="radio" name="Cont" value="Na" data-label="AllCon">Na</td></tr>
+			</tbody>
+		</table>
+
+		<p><br></p>
+		<input type="button" onclick="confConWin()" value="確定">
+		<input type="button" onclick="resConWin()" value="重置">
+	</form>
+</dialog>
+
+
+
+
+<dialog id="DetDia">
+	<p>請依照順序輸入決定因子</p>
+	<table><tr>
+		<td>決定因子有: </td>
+		<td id="myDet_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td>Movement</td>
+			<td><input type="button" onclick="showBtnName_Det('Ma')" value="Ma"></td>
+			<td><input type="button" onclick="showBtnName_Det('Mp')" value="Mp"></td>
+			<td><input type="button" onclick="showBtnName_Det('Map')" value="Map"></td></tr>
+		<tr><td></td>
+			<td><input type="button" onclick="showBtnName_Det('FMa')" value="FMa"></td>
+			<td><input type="button" onclick="showBtnName_Det('FMp')" value="FMp"></td>
+			<td><input type="button" onclick="showBtnName_Det('FMap')" value="FMap"></td></tr>
+		<tr><td></td>
+			<td><input type="button" onclick="showBtnName_Det('ma')" value="ma"></td>
+			<td><input type="button" onclick="showBtnName_Det('mp')" value="mp"></td>
+			<td><input type="button" onclick="showBtnName_Det('map')" value="map"></td></tr>
+		<tr><td>Chromatic Color</td>
+			<td><input type="button" onclick="showBtnName_Det('FC')" value="FC"></td>
+			<td><input type="button" onclick="showBtnName_Det('CF')" value="CF"></td>
+			<td><input type="button" onclick="showBtnName_Det('C')" value="C"></td>
+			<td><input type="button" onclick="showBtnName_Det('Cn')" value="Cn"></td></tr>
+		<tr><td>AChromatic Color</td>
+			<td><input type="button" onclick="showBtnName_Det('FC\'')" value="FC'"></td>
+			<td><input type="button" onclick="showBtnName_Det('C\'F')" value="C'F"></td>
+			<td><input type="button" onclick="showBtnName_Det('C\'')" value="C'"></td></tr>
+		<tr><td>Shading-Texture</td>
+			<td><input type="button" onclick="showBtnName_Det('FT')" value="FT"></td>
+			<td><input type="button" onclick="showBtnName_Det('TF')" value="TF"></td>
+			<td><input type="button" onclick="showBtnName_Det('T')" value="T"></td></tr>
+		<tr><td>Shading-Dimension</td>
+			<td><input type="button" onclick="showBtnName_Det('FV')" value="FV"></td>
+			<td><input type="button" onclick="showBtnName_Det('VF')" value="VF"></td>
+			<td><input type="button" onclick="showBtnName_Det('V')" value="V"></td></tr>
+		<tr><td>Shading-Diffuse</td>
+			<td><input type="button" onclick="showBtnName_Det('FY')" value="FY"></td>
+			<td><input type="button" onclick="showBtnName_Det('YF')" value="YF"></td>
+			<td><input type="button" onclick="showBtnName_Det('Y')" value="Y"></td></tr>
+		<tr><td>Reflection</td>
+			<td><input type="button" onclick="showBtnName_Det('Fr')" value="Fr"></td>
+			<td><input type="button" onclick="showBtnName_Det('rF')" value="rF"></td></tr>
+		<tr><td>Form Dimension</td>
+			<td><input type="button" onclick="showBtnName_Det('FD')" value="FD"></td></tr>
+		<tr><td>Form</td>
+			<td><input type="button" onclick="showBtnName_Det('F')" value="F"></td></tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="DetDiaConf()">
+	<input type="button" value="重置" onclick="DetDiaRest()">
+</dialog>
+
+<dialog id="ConDia">
+	<p>請依照順序輸入內容</p>
+	<table><tr>
+		<td>內容有: </td>
+		<td id="myCon_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td><input type="button" onclick="showBtnName_Con('H')" value="H"></td>
+			<td><input type="button" onclick="showBtnName_Con('(H)')" value="(H)"></td>
+			<td><input type="button" onclick="showBtnName_Con('Hd')" value="Hd"></td>
+			<td><input type="button" onclick="showBtnName_Con('(Hd)')" value="(Hd)"></td>
+			<td><input type="button" onclick="showBtnName_Con('Hx')" value="Hx"></td></tr>
+		<tr><td><input type="button" onclick="showBtnName_Con('A')" value="A"></td>
+			<td><input type="button" onclick="showBtnName_Con('(A)')" value="(A)"></td>
+			<td><input type="button" onclick="showBtnName_Con('Ad')" value="Ad"></td>
+			<td><input type="button" onclick="showBtnName_Con('(Ad)')" value="(Ad)"></td></tr>
+		<tr><td><input type="button" onclick="showBtnName_Con('An')" value="An"></td>
+			<td><input type="button" onclick="showBtnName_Con('Art')" value="Art"></td>
+			<td><input type="button" onclick="showBtnName_Con('Ay')" value="Ay"></td>
+			<td><input type="button" onclick="showBtnName_Con('Bl')" value="Bl"></td>
+			<td><input type="button" onclick="showBtnName_Con('Cg')" value="Cg"></td></tr>
+		<tr><td><input type="button" onclick="showBtnName_Con('Ex')" value="Ex"></td>
+			<td><input type="button" onclick="showBtnName_Con('Fi')" value="Fi"></td>
+			<td><input type="button" onclick="showBtnName_Con('Fd')" value="Fd"></td>
+			<td><input type="button" onclick="showBtnName_Con('Ge')" value="Ge"></td>
+			<td><input type="button" onclick="showBtnName_Con('Hh')" value="Hh"></td></tr>
+		<tr><td><input type="button" onclick="showBtnName_Con('Cl')" value="Cl"></td>
+			<td><input type="button" onclick="showBtnName_Con('Bt')" value="Bt"></td>
+			<td><input type="button" onclick="showBtnName_Con('Ls')" value="Ls"></td>
+			<td><input type="button" onclick="showBtnName_Con('Na')" value="Na"></td></tr>
+		<tr><td><input type="button" onclick="showBtnName_Con('Sc')" value="Sc"></td>
+			<td><input type="button" onclick="showBtnName_Con('Sx')" value="Sx"></td>
+			<td><input type="button" onclick="showBtnName_Con('Xy')" value="Xy"></td>
+			<td><input type="button" onclick="showBtnName_Con('Id')" value="Id"></td></tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="ConDiaConf()">
+	<input type="button" value="重置" onclick="ConDiaRest()">
+</dialog>
+
+<dialog id="SSDia">
+	<p>請依照順序輸入 Special Score</p>
+	<table><tr>
+		<td>Special Score 有: </td>
+		<td id="mySS_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td>不尋常的語言表達</td>
+			<td><input type="button" onclick="showBtnName_SS('DV1')" value="DV1"></td>
+			<td><input type="button" onclick="showBtnName_SS('INC1')" value="INC1"></td>
+			<td><input type="button" onclick="showBtnName_SS('DR1')" value="DR1"></td>
+			<td><input type="button" onclick="showBtnName_SS('FAB1')" value="FAB1"></td>
+			<td><input type="button" onclick="showBtnName_SS('ALOG')" value="ALOG"></td>
+			<td><input type="button" onclick="showBtnName_SS('CON')" value="CON"></td></tr>
+		<tr><td>其他</td>
+			<td><input type="button" onclick="showBtnName_SS('AB')" value="AB"></td>
+			<td><input type="button" onclick="showBtnName_SS('AG')" value="AG"></td>
+			<td><input type="button" onclick="showBtnName_SS('COP')" value="COP"></td>
+			<td><input type="button" onclick="showBtnName_SS('CP')" value="CP"></td>
+			<td><input type="button" onclick="showBtnName_SS('GHR')" value="GHR"></td>
+			<td><input type="button" onclick="showBtnName_SS('PHR')" value="PHR"></td></tr>
+		<tr><td></td>
+			<td><input type="button" onclick="showBtnName_SS('MOR')" value="MOR"></td>
+			<td><input type="button" onclick="showBtnName_SS('PER')" value="PER"></td>
+			<td><input type="button" onclick="showBtnName_SS('PSV')" value="PSV"></td>
+			<td><input type="button" onclick="SSNone()" value="無"></td>
+		</tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="SSDiaConf()">
+	<input type="button" value="重置" onclick="SSDiaRest()">
+</dialog>
+
+
+
+<body>
+	<header>
+		<hgroup>
+			<h1>羅夏克墨跡測驗 (Rorschach inkblot test)</h1>
+			<h3>結果僅供參考，盡信秘書不如無秘書</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<section class="dataTable">
+			<p class="boxTitle">關於羅夏克墨跡測驗...</p>
+			<p>Shin心理小秘書參照 Exner 解釋系統進行計分及解釋</p>
+			<p>呵呵</p>
+		</section>
+
+		<h3>----- 請依序輸入受測者逐個反應的編碼 -----</h3>
+
+
+		<section class="dataTable">
+			<h3>Sequence of Scores</h3>
+			<table class="Cards" width="97%" id="RespTable">
+				<tbody>
+					<tr class="whiteText">
+						<td>Card</td>
+						<td>Resp.No.</td>
+						<td>Location</td>
+						<td>DQ</td>
+						<td>Loc.No.</td>
+						<td>Determinants</td>
+						<td>FQ</td>
+						<td>(2)</td>
+						<td>contents</td>
+						<td>P</td>
+						<td>Z-Score</td>
+						<td>Special Score</td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr><td colspan=13></td></tr>
+					<tr><td colspan=13 class="whiteText">新增反應</td></tr>
+					<tr><td>Card</td>
+						<td>第幾個</td>
+						<td>Location</td>
+						<td>DQ</td>
+						<td>位置編號</td>
+						<td>決定因子</td>
+						<td>FQ</td>
+						<td>(2)</td>
+						<td>內容</td>
+						<td>P</td>
+						<td>Z-Score</td>
+						<td>Special Score</td>
+						<td></td></tr>
+					<tr>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="Card I">Card I</option>
+							<option value="Card II">Card II</option>
+							<option value="Card III">Card III</option>
+							<option value="Card IV">Card IV</option>
+							<option value="Card V">Card V</option>
+							<option value="Card VI">Card VI</option>
+							<option value="Card VII">Card VII</option>
+							<option value="Card VIII">Card VIII</option>
+							<option value="Card IX">Card IX</option>
+							<option value="Card X">Card X</option></select></td>
+						<td><input type="number" max=999 min=0 name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="W">W</option>
+							<option value="D">D</option>
+							<option value="Dd">Dd</option>
+							<option value="S">S</option>
+							<option value="WS">WS</option>
+							<option value="DS">DS</option>
+							<option value="DdS">DdS</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="+">+</option>
+							<option value="o">o</option>
+							<option value="v/+">v/+</option>
+							<option value="v">v</option></select></td>
+						<td><input type="number" max=999 min=0 name="Resp"></td>
+						<td><input id="RespDet" type="button" onclick="openDetDia()" value="選擇" name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="+">+</option>
+							<option value="o">o</option>
+							<option value="u">u</option>
+							<option value="-">-</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="(2)">(2)</option></select></td>
+						<td><input id="RespCon" type="button" onclick="openConDia()" value="選擇" name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="P">P</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="ZW">ZW</option>
+							<option value="ZA">ZA</option>
+							<option value="ZD">ZD</option>
+							<option value="ZS">ZS</option></select></td>
+						<td><input id="RespSS" type="button" onclick="openSSDia()" value="選擇" name="Resp"></td>
+						<td><input type="button" onclick="addResp()" value="新增"></td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<p><br></p>
+		
+		</section>
+
+		<section class="buttonSection">
+			<p>
+				<input type="button" value="測資1" onclick="test1()">
+				<input type="button" value="測資2" onclick="test2()">
+				<input type="button" value="測資3" onclick="test3()">
+				<input type="button" value="重置" onclick="Reload()">
+				<input type="button" value="GOGO" onclick="Summary1()">
+<!--
+				<button type="submit" onclick="test3()">測資3</button>
+				<button type="submit" onclick="test4()">測資4</button>-->
+			</p>
+			<p id="testText4"></p>
+		</section>
+
+		<section class="dataTable">
+			<h3>Structural Summary</h3>
+			<table class="Cards">
+				<tbody>
+					<tr class="BG_col1"><td colspan=14>Location Features</td></tr>
+					<tr><td colspan=3>Organization Activity</td>
+						<td rowspan=3 class="BG_col2"></td>
+						<td colspan=5>Location</td>
+						<td rowspan=3 class="BG_col2"></td>
+						<td colspan=4>Development Quality</td></tr>
+					<tr><td>Zf</td>
+						<td>ZSum</td>
+						<td>ZEst</td>
+						<td>W</td>
+						<td>D</td>
+						<td>W+D</td>
+						<td>Dd</td>
+						<td>S</td>
+						<td>+</td>
+						<td>o</td>
+						<td>v/+</td>
+						<td>v</td></tr>
+					<tr><td name="StrSum_Z"></td>
+						<td name="StrSum_Z"></td>
+						<td name="StrSum_Z"></td>
+						<td name="StrSum_Loc"></td>
+						<td name="StrSum_Loc"></td>
+						<td name="StrSum_Loc"></td>
+						<td name="StrSum_Loc"></td>
+						<td name="StrSum_Loc"></td>
+						<td name="StrSum_DQ"></td>
+						<td name="StrSum_DQ"></td>
+						<td name="StrSum_DQ"></td>
+						<td name="StrSum_DQ"></td></tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tbody>
+					<tr class="BG_col1">
+						<td colspan=6>Form Quality</td></tr>
+					<tr><td></td>
+						<td>+</td>
+						<td>o</td>
+						<td>u</td>
+						<td>-</td>
+						<td>none</td></tr>
+					<tr><td>FQx</td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+					<tr><td>MQual</td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td></tr>
+					<tr><td>W+D</td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td>
+						<td name="StrSum_FQ"></td></tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tbody>
+					<tr><td colspan=25 class="BG_col1">Determinants - Single & Blends</td></tr>
+					<tr><td>M</td><td>FM</td><td>m</td>
+						<td>FC</td><td>CF</td><td>C</td><td>Cn</td>
+						<td>FC'</td><td>C'F</td><td>C'</td>
+						<td>FT</td><td>TF</td><td>T</td>
+						<td>FV</td><td>VF</td><td>V</td>
+						<td>FY</td><td>YF</td><td>Y</td>
+						<td>Fr</td><td>rF</td>
+						<td>FD</td>
+						<td>F</td>
+						<td rowspan=2></td>
+						<td>(2)</td></tr>
+					<tr><td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+						<td name="StrSum_Det"></td><td name="StrSum_Det"></td></tr>
+				</tbody>
+			</table>
+
+			<table class="Cards" id="BleTable">
+				<tbody>
+					<tr id="DetBle"><td class="BG_col1">Determinants - Blends</td></tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tbody>
+					<tr><td colspan=27 class="BG_col1">Contents</td></tr>
+					<tr><td>H</td><td>(H)</td><td>Hd</td><td>(Hd)</td><td>Hx</td>
+						<td>A</td><td>(A)</td><td>Ad</td><td>(Ad)</td>
+						<td>An</td><td>Art</td><td>Ay</td><td>Bl</td><td>Cg</td>
+						<td>Ex</td><td>Fi</td><td>Fd</td><td>Ge</td><td>Hh</td>
+						<td>Cl</td><td>Sc</td><td>Sx</td><td>Xy</td><td>Id</td>
+						<td>Bt</td><td>Ls</td><td>Na</td></tr>
+					<tr><td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+						<td name="StrSum_Con"></td></tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tbody>
+					<tr><td colspan=20 class="BG_col1">Special Score</td></tr>
+					<tr><td>DR1</td><td>DR2</td>
+						<td>INC1</td><td>INC2</td>
+						<td>DR1</td><td>DR2</td>
+						<td>FAB1</td><td>FAB2</td>
+						<td>ALOG</td><td>CON</td>
+						<td rowspan=2 class="BG_col2"></td><td>AB</td><td>AG</td>
+						<td>COP</td><td>CP</td>
+						<td>GHR</td><td>PHR</td>
+						<td>MOR</td><td>PER</td><td>PSV</td></tr>
+					<tr><td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+						<td name="StrSum_SS"></td></tr>
+				</tbody>
+			</table>
+
+			<table class="Cards">
+				<tr><td>Raw Sum6</td><td name="StrSum_Sum6"></td></tr>
+				<tr><td>Wgtd Sum6</td><td name="StrSum_Sum6"></td></tr>
+			</table>
+		</section>
+
+		<br>
+
+		<section class="dataTable">
+			<h3>Ratios, Percentages, and Derivations</h3>
+			<table class="Cards">
+				<tr><td colspan=8 class="BG_col1">Core Section</td></tr>
+				<tr><td>R</td><td name="RPD_1"></td>
+					<td class="BG_col2"></td>
+					<td>L</td><td name="RPD_1">
+					<td class="BG_col2"></td></tr>
+				<tr><td colspan=8 class="BG_col1"></td></tr>
+				<tr><td>EB</td><td name="RPD_1">
+					<td rowspan=3 class="BG_col2"></td>
+					<td>EA</td><td name="RPD_1">
+					<td rowspan=3 class="BG_col2">
+					<td>EBPer</td><td name="RPD_1"></tr>
+				<tr><td>eb</td><td name="RPD_1">
+					<td>es</td><td name="RPD_1">
+					<td>D</td><td name="RPD_1"></tr>
+				<tr><td colspan=2></td>
+					<td>Adj es</td><td name="RPD_1">
+					<td>Adj D</td><td name="RPD_1"></tr>
+				<tr><td colspan=8 class="BG_col1"></td></tr>
+				<tr><td>FM</td><td name="RPD_1">
+					<td rowspan=2 class="BG_col2"></td>
+					<td>SumC'</td><td name="RPD_1">
+					<td rowspan=2 class="BG_col2">
+					<td>SumT</td><td name="RPD_1"></tr>
+				<tr><td>m</td><td name="RPD_1">
+					<td>SumV</td><td name="RPD_1">
+					<td>SumY</td><td name="RPD_1"></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=17>Ideation Section</td></tr>
+				<tr><td>a:p</td><td class="BG_col2" rowspan=2></td>
+					<td>Ma:Mp</td><td class="BG_col2" rowspan=2></td>
+					<td>2AB+Art+Ay</td><td class="BG_col2" rowspan=2></td>
+					<td>MOR</td><td class="BG_col2" rowspan=2></td>
+					<td>Sum6</td><td class="BG_col2" rowspan=2></td>
+					<td>Lvl-2</td><td class="BG_col2" rowspan=2></td>
+					<td>WSum6</td><td class="BG_col2" rowspan=2></td>
+					<td>M-</td><td class="BG_col2" rowspan=2></td>
+					<td>M none</td></tr>
+				<tr><td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td>
+					<td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td>
+					<td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=13>Affect Section</td></tr>
+				<tr><td>FC:CF+C</td><td class="BG_col2" rowspan=2></td>
+					<td>Pure C</td><td class="BG_col2" rowspan=2></td>
+					<td>SumC':WSumC</td><td class="BG_col2" rowspan=2></td>
+					<td>Afr</td><td class="BG_col2" rowspan=2></td>
+					<td>S</td><td class="BG_col2" rowspan=2></td>
+					<td>Blends:R</td><td class="BG_col2" rowspan=2></td>
+					<td>CP</td></tr>
+				<tr><td name="RPD_3"></td><td name="RPD_3"></td><td name="RPD_3"></td>
+					<td name="RPD_3"></td><td name="RPD_3"></td>
+					<td name="RPD_3"></td><td name="RPD_3"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=13>Mediation Section</td></tr>
+				<tr><td>XA%</td><td class="BG_col2" rowspan=2></td>
+					<td>WDA%</td><td class="BG_col2" rowspan=2></td>
+					<td>X-%</td><td class="BG_col2" rowspan=2></td>
+					<td>S-</td><td class="BG_col2" rowspan=2></td>
+					<td>P</td><td class="BG_col2" rowspan=2></td>
+					<td>X+%</td><td class="BG_col2" rowspan=2></td>
+					<td>Xu%</td></tr>
+				<tr><td name="RPD_4"></td><td name="RPD_4"></td><td name="RPD_4"></td>
+					<td name="RPD_4"></td><td name="RPD_4"></td><td name="RPD_4"></td>
+					<td name="RPD_4"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=13>Processing Section</td></tr>
+				<tr><td>Zf</td><td class="BG_col2" rowspan=2></td>
+					<td>W:D:Dd</td><td class="BG_col2" rowspan=2></td>
+					<td>W:M</td><td class="BG_col2" rowspan=2></td>
+					<td>Zd</td><td class="BG_col2" rowspan=2></td>
+					<td>PSV</td><td class="BG_col2" rowspan=2></td>
+					<td>DQ+</td><td class="BG_col2" rowspan=2></td>
+					<td>DQv</td></tr>
+				<tr><td name="RPD_5"></td><td name="RPD_5"></td><td name="RPD_5"></td>
+					<td name="RPD_5"></td><td name="RPD_5"></td>
+					<td name="RPD_5"></td><td name="RPD_5"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=21>Interpersonal Section</td></tr>
+				<tr><td>COP</td><td class="BG_col2" rowspan=2></td>
+					<td>AG</td><td class="BG_col2" rowspan=2></td>
+					<td>GHR:PHR</td><td class="BG_col2" rowspan=2></td>
+					<td>a:p</td><td class="BG_col2" rowspan=2></td>
+					<td>Food</td><td class="BG_col2" rowspan=2></td>
+					<td>SumT</td><td class="BG_col2" rowspan=2></td>
+					<td>Human Cont</td><td class="BG_col2" rowspan=2></td>
+					<td>Pure H</td><td class="BG_col2" rowspan=2></td>
+					<td>PER</td><td class="BG_col2" rowspan=2></td>
+					<td>Isolation Index</td></tr>
+				<tr><td name="RPD_6"></td><td name="RPD_6"></td>
+					<td name="RPD_6"></td><td name="RPD_6"></td>
+					<td name="RPD_6"></td><td name="RPD_6"></td>
+					<td name="RPD_6"></td><td name="RPD_6"></td>
+					<td name="RPD_6"></td><td name="RPD_6"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=13>Self Perception Section</td></tr>
+				<tr><td>3r+(2)/R</td><td class="BG_col2" rowspan=2></td>
+					<td>Fr+rF</td><td class="BG_col2" rowspan=2></td>
+					<td>SumV</td><td class="BG_col2" rowspan=2></td>
+					<td>FD</td><td class="BG_col2" rowspan=2></td>
+					<td>An+Xy</td><td class="BG_col2" rowspan=2></td>
+					<td>MOR</td><td class="BG_col2" rowspan=2></td>
+					<td>H:(H)+Hd+(Hd)</td></tr>
+				<tr><td name="RPD_7"></td><td name="RPD_7"></td><td name="RPD_7"></td>
+					<td name="RPD_7"></td><td name="RPD_7"></td>
+					<td name="RPD_7"></td><td name="RPD_7"></td></tr>
+			</table>
+
+			<br>
+
+			<table class="Cards">
+				<tr><td class="BG_col1" colspan=11>Special Indices</td></tr>
+				<tr><td>PTI</td><td class="BG_col2" rowspan=2></td>
+					<td>DEPI</td><td class="BG_col2" rowspan=2></td>
+					<td>CDI</td><td class="BG_col2" rowspan=2></td>
+					<td>S-CON</td><td class="BG_col2" rowspan=2></td>
+					<td>HVI</td><td class="BG_col2" rowspan=2></td>
+					<td>OBS</td></tr>
+				<tr><td name="RPD_8"></td><td name="RPD_8"></td><td name="RPD_8"></td>
+					<td name="RPD_8"></td><td name="RPD_8"></td><td name="RPD_8"></td></tr>
+			</table>
+
+		</section>
+
+		<section>
+			<p id="testText1"></p>			
+			<p id="testText2"><!--測試文字--> </p>
+		</section>
+		<p><br><br><br><br></p>
+
+
+
+
+
+
+
+<!--try end-->
+
+			<p><br></p>
+		</section>
+
+	</article>
+
+	<footer>
+		Shin心理師 你的臨床小秘書
+	</footer>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+<!--
+
+<dialog id="DetDialog2">
+	<form>
+		<p>請選擇此反應中包含的所有決定因子</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>Movement</td>
+					<td><input type="radio" name="Det2M" value="Ma" data-label="AllDet">Ma</td>
+					<td><input type="radio" name="Det2M" value="Mp" data-label="AllDet">Mp</td>
+					<td><input type="radio" name="Det2M" value="Ma-p" data-label="AllDet">Ma-p</td></tr>
+				<tr><td></td>
+					<td><input type="radio" name="Det2FM" value="FMa" data-label="AllDet">FMa</td>
+					<td><input type="radio" name="Det2FM" value="FMp" data-label="AllDet">FMp</td>
+					<td><input type="radio" name="Det2FM" value="FMa-p" data-label="AllDet">FMa-p</td></tr>
+				<tr><td></td>
+					<td><input type="radio" name="Det2m" value="ma" data-label="AllDet">ma</td>
+					<td><input type="radio" name="Det2m" value="mp" data-label="AllDet">mp</td>
+					<td><input type="radio" name="Det2m" value="ma-p" data-label="AllDet">ma-p</td></tr>
+				<tr>
+					<td>Chromatic Color</td>
+					<td><input type="radio" name="Det3" value="FC" data-label="AllDet">FC</td>
+					<td><input type="radio" name="Det3" value="CF" data-label="AllDet">CF</td>
+					<td><input type="radio" name="Det3" value="C" data-label="AllDet">C</td>
+					<td><input type="radio" name="Det3" value="Cn" data-label="AllDet">Cn</td></tr>
+				<tr>
+					<td>Achromatic Color</td>
+					<td><input type="radio" name="Det4" value="FC'" data-label="AllDet">FC'</td>
+					<td><input type="radio" name="Det4" value="C'F" data-label="AllDet">C'F</td>
+					<td><input type="radio" name="Det4" value="C'" data-label="AllDet">C'</td></tr>
+				<tr>
+					<td>Shading-Texture</td>
+					<td><input type="radio" name="Det5" value="FT" data-label="AllDet">FT</td>
+					<td><input type="radio" name="Det5" value="TF" data-label="AllDet">TF</td>
+					<td><input type="radio" name="Det5" value="T" data-label="AllDet">T</td></tr>
+				<tr>
+					<td>Shading-Dimension</td>
+					<td><input type="radio" name="Det6" value="FV" data-label="AllDet">FV</td>
+					<td><input type="radio" name="Det6" value="VF" data-label="AllDet">VF</td>
+					<td><input type="radio" name="Det6" value="V" data-label="AllDet">V</td></tr>
+				<tr>
+					<td>Shading-Diffuse</td>
+					<td><input type="radio" name="Det7" value="FY" data-label="AllDet">FY</td>
+					<td><input type="radio" name="Det7" value="YF" data-label="AllDet">YF</td>
+					<td><input type="radio" name="Det7" value="Y" data-label="AllDet">Y</td></tr>
+				<tr>
+					<td>Reflection</td>
+					<td><input type="radio" name="Det9" value="Fr" data-label="AllDet">Fr</td>
+					<td><input type="radio" name="Det9" value="rF" data-label="AllDet">rF</td></tr>
+				<tr>
+					<td>Form Dimension</td>
+					<td><input type="radio" name="Det8" value="FD" data-label="AllDet">FD</td></tr>
+				<tr>
+					<td>Form</td>
+					<td><input type="radio" name="Det1" value="F" data-label="AllDet">F</td></tr>
+			</tbody>
+		</table>
+		<p><br></p>
+		<input type="button" onclick="confDetWin()" value="確定">
+		<input type="button" onclick="resDetWin()" value="重置">
+	</form>
+</dialog>
+
+
+
+
+
+<dialog id="SSDialog">
+	<form>
+		<p>請選擇此反應中包含的所有特殊分數</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="DV1" data-label="AllSS">DV1</td>
+					<td><input type="checkbox" name="SpeSco" value="DV2" data-label="AllSS">DV2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="INC1" data-label="AllSS">INC1</td>
+					<td><input type="checkbox" name="SpeSco" value="INC2" data-label="AllSS">INC2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="DR1" data-label="AllSS">DR1</td>
+					<td><input type="checkbox" name="SpeSco" value="DR2" data-label="AllSS">DR2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="FAB1" data-label="AllSS">FAB1</td>
+					<td><input type="checkbox" name="SpeSco" value="FAB2" data-label="AllSS">FAB2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="ALOG" data-label="AllSS">ALOG</td>
+					<td><input type="checkbox" name="SpeSco" value="CON" data-label="AllSS">CON</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="AB" data-label="AllSS">AB</td>
+					<td><input type="checkbox" name="SpeSco" value="AG" data-label="AllSS">AG</td>
+					<td><input type="checkbox" name="SpeSco" value="COP" data-label="AllSS">COP</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="CP" data-label="AllSS">CP</td>
+					<td><input type="checkbox" name="SpeSco" value="GHR" data-label="AllSS">GHR</td>
+					<td><input type="checkbox" name="SpeSco" value="PHR" data-label="AllSS">PHR</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="MOR" data-label="AllSS">MOR</td>
+					<td><input type="checkbox" name="SpeSco" value="PER" data-label="AllSS">PER</td>
+					<td><input type="checkbox" name="SpeSco" value="PSV" data-label="AllSS">PSV</td></tr>
+				<tr><td><input type="checkbox" name="SpeSco" value=" " data-label="AllSS">無</td></tr>
+			</tbody>
+		</table>
+
+		<p><br></p>
+		<input type="button" onclick="confSSWin()" value="確定">
+		<input type="button" onclick="resSSWin()" value="重置">
+	</form>
+</dialog>
+
+-->
