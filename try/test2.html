@@ -1,0 +1,17 @@
+
+<html> 
+	<head> 
+		<title>test2</title> 
+		<script type="text/javascript"> 
+			function getvalue() {
+				let hi = window.opener;
+				document.getElemenetById("label1").innerHTML = window.opener.document.getElemenetById("label1").innerHTML;
+			} 
+		</script> 
+	</head>
+
+	<body> 
+		<label id="label1">page test2</label> 
+		<input type="button" onclick="getvalue()" value="get test1 page value"> 
+	</body>
+</html>
