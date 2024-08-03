@@ -30,7 +30,7 @@ function generateRep(){
 
 	var ConCol_Ele = window.opener.document.getElementsByName("StrSum_Con");
 	var ConCol_Pdf = document.getElementsByName("ConCol");
-	for(let i=0; i<24; i++) ConCol_Pdf[i].innerHTML = ConCol_Ele[i].innerHTML;
+	for(let i=0; i<27; i++) ConCol_Pdf[i].innerHTML = ConCol_Ele[i].innerHTML;
 
 
 	var SSCol_Ele = window.opener.document.getElementsByName("StrSum_SS");
