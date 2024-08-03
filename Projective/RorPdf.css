@@ -1,0 +1,17 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+.darkLine{
+	background-color: #6C6C6C;
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+}
+
+.subTitle{
+	text-align: center;
+}
