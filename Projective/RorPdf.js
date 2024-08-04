@@ -2,7 +2,7 @@ function generateRep(){
 	document.getElementById('generateRep').style.display = "none";
 	var count = 0;
 
-	var RespFromParent = window.opener.document.getElementById("ParentResp");
+	var RespFromParent = window.opener.document.getElementById("ParentResp").innerHTML;
 	RespFromParent = RespFromParent.split("--").reverse();
 
 	var SeqScoTable = document.getElementById("SeqScoTable");
