@@ -1,0 +1,134 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+input, select {
+	font-size: 16px;
+}
+
+p, h3, h1 {
+	text-align: center;
+}
+
+.fontSize20 {
+	font-size: 20px;
+}
+
+.dataTable {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+	width: 100%;
+	overflow: auto;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+	font-size: 24px;
+}
+
+.buttonClass {
+	height: 200px;
+	width: 200px;
+	font-size: 40px;
+}
+
+.Cards {
+	border: 1px solid;
+	max-width: 97%;
+}
+
+.Cards td {
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+
+
+.BG_col1 {
+	background-color: #E0E0E0;
+}
+
+.BG_col2 {
+	background-color: #F0F0F0;
+}
+
+.whiteText1{
+	background-color: #D0D0D0;
+}
+
+.whiteText2{
+	background-color: #6C6C6C;
+	color: #F0F0F0;
+}
+
+.whiteText3{
+	background-color: #3C3C3C;
+	color: #F0F0F0;
+}
+
+.forParent {
+	display: none;
+}
+
+
+
+.floatLeft{
+	display: flex;
+	align-items: flex-end;
+}
+
+.floatLeft_child{
+	padding-left: 20px;
+}
+
+
+#StrSum_Show, #CoreSec_Show{
+	display: none;
+}
+
+
+
+
+.panel-control {
+	position:absolute;
+	opacity:0;
+}
+.tab-group label {
+	display:inline-block;
+	padding: 10px 30px;
+	border:1px solid #ccc;
+	border-bottom:none;
+	background-color: #D0D0D0;
+	bottom:-1px;
+	position:relative;
+}
+.content-group {
+	border:1px solid #ccc;
+	padding: 20px;
+}
+.content{display:none;}
+
+#radio1:checked ~ .tab-group [for="radio1"],
+#radio2:checked ~ .tab-group [for="radio2"],
+#radio3:checked ~ .tab-group [for="radio3"],
+#radio4:checked ~ .tab-group [for="radio4"],
+#radio5:checked ~ .tab-group [for="radio5"],
+#radio6:checked ~ .tab-group [for="radio6"],
+#radio7:checked ~ .tab-group [for="radio7"],
+#radio8:checked ~ .tab-group [for="radio8"]{background-color: #fff;}
+
+#radio1:checked ~ .content-group .content1,
+#radio2:checked ~ .content-group .content2,
+#radio3:checked ~ .content-group .content3,
+#radio4:checked ~ .content-group .content4,
+#radio5:checked ~ .content-group .content5,
+#radio6:checked ~ .content-group .content6,
+#radio7:checked ~ .content-group .content7,
+#radio8:checked ~ .content-group .content8 {display:block}
