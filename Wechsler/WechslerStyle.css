@@ -1,0 +1,189 @@
+* {
+  font-family: Microsoft JhengHei;
+  -webkit-print-color-adjust:exact
+}
+
+input, select {
+	font-size: 16px;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+#inputDiv {
+	display: flex;
+	align-items: self-start;
+}
+
+#inputDiv section {
+	padding: 20px;
+	flex: 1;
+}
+
+.checkBox {
+	display: flex;
+	align-items: self-start;
+}
+
+.checkBox section{
+	flex: 1;
+}
+
+.checkBox2 {
+	display: flex;
+	align-items: self-start;
+}
+
+.checkBox2_child1{
+	flex: 1;
+}
+
+.checkBox2_child2{
+	flex: 2;
+}
+
+
+
+.dataTable, .buttonSection {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+	font-size: 24px;
+}
+
+.buttonClass {
+	height: 200px;
+	width: 200px;
+	font-size: 40px;
+}
+
+table {
+	border: 1px solid;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+th, td {
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+.WAIS_null {
+	color: #FFFFFF;
+	background-color: #5A5AAD;
+}
+
+.WAIS_DanSe {
+	color: #FFFFFF;
+	background-color: #CECEFF;
+}
+
+.WAIS_DanSe2 {
+	background-color: #CECEFF;
+}
+
+.WISC_null {
+	color: #FFFFFF;
+	background-color: #4F9D9D;
+}
+
+.WISC_DanSe {
+	background-color: #D1E9E9;
+}
+
+.doPrint{
+	display: none;
+}
+
+
+
+
+.panel-control {
+	position:absolute;
+	opacity:0;
+}
+.tab-group label {
+	display:inline-block;
+	padding: 10px 30px;
+	border:1px solid #ccc;
+	border-bottom:none;
+	background-color: #D0D0D0;
+	bottom:-1px;
+	position:relative;
+}
+.content-group {
+	border:1px solid #ccc;
+	padding: 20px;
+}
+.content{display:none;}
+
+#radio1:checked ~ .tab-group [for="radio1"],
+#radio2:checked ~ .tab-group [for="radio2"],
+#radio3:checked ~ .tab-group [for="radio3"],
+#radio4:checked ~ .tab-group [for="radio4"]{background-color: #fff;}
+
+#radio1:checked ~ .content-group .content1,
+#radio2:checked ~ .content-group .content2,
+#radio3:checked ~ .content-group .content3,
+#radio4:checked ~ .content-group .content4 {display:block}
+
+
+
+
+
+@media print{
+	*, input[name="BasicInfo"]{
+		font-size: 7pt;
+	}
+
+	h1{
+		font-size: 15pt;
+	}
+	
+	th, td {
+	border: 0.1px solid #CCC;
+	padding: 1px;
+	}
+
+	.noPrint{
+		display: none;
+	}
+
+	.doPrint{
+		display: block;
+	}
+
+
+
+	.panel-control {
+		display: none;
+	}
+	.tab-group label {
+		display: none;
+	}
+
+	.content{
+		display: block;
+	}
+
+	.breakBefore {
+		break-before: page;
+	}
+
+}
+
+@page{
+	size: A4;
+	margin: 0;
+}
