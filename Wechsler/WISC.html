@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="psychology, clinical, testing">
+	<meta name="description" content="WISC-V常模查詢頁面">
+	<title>WISC-V</title>
+	<link rel="stylesheet" type="text/css" href="WechslerStyle.css">
+	<script type="text/javascript" src="WISC.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<hgroup>
+			<h1 class="noPrint">WISC-V</h1>
+			<h3 class="noPrint">結果僅供參考，盡信秘書不如無秘書</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<div class="noPrint">
+			<div id="inputDiv">
+				<section class="dataTable">
+					<p class="boxTitle">各分測驗原始分數</p>
+					<p><input name="RawIn" type="number" min="0" max="200">一、圖形設計</p>
+					<p><input name="RawIn" type="number" min="0" max="200">二、類同</p>
+					<p><input name="RawIn" type="number" min="0" max="200">三、矩陣推理</p>
+					<p><input name="RawIn" type="number" min="0" max="200">四、記憶廣度</p>
+					<p><input name="RawIn" type="number" min="0" max="200">五、符號替代</p>
+					<p><input name="RawIn" type="number" min="0" max="200">六、詞彙</p>
+					<p><input name="RawIn" type="number" min="0" max="200">七、圖形等重</p>
+					<p>-</p>
+					<p><input name="RawIn" type="number" min="0" max="200">八、視覺拼圖</p>
+					<p><input name="RawIn" type="number" min="0" max="200">九、圖畫廣度</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十、符號尋找</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十一、常識</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十二、圖畫概念</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十三、數-字序列</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十四、刪除動物</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十五、理解</p>
+					<p><input name="RawIn" type="number" min="0" max="200">十六、算術</p>
+				</section>
+
+				<section class="dataTable">
+					<p class="boxTitle">歷程分數</p>
+					<p><input type="number" name="Process" min="0" max="20">圖形設計無時間加分(BDn)</p>
+					<p><input type="number" name="Process" min="0" max="20">圖形設計局部分數(BDp)</p>
+					<p><input type="number" name="Process" min="0" max="20">順序背誦廣度(DSf)</p>
+					<p><input type="number" name="Process" min="0" max="20">逆序背誦廣度(DSb)</p>
+					<p><input type="number" name="Process" min="0" max="20">排序背誦廣度(DSs)</p>
+					<p><input type="number" name="Process" min="0" max="20">刪除動物雜亂排列(CAr)</p>
+					<p><input type="number" name="Process" min="0" max="20">刪除動物結構排列(CAs)</p>
+					<p> - </p>
+					<p><input type="number" name="Process" min="0" max="20">最長順序背誦廣度(LDSf)</p>
+					<p><input type="number" name="Process" min="0" max="20">最長逆序背誦廣度(LDSb)</p>
+					<p><input type="number" name="Process" min="0" max="20">最長排序背誦廣度(LDSs)</p>
+					<p><input type="number" name="Process" min="0" max="20">最長圖畫廣度刺激頁圖畫數(LPSs)</p>
+					<p><input type="number" name="Process" min="0" max="20">最長圖畫廣度選答頁圖畫數(LPSr)</p>
+					<p><input type="number" name="Process" min="0" max="20">最長數字序列廣度(LLNs)</p>
+				</section>
+
+				<section class="dataTable">
+					<p class="boxTitle">受測者的基本資料</p>
+					<p>年齡: <input type="number" name="Age" min="6" max="16">歲
+						<input type="number" name="Age" min="0" max="11">月</p>
+					<p>性別: <select name="Sex">
+						<option value="male">男</option>
+						<option value="female">女</option>
+						<option value="others">其他</option></select></p>
+					<br><br><br>
+					<section class="buttonSection" style="text-align: center;">
+						<p>
+							<button type="submit" name="submitB" onclick="submitB()">送出</button>
+							<button type="reset" name="resetB" onclick="Reload()">重置</button>
+							<button type="submit" onclick="test2()">測資</button>
+							<button type="submit" onclick="window.print()">列印</button>
+						</p>
+						<p id="testText"><br>測試資料源自 WISC-V 指導手冊 p56.<!--測試文字--> </p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+
+		<section class="noPrint"><p><br><br><br></p></section>
+
+		<section class="panel-group">
+			<input type="radio" name="panel-radio" id="radio1" class="panel-control" checked>
+			<input type="radio" name="panel-radio" id="radio2" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio3" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio4" class="panel-control">
+			<div class="tab-group">
+				<label for="radio1" class="active">全量表智商及四項指數分數</label>
+				<label for="radio2">主要分析頁</label>
+				<label for="radio3">選擇性分析頁 - 選擇性指數</label>
+				<label for="radio4">選擇性分析頁 - 歷程分數</label>
+			</div>
+			<div class="content-group">
+				<div class="content content1">
+					<h1 class="doPrint">魏氏兒童智力量表 第五版</h1>
+					<div class="checkBox2">
+						<section class="checkBox2_child1">
+							<p class="noPrint" style="text-align: center;">以下個資僅用於列印輸出(可不用填寫)</p>
+							<table>
+								<caption style="color: #FFF">..</caption>
+								<tr><td>受試者</td>
+									<td colspan=3><input type="text" name="BasicInfo"></td></tr>
+								<tr><td>編號</td>
+									<td colspan=3><input type="text" name="BasicInfo"></td></tr>
+								<tr><td>學校/機構</td>
+									<td colspan=3><input type="text" name="BasicInfo"></td></tr>
+								<tr><td>性別</td>
+									<td colspan=3><input type="text" name="BasicInfo"></td></tr>
+								<tr><td>主試者</td>
+									<td colspan=3><input type="text" name="BasicInfo"></td></tr>
+								<tr><td colspan=4></td></tr>
+								<tr><td colspan=4></td></tr>
+								<tr><td colspan=4></td></tr>
+								<tr><td></td>
+									<td>年</td>
+									<td>月</td>
+									<td>日</td></tr>
+								<tr><td>測驗日期</td>
+									<td><input type="number" min= "1" max="3000" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="12" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="31" name="BasicInfo"></td></tr>
+								<tr><td>出生日期</td>
+									<td><input type="number" min= "1" max="3000" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="12" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="31" name="BasicInfo"></td></tr>
+								<tr><td>實足年齡</td>
+									<td><input type="number" min= "1" max="3000" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="12" name="BasicInfo"></td>
+									<td><input type="number" min= "1" max="31" name="BasicInfo"></td></tr>
+							</table>
+						</section>
+
+						<section class="checkBox2_child2">
+							<table><caption>第一頁: 由原始總分轉換量表分數</caption>
+								<thead>
+									<tr><td>分測驗</td>
+										<td>原始總分</td>
+										<td>全量表</td>
+										<td>語文理解</td>
+										<td>視覺空間</td>
+										<td>流體推理</td>
+										<td>工作記憶</td>
+										<td>處理速度</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td>一、圖形設計</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>二、類同</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>三、矩陣推理</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>四、記憶廣度</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>五、符號替代</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td></tr>
+									<tr>
+										<td>六、詞彙</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>七、圖形等重</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>八、視覺拼圖</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>九、圖畫廣度</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十、符號尋找</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Ind_sub"></td></tr>
+									<tr>
+										<td>十一、常識</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十二、圖畫概念</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十三、數-字序列</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十四、刪除動物</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十五、理解</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十六、算術</td>
+										<td data-label="RawScore"></td>
+										<td data-label="FSIQ_sub">(&nbsp&nbsp)</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td colspan=2>量表分數總分</td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="RawTotalScore"></td></tr>
+								</tbody>
+								<tfoot>
+									<tr><td colspan=2></td>
+										<td>全量表</td>
+										<td>語文理解</td>
+										<td>視覺空間</td>
+										<td>流體推理</td>
+										<td>工作記憶</td>
+										<td>處理速度</td></tr>
+									<tr>
+										<td colspan=2>組合分數</td>
+										<td data-label="FSIQ">FSIQ</td>
+										<td data-label="VCI">VCI</td>
+										<td data-label="VSI">VSI</td>
+										<td data-label="FRI">FRI</td>
+										<td data-label="WMI">WMI</td>
+										<td data-label="PSI">PSI</td></tr>
+									<tr>
+										<td colspan=2>百分等級</td>
+										<td data-label="PR"></td>
+										<td data-label="PR"></td>
+										<td data-label="PR"></td>
+										<td data-label="PR"></td>
+										<td data-label="PR"></td>
+										<td data-label="PR"></td></tr>
+									<tr>
+										<td colspan=2>信賴區間</td>
+										<td data-label="CI"></td>
+										<td data-label="CI"></td>
+										<td data-label="CI"></td>
+										<td data-label="CI"></td>
+										<td data-label="CI"></td>
+										<td data-label="CI"></td></tr>
+								</tfoot>
+							</table>
+						</section>
+					</div>
+
+					<br><br>
+
+					<div class="checkBox">
+						<div style="width: 400px; height: 500px; margin: 0 auto;">
+							<canvas id="subTestChart" style="padding: 10px"></canvas>
+						</div>
+
+						<div style="width: 300px; height: 500px; margin: 0 auto;">
+							<canvas id="indexChart" style="padding: 10px"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="content content2 breakBefore">
+					<h1 class="doPrint">主要分析頁</h1>
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<caption>指數層次的比較</caption>
+								<thead>
+									<tr>
+										<td class="WISC_null" colspan=2>指數</td>
+										<td class="WISC_null" colspan=4> 指數分數 - 平均指數分數 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">強弱項</td>
+										<td class="WISC_null">基本率</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td class="WISC_null" rowspan=5 width="3px">與平均數的比較</td>
+										<td>語文理解</td>
+										<td data-label="VCI">VCI</td>
+										<td>-</td>
+										<td data-label="IndMean"></td>
+										<td>=</td>
+										<td data-label="IndDiff1"></td>
+										<td data-label="IndDiff_cv1"></td>
+										<td data-label="IndDiff_sw1"></td>
+										<td data-label="IndDiff_br1"></td></tr>
+									<tr>
+										<td>視覺空間</td>
+										<td data-label="VSI">VSI</td>
+										<td>-</td>
+										<td data-label="IndMean"></td>
+										<td>=</td>
+										<td data-label="IndDiff1"></td>
+										<td data-label="IndDiff_cv1"></td>
+										<td data-label="IndDiff_sw1"></td>
+										<td data-label="IndDiff_br1"></td></tr>
+									<tr>
+										<td>流體推理</td>
+										<td data-label="FRI">FRI</td>
+										<td>-</td>
+										<td data-label="IndMean"></td>
+										<td>=</td>
+										<td data-label="IndDiff1"></td>
+										<td data-label="IndDiff_cv1"></td>
+										<td data-label="IndDiff_sw1"></td>
+										<td data-label="IndDiff_br1"></td></tr>
+									<tr>
+										<td>工作記憶</td>
+										<td data-label="WMI">WMI</td>
+										<td>-</td>
+										<td data-label="IndMean"></td>
+										<td>=</td>
+										<td data-label="IndDiff1"></td>
+										<td data-label="IndDiff_cv1"></td>
+										<td data-label="IndDiff_sw1"></td>
+										<td data-label="IndDiff_br1"></td></tr>
+									<tr>
+										<td>處理速度</td>
+										<td data-label="PSI">PSI</td>
+										<td>-</td>
+										<td data-label="IndMean"></td>
+										<td>=</td>
+										<td data-label="IndDiff1"></td>
+										<td data-label="IndDiff_cv1"></td>
+										<td data-label="IndDiff_sw1"></td>
+										<td data-label="IndDiff_br1"></td></tr>
+									<tr>
+										<td class="WISC_null" colspan=2>指數</td>
+										<td class="WISC_null" colspan=4> 指數分數1 - 指數分數2 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">是否顯著</td>
+										<td class="WISC_null">基本率</td></tr>
+									<tr>
+										<td class="WISC_null" rowspan=10 width="3px">配對差異比較</td>
+										<td>語文理解-視覺空間</td>
+										<td data-label="VCI">VCI</td>
+										<td>-</td>
+										<td data-label="VSI">VSI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>語文理解-流體推理</td>
+										<td data-label="VCI">VCI</td>
+										<td>-</td>
+										<td data-label="FRI">FRI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>語文理解-工作記憶</td>
+										<td data-label="VCI">VCI</td>
+										<td>-</td>
+										<td data-label="WMI">WMI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>語文理解-處理速度</td>
+										<td data-label="VCI">VCI</td>
+										<td>-</td>
+										<td data-label="PSI">PSI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>視覺空間-流體推理</td>
+										<td data-label="VSI">VSI</td>
+										<td>-</td>
+										<td data-label="FRI">FRI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>視覺空間-工作記憶</td>
+										<td data-label="VSI">VSI</td>
+										<td>-</td>
+										<td data-label="WMI">WMI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>視覺空間-處理速度</td>
+										<td data-label="VSI">VSI</td>
+										<td>-</td>
+										<td data-label="PSI">PSI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>流體推理-工作記憶</td>
+										<td data-label="FRI">FRI</td>
+										<td>-</td>
+										<td data-label="WMI">WMI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>流體推理-處理速度</td>
+										<td data-label="FRI">FRI</td>
+										<td>-</td>
+										<td data-label="PSI">PSI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+									<tr>
+										<td>工作記憶-處理速度</td>
+										<td data-label="WMI">WMI</td>
+										<td>-</td>
+										<td data-label="PSI">PSI</td>
+										<td>=</td>
+										<td data-label="IndDiff2"></td>
+										<td data-label="IndDiff_cv2"></td>
+										<td data-label="IndDiff_sw2"></td>
+										<td data-label="IndDiff_br2"></td></tr>
+								<tfoot>
+
+								</tfoot>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="90%">
+								<caption style="color: #FFF">..</caption>
+								<tr><td class="WISC_null" colspan=4>比較的根據</td></tr>
+								<tr><td class="WISC_DanSe" colspan=4>比較分數</td></tr>
+								<tr><td colspan=4><input type="checkbox" checked="checked" disabled="disabled">平均主要指數分數(MIS)</td></tr>
+								<tr><td>合計五項<br>主要指數分數</td>
+									<td colspan=2></td>
+									<td>平均指數分數</td></tr>
+								<tr><td name="Box_2_1"></td>
+									<td colspan=2>÷ 5 =</td>
+									<td name="Box_2_1"></td></tr>
+								<tr><td colspan=4><input type="checkbox" disabled="disabled">FSIQ</td></tr>
+							</table>
+							<table width="90%">
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">基本率參照團體</td></tr>
+								<tr><td colspan=2><input type="checkbox" disabled="disabled" checked="checked">全部樣本</td>
+									<td colspan=2><input type="checkbox" disabled="disabled">FSIQ水準</td></tr>
+							</table>
+							<br><br>
+							<table width="90%">
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">基本率參照團體</td></tr>
+								<tr><td colspan=2><input type="checkbox" disabled="disabled" checked="checked">全部樣本</td>
+									<td colspan=2><input type="checkbox" disabled="disabled">FSIQ水準</td></tr>
+							</table>
+						</section>
+					</div>
+
+					<p><br></p>
+
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<caption>分測驗層次的比較</caption>
+								<thead>
+									<tr>
+										<td class="WISC_null" colspan=2>指數</td>
+										<td class="WISC_null" colspan=4> 量表分數 - 平均量表分數 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">強弱項</td>
+										<td class="WISC_null">基本率</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td class="WISC_null" rowspan=10 width="3px">與平均數的比較</td>
+										<td>類同</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>詞彙</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>圖形設計</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>視覺拼圖</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>矩陣推理</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>圖形等重</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>記憶廣度</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>圖畫廣度</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>符號替代</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td>符號尋找</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub_mean"></td>
+										<td>=</td>
+										<td data-label="SubDiff1"></td>
+										<td data-label="SubDiff_cv1"></td>
+										<td data-label="SubDiff_sw1"></td>
+										<td data-label="SubDiff_br1"></td></tr>
+									<tr>
+										<td class="WISC_null" colspan=2>分測驗</td>
+										<td class="WISC_null" colspan=4> 量表分數1 - 量表分數2 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">強弱項</td>
+										<td class="WISC_null">基本率</td></tr>
+									<tr>
+										<td class="WISC_null" rowspan=5 width="3px">配對差異比較</td>
+										<td>類同-詞彙</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>=</td>
+										<td data-label="SubDiff2"></td>
+										<td data-label="SubDiff_cv2"></td>
+										<td data-label="SubDiff_sw2"></td>
+										<td data-label="SubDiff_br2"></td></tr>
+									<tr>
+										<td>圖形設計-視覺拼圖</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>=</td>
+										<td data-label="SubDiff2"></td>
+										<td data-label="SubDiff_cv2"></td>
+										<td data-label="SubDiff_sw2"></td>
+										<td data-label="SubDiff_br2"></td></tr>
+									<tr>
+										<td>矩陣推理-圖形等重</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>=</td>
+										<td data-label="SubDiff2"></td>
+										<td data-label="SubDiff_cv2"></td>
+										<td data-label="SubDiff_sw2"></td>
+										<td data-label="SubDiff_br2"></td></tr>
+									<tr>
+										<td>記憶廣度-圖畫廣度</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>=</td>
+										<td data-label="SubDiff2"></td>
+										<td data-label="SubDiff_cv2"></td>
+										<td data-label="SubDiff_sw2"></td>
+										<td data-label="SubDiff_br2"></td></tr>
+									<tr>
+										<td>符號替代-符號尋找</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>-</td>
+										<td data-label="FSIQ_sub2"></td>
+										<td>=</td>
+										<td data-label="SubDiff2"></td>
+										<td data-label="SubDiff_cv2"></td>
+										<td data-label="SubDiff_sw2"></td>
+										<td data-label="SubDiff_br2"></td></tr>
+								<tfoot>
+
+								</tfoot>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="90%">
+								<caption style="color: #FFF">..</caption>
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">比較分數</td></tr>
+								<tr><td colspan=4><input type="checkBox" name="MSS" disabled="disabled">主要指數之平均量表分數(MSS-I)</td></tr>
+								<tr><td>形成主要指數<br>的十個分測驗<br>量表分數合計</td>
+									<td colspan=2></td>
+									<td>主要指數之<br>平均量表分數</td></tr>
+								<tr><td name="Box_2_2"></td>
+									<td colspan=2>÷ 7 =</td>
+									<td name="Box_2_2"></td></tr>
+								<tr><td colspan=4><input type="checkBox" name="MSS" disabled="disabled">全量表智商之平均量表分數(MSS-F)</td></tr>
+								<tr><td>形成全量表智商<br>的七個分測驗<br>量表分數合計</td>
+									<td colspan=2></td>
+									<td>主要指數之<br>平均量表分數</td></tr>
+								<tr><td name="Box_2_2"></td>
+									<td colspan=2>÷ 7 =</td>
+									<td name="Box_2_2"></td></tr>
+							</table>
+							<table width="90%">
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+							</table>
+							<br><br>
+							<table width="90%">
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+							</table>
+						</section>
+					</div>
+				</div>
+
+				<div class="content content3 breakBefore">
+					<h1 class="doPrint">選擇性分析頁 - 選擇性指數</h1>
+					<div class="checkBox">
+						<section>
+							<table><caption>選擇性指數量表分數總分</caption>
+								<thead>
+									<tr><td rowspan=2>分測驗</td>
+										<td colspan=5>量表分數</td></tr>
+									<tr><td>數量推理</td>
+										<td>聽覺工作記憶</td>
+										<td>非語文</td>
+										<td>一般能力</td>
+										<td>認知效能</td></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>一、圖形設計</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>二、類同</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>三、矩陣推理</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>四、記憶廣度</td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td></tr>
+									<tr>
+										<td>五、符號替代</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td></tr>
+									<tr>
+										<td>六、詞彙</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>七、圖形等重</td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>八、視覺拼圖</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>九、圖畫廣度</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td></tr>
+									<tr>
+										<td>十、符號尋找</td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td></tr>
+									<tr>
+										<td>十三、數-字序列</td>
+										<td class="WISC_null"></td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td>十六、算術</td>
+										<td data-label="Sel_sub"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td>
+										<td class="WISC_null"></td></tr>
+									<tr>
+										<td >量表分數總分</td>
+										<td class="WISC_DanSe" data-label="SelRawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="SelRawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="SelRawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="SelRawTotalScore"></td>
+										<td class="WISC_DanSe" data-label="SelRawTotalScore"></td></tr>
+								</tbody>
+								<tfoot>
+									<tr><td></td>
+										<td>數量推理</td>
+										<td>聽覺工作記憶</td>
+										<td>非語文</td>
+										<td>一般能力</td>
+										<td>認知效能</td></tr>
+									<tr>
+										<td>指數分數</td>
+										<td data-label="SelInd">QRI</td>
+										<td data-label="SelInd">AWMI</td>
+										<td data-label="SelInd">NVI</td>
+										<td data-label="SelInd">GAI</td>
+										<td data-label="SelInd">CPI</td></tr>
+									<tr>
+										<td>百分等級</td>
+										<td data-label="SelPR"></td>
+										<td data-label="SelPR"></td>
+										<td data-label="SelPR"></td>
+										<td data-label="SelPR"></td>
+										<td data-label="SelPR"></td></tr>
+									<tr>
+										<td>信賴區間</td>
+										<td data-label="SelCI"></td>
+										<td data-label="SelCI"></td>
+										<td data-label="SelCI"></td>
+										<td data-label="SelCI"></td>
+										<td data-label="SelCI"></td></tr>
+								</tfoot>
+							</table>
+						</section>
+
+						<div style="width: 300px; height: 500px; margin: 0 auto;">
+							<canvas id="selChart" style="padding: 10px"></canvas>
+						</div>
+					</div>
+
+					<br><br>
+
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<caption>差異比較</caption>
+								<thead>
+									<tr>
+										<td class="WISC_null">指數</td>
+										<td class="WISC_null" colspan=4> 指數分數 - 平均指數分數 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">是否顯著</td>
+										<td class="WISC_null">基本率</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td>一般能力-全量表</td>
+										<td data-label="SelInd1">GAI</td>
+										<td>-</td>
+										<td data-label="SelInd1">FSIQ</td>
+										<td>=</td>
+										<td data-label="SelDiff"></td>
+										<td data-label="SelDiff_cv"></td>
+										<td data-label="SelDiff_sw"></td>
+										<td data-label="SelDiff_br"></td></tr>
+									<tr>
+										<td>一般能力-認知效能</td>
+										<td data-label="SelInd1">GAI</td>
+										<td>-</td>
+										<td data-label="SelInd1">CPI</td>
+										<td>=</td>
+										<td data-label="SelDiff"></td>
+										<td data-label="SelDiff_cv"></td>
+										<td data-label="SelDiff_sw"></td>
+										<td data-label="SelDiff_br"></td></tr>
+									<tr>
+										<td>工作記憶-聽覺工作記憶</td>
+										<td data-label="SelInd1">WMI</td>
+										<td>-</td>
+										<td data-label="SelInd1">AWMI</td>
+										<td>=</td>
+										<td data-label="SelDiff"></td>
+										<td data-label="SelDiff_cv"></td>
+										<td data-label="SelDiff_sw"></td>
+										<td data-label="SelDiff_br"></td></tr>
+								</tbody>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="90%">
+								<caption style="color: #FFF">..</caption>
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">基本率參照團體</td></tr>
+								<tr><td colspan=2><input type="checkbox" disabled="disabled" checked="checked">全部樣本</td>
+									<td colspan=2><input type="checkbox" disabled="disabled">FSIQ水準</td></tr>
+							</table>
+						</section>
+					</div>
+
+					<br><br>
+
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<tr>
+									<td class="WISC_null">分測驗</td>
+									<td class="WISC_null" colspan=4> 量表分數1 - 量表分數2 =</td>
+									<td class="WISC_null">差異值</td>
+									<td class="WISC_null">臨界值</td>
+									<td class="WISC_null">是否顯著</td>
+									<td class="WISC_null">基本率</td></tr>
+								<tr>
+									<td>圖形等重-算術</td>
+									<td data-label="SelInd1"></td>
+									<td>-</td>
+									<td data-label="SelInd1"></td>
+									<td>=</td>
+									<td data-label="SelDiff"></td>
+									<td data-label="SelDiff_cv"></td>
+									<td data-label="SelDiff_sw"></td>
+									<td data-label="SelDiff_br"></td></tr>
+								<tr>
+									<td>記憶廣度-數字序列</td>
+									<td data-label="SelInd1"></td>
+									<td>-</td>
+									<td data-label="SelInd1"></td>
+									<td>=</td>
+									<td data-label="SelDiff"></td>
+									<td data-label="SelDiff_cv"></td>
+									<td data-label="SelDiff_sw"></td>
+									<td data-label="SelDiff_br"></td></tr>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="90%">
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+							</table>
+						</section>
+					</div>
+				</div>
+
+				<div class="content content4 breakBefore">
+					<h1 class="doPrint">選擇性分析頁 - 歷程分數</h1>
+					<section>
+						<table>
+							<caption>由原始總分轉換量表分數</caption>
+							<thead>
+								<tr>
+									<td class="WISC_null">歷程分數</td>
+									<td class="WISC_null">原始總分</td>
+									<td class="WISC_null">量表分數</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>圖形設計無時間加分(BDn)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>圖形設計局部分數(BDp)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>順序背誦廣度(DSf)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>逆序背誦廣度(DSb)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>排序背誦廣度(DSs)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>刪除動物雜亂排列(CAr)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+								<tr>
+									<td>刪除動物結構排列(CAs)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProSca"></td></tr>
+							</tbody>
+						</table>
+					</section>
+
+					<br>
+
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<caption>差異比較</caption>
+								<thead>
+									<tr>
+										<td class="WISC_null">分測驗 / 歷程分數</td>
+										<td class="WISC_null" colspan=4> 量表分數1 - 量表分數2 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">臨界值</td>
+										<td class="WISC_null">是否顯著</td>
+										<td class="WISC_null">基本率</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td>圖形設計-圖形設計無時間加分</td>
+										<td data-label="SelProSca2">BD</td>
+										<td>-</td>
+										<td data-label="SelProSca2">BDn</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>圖形設計-圖形設計局部分數</td>
+										<td data-label="SelProSca2">BD</td>
+										<td>-</td>
+										<td data-label="SelProSca2">BDp</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>順序背誦廣度-逆序背誦廣度</td>
+										<td data-label="SelProSca2">DSf</td>
+										<td>-</td>
+										<td data-label="SelProSca2">DSb</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>順序背誦廣度-排序背誦廣度</td>
+										<td data-label="SelProSca2">DSf</td>
+										<td>-</td>
+										<td data-label="SelProSca2">DSs</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>逆序背誦廣度-排序背誦廣度</td>
+										<td data-label="SelProSca2">DSb</td>
+										<td>-</td>
+										<td data-label="SelProSca2">DSs</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>數字序列-排序背誦廣度</td>
+										<td data-label="SelProSca2">LN</td>
+										<td>-</td>
+										<td data-label="SelProSca2">DSs</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+									<tr>
+										<td>刪除動物雜亂排序-刪除動物結構排序</td>
+										<td data-label="SelProSca2">CAr</td>
+										<td>-</td>
+										<td data-label="SelProSca2">CAs</td>
+										<td>=</td>
+										<td data-label="SelProDiff1"></td>
+										<td data-label="SelProDiff_cv1"></td>
+										<td data-label="SelProDiff_sig1"></td>
+										<td data-label="SelProDiff_br1"></td></tr>
+								</tbody>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="90%">
+							<caption style="color: #FFF">..</caption>
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">顯著水準</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">0.01</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">0.05</td>
+									<td><input type="checkbox" disabled="disabled">0.10</td>
+									<td><input type="checkbox" disabled="disabled">0.15</td></tr>
+							</table>
+						</section>
+					</div>
+					
+					<br><br><br><br>
+
+					<section>
+						<table>
+							<caption>由原始分數轉換基本率</caption>
+							<thead>
+								<tr>
+									<td class="WISC_null">歷程分數</td>
+									<td class="WISC_null">原始分數</td>
+									<td class="WISC_null">基本率</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>最長順序背誦廣度(LDSf)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+								<tr>
+									<td>最長逆序背誦廣度(LDSb)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+								<tr>
+									<td>最長排序背誦廣度(LDSs)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+								<tr>
+									<td>最長圖畫廣度刺激頁圖畫數(LPSs)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+								<tr>
+									<td>最長圖畫廣度選答頁圖畫數(LPSr)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+								<tr>
+									<td>最長數字序列廣度(LLNs)</td>
+									<td data-label="SelProRaw"></td>
+									<td data-label="SelProBR"></td></tr>
+							</tbody>
+						</table>
+					</section>
+
+					<br>
+
+					<div class="checkBox2">
+						<section class="checkBox2_child2">
+							<table>
+								<caption>差異比較</caption>
+								<thead>
+									<tr>
+										<td class="WISC_null">歷程分數</td>
+										<td class="WISC_null" colspan=4> 原始分數1 - 原始分數2 =</td>
+										<td class="WISC_null">差異值</td>
+										<td class="WISC_null">基本率</td>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td>最長順序背誦廣度-最長逆序背誦廣度</td>
+										<td data-label="SelProRaw">LDSf</td>
+										<td>-</td>
+										<td data-label="SelProRaw">LDSb</td>
+										<td>=</td>
+										<td data-label="SelProDiff2"></td>
+										<td data-label="SelProDiff_br2"></td></tr>
+									<tr>
+										<td>最長順序背誦廣度-最長排序背誦廣度</td>
+										<td data-label="SelProRaw">LDSf</td>
+										<td>-</td>
+										<td data-label="SelProRaw">LDSs</td>
+										<td>=</td>
+										<td data-label="SelProDiff2"></td>
+										<td data-label="SelProDiff_br2"></td></tr>
+									<tr>
+										<td>最長逆序背誦廣度-最長排序背誦廣度</td>
+										<td data-label="SelProRaw">LDSb</td>
+										<td>-</td>
+										<td data-label="SelProRaw">LDSs</td>
+										<td>=</td>
+										<td data-label="SelProDiff2"></td>
+										<td data-label="SelProDiff_br2"></td></tr>
+								</tbody>
+							</table>
+						</section>
+
+						<section class="checkBox2_child1">
+							<table width="70%">
+							<caption style="color: #FFF">..</caption>
+								<tr><td colspan=4 class="WISC_null">比較的根據</td></tr>
+								<tr><td colspan=4 class="WISC_DanSe">基本率參照團體</td></tr>
+								<tr><td><input type="checkbox" disabled="disabled">全部樣本</td>
+									<td><input type="checkbox" disabled="disabled" checked="checked">年齡組</td></tr>
+							</table>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<p><br><br><br></p>
+
+
+
+	</article>
+
+	<footer>
+		Shin心理師 你的臨床小秘書
+	</footer>
+</body>
+
+
+</html>
