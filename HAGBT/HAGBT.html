@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="psychology, clinical, testing">
+	<meta name="description" content="班達計分頁面">
+	<title>Bender Gestalt Visual Motor Test</title>
+	<link rel="stylesheet" type="text/css" href="HAGBTStyle.css">
+	<script type="text/javascript" src="HAGBT.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<hgroup class="centerText">
+			<h1>班達視覺動作完形測驗 (HAGBT)</h1>
+			<h3>結果僅供參考，盡信秘書不如無秘書</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<section class="dataTable centerText">
+			<p class="boxTitle">關於班達視覺動作完形測驗...</p>
+			<p>班達完形測驗 Bender-Gestalt Test 同時是神經心理測驗也是投射測驗</p>
+			<p>作為神經心理測驗時，可以透過不同計分方式快速篩檢器質性腦傷的可能性</p>
+			<p>作為投射測驗時，可以透過個案作畫品質推論其性格特質</p>
+			<p>Shin心理小秘書提供的解釋參考 Hutt (1969)</p>
+			<p>包含 Psychopathology Scale 以及 Configurational Approach</p>
+			<p>也提供投射性解釋，但解釋時應小心，應綜合各項反覆出現的特徵再行解釋</p>
+		</section>
+
+		<h3 class="centerText">----- 請判斷受測者於以下各項指標的作畫表現 -----</h3>
+
+		<section class="dataTable">
+			<p class="boxTitle centerText">Psychopathology Scale<br><br></p>
+			<h3>組織因子 factor related to organization</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="10%">因子</td><td width="29%">定義</td><td width="29%">Psychopathology Scale 計分</td><td width="29%">投射性解釋</td></tr>
+					<tr>
+						<td><p>1. 序列</p><p>sequence</p></td>
+						<td><p>圖形依序排列繪製於紙上的規律性</p>
+							<ul class="BGfactorDefList">
+								<li>通常左而右或上而下，右而左或上而下視為偏離1次</li>
+								<li>偏離已呈現的排序方式則視為偏離1次</li>
+								<li>每圖一張視為不規律 (irregular sequence) 計為偏離2次</li>
+								<li>畫到邊邊後下一張若出現在適切的位置則不算偏離</li>
+							</ul>
+						<td>
+							<label><input type="radio" name="PPS_1" value="10.0"><span class="button">(10.0) 混亂或符號式排列 (圖形排序亂跳或排成特定符號)<br></label>
+							<label><input type="radio" name="PPS_1" value="7.0"><span class="button">(7.0) 不規律 (超過1次偏離且無亂跳或混亂排序)<br></label>
+							<label><input type="radio" name="PPS_1" value="4.0"><span class="button">(4.0) 過度條理且排列死板 (沒有偏移)<br></label>
+							<label><input type="radio" name="PPS_1" value="1.0"><span class="button">(1.0) 正常或有條理 (沒有偏離或僅1次偏離)</label></td>
+						<td><p>【組織及計畫的態度與技巧】</p>
+							<ul class="BGfactorIntList">
+								<li>排列過度精確且難因情境調整 -> 可能強迫</li>
+								<li>排列不規律或混亂 -> 焦慮, 激躁的思覺失調, 缺乏控制</li>
+								<li>右而左 -> 消極或反抗傾向</li>
+								<li>一圖一張 (或總共超過 2 張) -> 自我中心或對立特質</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>2. 首圖位置</p><p>position of the first drawing</p></td>
+						<td>圖 A 在紙上的位置</td>
+						<td>
+							<label><input type="radio" name="PPS_2" value="10.0"><span class="button">(10.0) 異常位置，嚴重: 圖 A 的任一部分落在邊界 1 英吋內<br></label>
+							<label><input type="radio" name="PPS_2" value="5.0"><span class="button">(5.0) 自我中心位置: 圖 A 任一部分落在中心 3 英吋方形內<br></label>
+							<label><input type="radio" name="PPS_2" value="1.0"><span class="button">(1.0) 正常位置: 圖 A 整體落在紙張上 1/3 部分</label></td>
+						<td><p>【對其世界的定向】</p>
+							<ul class="BGfactorIntList">
+								<li>非典型位置 -> 迴避與外界的連結</li>
+								<li>在中心且圖很大 -> 自戀, 自我中心, 被動對立</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>3. 空間使用</p><p>use of space</p></td>
+						<td><p>連續或鄰近兩圖間的相對空間間隔</p>
+							<ul class="BGfactorDefList">
+								<li>過度擴張 -> 空間 > 1/2 軸線</li>
+								<li>過度侷限 -> 空間 < 1/4 軸線</li>
+							</ul>
+							<p>(同水平位置的兩圖 應依照左圖水平軸長為依據)</p>
+							<p>(同垂直位置的兩圖 應依照上圖垂直軸長為依據)</p></td>
+						<td>
+							<label><input type="radio" name="PPS_3" value="10.0"><span class="button">(10.0) 異常空間使用 (≥ 2 次過度擴張或過度侷限)<br></label>
+							<label><input type="radio" name="PPS_3" value="1.0"><span class="button">(1.0) < 1 次過度的空間使用</label></td>
+						<td><p>【情緒調適, 性格, 自我定向】</p>
+							<ul class="BGfactorIntList">
+								<li>過度擴張 -> 敵意, 發洩, 武斷</li>
+								<li>過度侷限 -> 被動, 退縮, 孤僻 or 壓抑敵意, 受虐傾向</li>
+							</ul>
+							<p>ex: paranoid 可能呈現圖小但空間、使用過度擴張</p></td></tr>
+					<tr>
+						<td><p>4. 相撞</p><p>collision</p></td>
+						<td><p>圖形撞在一起或重疊</p>
+							<ul class="BGfactorDefList">
+								<li>相撞 (collision) 兩圖的邊邊觸碰或重疊</li>
+								<li>相撞傾向 (collision tendency) 圖的部分侵入另一圖的開放空間 且兩圖並未真的觸碰或重疊</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_4" value="10.0"><span class="button">(10.0) 有相撞，嚴重: ≥ 2 次相撞<br></label>
+							<label><input type="radio" name="PPS_4" value="8.5"><span class="button">(8.5) 有相撞，中重: 2 次相撞<br></label>
+							<label><input type="radio" name="PPS_4" value="7.0"><span class="button">(7.0) 有相撞: 1 次相撞<br></label>
+							<label><input type="radio" name="PPS_4" value="5.5"><span class="button">(5.5) 有相撞傾向，嚴重: ≥ 2 次相撞傾向<br></label>
+							<label><input type="radio" name="PPS_4" value="4.0"><span class="button">(4.0) 有相撞傾向，中重: 2 次相撞傾向<br></label>
+							<label><input type="radio" name="PPS_4" value="2.5"><span class="button">(2.5) 有相撞傾向: 1 次相撞傾向<br></label>
+							<label><input type="radio" name="PPS_4" value="1.0"><span class="button">(1.0) 無相撞及相撞傾向</label>
+							<p>-<br>P.S. 同時有相撞及相撞傾向時應加總分數，但最多10分<br></label>
+							<label><input type="radio" name="PPS_4" value="9.5"><span class="button">(9.5) 1次相撞傾向 + 1次相撞</label></td>
+						<td><p>【自我功能受損】</p>
+							<ul class="BGfactorIntList">
+								<li>預期計畫能力不佳, 衝動, 難區辨圖形-背景關係</li>
+							</ul>
+							<p>【其他解釋】</p>
+							<ul class="BGfactorIntList">
+								<li>生理損傷 -> 周圍神經或肌肉受損 & 適於區辨器質性腦傷</li>
+								<li>發展因素 -> 7歲前常見相撞 運動控制及知覺敏感發展</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>5. 轉紙</p><p>shift in the position of the paper</p></td>
+						<td>將抄繪的紙張旋轉近90度 (垂直轉成水平)</td>
+						<td>
+							<label><input type="radio" name="PPS_5" value="10.0"><span class="button">(10.0) 每個圖都轉紙<br></label>
+							<label><input type="radio" name="PPS_5" value="7.0"><span class="button">(7.0) 3~8 個圖轉紙<br></label>
+							<label><input type="radio" name="PPS_5" value="5.5"><span class="button">(5.5) 1~2 個圖轉紙<br></label>
+							<label><input type="radio" name="PPS_5" value="1.0"><span class="button">(1.0) 沒有轉紙</label></td>
+						<td><p>【壓抑或潛在的攻擊或對立】</p>
+							<p>紙與卡擺放不一，導致知覺失調及焦慮，進而產生轉紙或轉卡的衝動</p>
+							<ul class="BGfactorIntList">
+								<li>不轉 -> 健康者抑制衝動</li>
+								<li>轉 -> 潛藏或被動對立</li>
+							</ul></td></tr>
+				</tbody>
+			</table>
+
+			<p><br></p>
+
+			<h3>完形改變因子 factor related to change in the gestalt</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="10%">因子</td><td width="29%">定義</td><td width="29%">Psychopathology Scale 計分</td><td width="29%">投射性解釋</td></tr>
+					<tr>
+						<td><p>6. 閉合困難</p><p>closure difficulty</p>
+							<p>(圖 A, 2, 4, 7, 8)</p></td>
+						<td><p>圖形中的"線段間"或"部分間"的接合(joining)有困難</p>
+							<p>可能的困難樣態有: 重畫, 素描式(品質差), 擦拭, 筆觸變深</p>
+							<ul class="BGfactorDefList">
+								<li>兩邊接合困難: 圖 A, 4, 7, 8</li>
+								<li>完整封閉圓困難: 圖 A, 2</li>
+								<li>兩部分接合困難: 圖 A, 4, 7</li>
+							</ul>
+						<td>
+							<label><input type="radio" name="PPS_6" value="10.0"><span class="button">(10.0) 非常嚴重: ≥ 9 分<br></label>
+							<label><input type="radio" name="PPS_6" value="7.75"><span class="button">(7.75) 嚴重: 6~8 分<br></label>
+							<label><input type="radio" name="PPS_6" value="5.5"><span class="button">(5.5) 中度: 3~5 分<br></label>
+							<label><input type="radio" name="PPS_6" value="3.25"><span class="button">(3.25) 輕微: 1~2 分<br></label>
+							<label><input type="radio" name="PPS_6" value="1.0"><span class="button">(1.0) 無: 沒有閉合困難</label>
+							<ul class="BGfactorDefList">
+								<li>一圖最多計 2 次閉合困難 (最多 2 分)</li>
+								<li>圖 2: 2 次困難算 1 分; ≥ 3 次困難算 2 分</li>
+							</ul></td>
+						<td><p>【維持適切人際關係, 情緒適應】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 於人際關係中易感害怕</li>
+								<li>-> 整體情緒困擾</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>7. 交叉困難</p><p>crossing difficulty</p><p>(圖 6, 7)</p></td>
+						<td><p>圖 6 & 圖 7 中兩部分交叉處繪製困難</p>
+							<p>可能的困難樣態有: 重畫, 素描式(品質差), 擦拭, 筆觸變深</p></td>
+						<td>
+							<label><input type="radio" name="PPS_7" value="10.0"><span class="button">(10.0) 嚴重: 3 次<br></label>
+							<label><input type="radio" name="PPS_7" value="7.0"><span class="button">(7.0) 中度: 2 次<br></label>
+							<label><input type="radio" name="PPS_7" value="4.0"><span class="button">(4.0) 輕度: 1 次<br></label>
+							<label><input type="radio" name="PPS_7" value="1.0"><span class="button">(1.0) 無: 0 次</label></td>
+						<td><p>【心理阻塞】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 猶豫不決, 強迫疑心, 畏懼</li>
+							</ul>【人際關係困難】</td></tr>
+					<tr>
+						<td><p>8. 曲率困難</p><p>curvature difficulty</p><p>(圖 4, 5, 6)</p></td>
+						<td><p>圖 4, 5, 6 的曲線有明顯改變 可能的困難樣態有:</p>
+							<ul class="BGfactorDefList">
+								<li>曲線幅度增加或減少</li>
+								<li>以直線或折現取代曲線</li>
+								<li>曲線變平坦</li>
+								<li>曲線分配不均或不規律</li>
+								<li>圖 4, 6 的圈數增加或減少</li>
+							</ul>
+						<td>
+							<label><input type="radio" name="PPS_8" value="10.0"><span class="button">(10.0) 嚴重: 3 次<br></label>
+							<label><input type="radio" name="PPS_8" value="7.0"><span class="button">(7.0) 中度: 2 次<br></label>
+							<label><input type="radio" name="PPS_8" value="4.0"><span class="button">(4.0) 輕度: 1 次<br></label>
+							<label><input type="radio" name="PPS_8" value="1.0"><span class="button">(1.0) 無: 0 次</label></td>
+						<td><p>【情緒展現困難】</p>
+							<ul class="BGfactorIntList">
+								<li>曲率增加 -> 情緒性及情緒反應過度</li>
+								<li>曲率減少 -> 情緒性減低及憂鬱低落</li>
+								<li><p>曲率不規律 -> 情緒行為不穩定</p>
+									<p>(若同時曲率增加) -> 敵意展現</p></li>
+							</ul></td></tr>
+					<tr>
+						<td><p>9. 角度改變</p><p>change in angulation</p>
+							<p>(圖 2, 3, 4, 5, 6, 7)</p></td>
+						<td><p>圖中角度改變超過 15 度 各圖關注之角度:</p>
+							<ul class="BGfactorDefList">
+								<li>圖 2 : 直列與水平線角度</li>
+								<li>圖 3 : 直列點點的折角</li>
+								<li>圖 4 : 曲線與ㄩ的角度</li>
+								<li>圖 5 : 外部點與水平軸線的角度</li>
+								<li>圖 6 : 兩曲線交錯的角度</li>
+								<li>圖 7 : 兩部分間的角度</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_9" value="10.0"><span class="button">(10.0) 5 張圖有角度改變<br></label>
+							<label><input type="radio" name="PPS_9" value="8.0"><span class="button">(8.0) 4 張圖有角度改變<br></label>
+							<label><input type="radio" name="PPS_9" value="6.0"><span class="button">(6.0) 3 張圖有角度改變<br></label>
+							<label><input type="radio" name="PPS_9" value="4.0"><span class="button">(4.0) 2 張圖有角度改變<br></label>
+							<label><input type="radio" name="PPS_9" value="2.0"><span class="button">(2.0) 1 張圖有角度改變<br></label>
+							<label><input type="radio" name="PPS_9" value="1.0"><span class="button">(1.0) 無角度改變</label></td>
+						<td><p>【情感 affective 刺激處理困難】</p>
+							<p>情感控制及衝動控制困難</p>
+							<ul class="BGfactorIntList">
+								<li>角度增加 (變鈍) -> 情感性減低</li>
+								<li>角度減少 (變尖銳) -> 情感性增加</li>
+							</ul>
+							<p>適於區辨器質性腦損傷</p></td></tr>
+				</tbody>
+			</table>
+
+			<p><br></p>
+
+			<h3>完形扭曲因子 factor related distortion of the gestalt (為嚴重心理病理指標)</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="10%">因子</td><td width="29%">定義</td><td width="29%">Psychopathology Scale 計分</td><td width="29%">投射性解釋</td></tr>
+					<tr>
+						<td><p>10. 知覺旋轉</p><p>perceptual rotation</p></td>
+						<td><p>刺激卡片及測驗紙位置皆正常，但抄繪出的整個圖形呈現有旋轉</p>
+							<p>若僅圖形的一部分旋轉不算</p>
+						<td>
+							<label><input type="radio" name="PPS_10" value="10.0"><span class="button">(10.0) 嚴重旋轉: 任一圖旋轉 80~180 度 (可能具診斷病徵 pathognomic)<br></label>
+							<label><input type="radio" name="PPS_10" value="7.0"><span class="button">(7.0) 中度旋轉: 任一圖旋轉 15~79 度 (可能具有人格困擾)<br></label>
+							<label><input type="radio" name="PPS_10" value="4.0"><span class="button">(4.0) 輕度旋轉: 任一圖旋轉 5~14 度 (可能有人格問題 但相對輕微)<br></label>
+							<label><input type="radio" name="PPS_10" value="1.0"><span class="button">(1.0) 沒有旋轉: 沒有旋轉超過 4 度</label></td>
+						<td><p>【自我功能嚴重困擾】</p>
+							<ul class="BGfactorIntList">
+								<li>成人旋轉角度大 -> 嚴重心理病理 <br>兒童旋轉角度大 -> 嚴重對立</li>
+								<li>輕度順時鐘旋轉 -> 憂鬱傾向<br>輕度逆時鐘旋轉 -> 對立傾向</li>
+								<li>沒有意識到旋轉錯誤 -> 思覺失調或器質性腦損傷
+									<br>測試極限時無法修正 -> 更支持精神病或器質性腦損傷</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>11. 退化</p><p>retrogression</p></td>
+						<td>以更原始的完形取代較成熟的完形刺激
+							<ul class="BGfactorDefList">
+								<li>可能的樣態有: <br>圖 2: 用弧線或點取代完整圓<br>圖 1, 3, 5: 用短線段取代點</li>
+								<li>一圖中至少出現 2 次退化才算</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_11" value="10.0"><span class="button">(10.0) 嚴重: 超過 2 圖符合<br></label>
+							<label><input type="radio" name="PPS_11" value="7.0"><span class="button">(7.0) 中度: 2 圖符合<br></label>
+							<label><input type="radio" name="PPS_11" value="4.0"><span class="button">(4.0) 輕度: 1 圖符合<br></label>
+							<label><input type="radio" name="PPS_11" value="1.0"><span class="button">(1.0) 無退化現象</label></td>
+						<td><p>【對創傷的嚴重且慢性防衛機制】<br>【自我功能及整合的缺陷】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 思覺失調: 人格解構, 對慢性衝突不適切的補償</li>
+								<li>-> 強烈焦慮之精神官能症: 無效的防衛機制</li>
+								<li>-> 兒童可能發展延宕 (9 歲前常見退化)<br>-> 或 情緒問題, 攻擊行為</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>12. 簡化</p><p>simplification</p></td>
+						<td>以簡略的圖形抄繪班達刺激圖 可能的樣態有:
+							<ul class="BGfactorDefList">
+								<li>將圖 A 畫成不接觸的兩圖形</li>
+								<li>減少圖 1, 2, 3, 5 中的元素量<br>至少少 3 個元素</li>
+								<li>減少圖 6 的弧線數量</li>
+								<li>以橢圓或矩形繪製圖 7, 8</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_12" value="10.0"><span class="button">(10.0) 嚴重: 超過 2 圖有簡化<br></label>
+							<label><input type="radio" name="PPS_12" value="7.0"><span class="button">(7.0) 中度: 2 圖有簡化<br></label>
+							<label><input type="radio" name="PPS_12" value="4.0"><span class="button">(4.0) 輕度: 1 圖有簡化<br></label>
+							<label><input type="radio" name="PPS_12" value="1.0"><span class="button">(1.0) 無簡化現象</label>
+							<ul class="BGfactorDefList">
+								<li>當圖有破碎 (13.) 或退化 (11.) 時 則不計為簡化</li>
+								<li>每圖僅計 (簡化, 破碎, 退化) 其一</li></td>
+						<td><p>【對外在客體投注 cathexis 減少】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 面對要求時 企圖減少心力耗損 (可能對立傾向或詐病)</li>
+								<li>-> 衝動控制, 執行功能困難</li>
+							</ul></td></tr>
+					<tr>
+						<td><p>13. 破碎</p><p>fragmentation</p></td>
+						<td><p>完形圖形的基本要素毀壞 可能的樣態:</p>
+							<ul class="BGfactorDefList">
+								<li>圖形明顯沒結束或沒完成</li>
+								<li>圖形繪成拆散部件 (部件相隔遙遠 難形成完形)</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_13" value="10.0"><span class="button">(10.0) 嚴重: 超過 2 圖有破碎<br></label>
+							<label><input type="radio" name="PPS_13" value="7.0"><span class="button">(7.0) 中度: 2 圖有破碎<br></label>
+							<label><input type="radio" name="PPS_13" value="4.0"><span class="button">(4.0) 輕度: 1 圖有破碎<br></label>
+							<label><input type="radio" name="PPS_13" value="1.0"><span class="button">(1.0) 無破碎現象</label></td>
+						<td><p>【知覺-動作功能缺陷】<br>【抽象及整合之運思能力受損】
+							<br><br>適於區辨精神病 & 器質性腦損傷</p></td></tr>
+					<tr>
+						<td><p>14. 重疊困難</p><p>overlapping difficulty</p>
+							<p>(圖 A, 4, 7)</p></td>
+						<td>重疊困難或連結困難 樣態有:
+							<ul class="BGfactorDefList">
+								<li>圖 A, 4: 不需重疊時 大量重疊</li>
+								<li>圖 7: 重疊處繪製失敗</li>
+								<li>圖 7: 重疊處圖形被簡化或扭曲</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_14" value="10.0"><span class="button">(10.0) 嚴重: 超過 1 圖有重疊困難<br></label>
+							<label><input type="radio" name="PPS_14" value="5.5"><span class="button">(5.5) 中度: 1 圖有重疊困難<br></label>
+							<label><input type="radio" name="PPS_14" value="1.0"><span class="button">(1.0) 沒有重疊困難</label></td>
+						<td>適於區辨器質性腦損傷</td></tr>
+					<tr>
+						<td><p>15. 精緻化或塗鴉</p><p>elaboration or doodling</p></td>
+						<td><p>使得完形明顯改變的精緻化或塗鴉</p>
+							<ul class="BGfactorDefList">
+								<li>可能的樣態: 外加的裝飾, 線段, 弧線</li>
+								<li>不同於 perseveration (見 16.)</li>
+								<li>點綴若沒有改變完形則不算</li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_15" value="10.0"><span class="button">(10.0) 嚴重: 超過 2 圖有精緻化或塗鴉<br></label>
+							<label><input type="radio" name="PPS_15" value="7.0"><span class="button">(7.0) 中度: 2 圖有精緻化或塗鴉<br></label>
+							<label><input type="radio" name="PPS_15" value="4.0"><span class="button">(4.0) 輕度: 1 圖有精緻化或塗鴉<br></label>
+							<label><input type="radio" name="PPS_15" value="1.0"><span class="button">(1.0) 無精緻化或塗鴉現象</label></td>
+						<td><p>【衝動控制困難】<br>【強烈外顯的焦慮】<br>【心智退化或腦傷】</p></td></tr>
+					<tr>
+						<td><p>16. 持續</p><p>persevervation</p></td>
+						<td><ul class="BGfactorDefList">
+								<li>抄繪時出現前一圖形的元素 但此時該元素未見於刺激卡上<br>如: 圖 2 中畫了來自圖 1 的點</li>
+								<li>繪製出比刺激卡上還要多的元素<br>如: 圖 1 畫了 14 個點 (原本 12 個點) </li>
+							</ul></td>
+						<td>
+							<label><input type="radio" name="PPS_16" value="10.0"><span class="button">(10.0) 嚴重: 超過 2 圖有持續<br></label>
+							<label><input type="radio" name="PPS_16" value="7.0"><span class="button">(7.0) 中度: 2 圖有持續<br></label>
+							<label><input type="radio" name="PPS_16" value="4.0"><span class="button">(4.0) 輕度: 1 圖有持續<br></label>
+							<label><input type="radio" name="PPS_16" value="1.0"><span class="button">(1.0) 無持續現象</label>
+							<ul class="BGfactorDefList">
+								<li>每圖需至少有 2 個持續元素才算有持續</li></ul></td>
+						<td><p>【心智彈性】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 難轉換心智思維 (mindset)</li>
+								<li>-> 固著於已建立的心智思維</li>
+							</ul>
+							<p><br>適於區辨器質性腦損傷</p></td></tr>
+					<tr>
+						<td><p>17. 重畫</p><p>redrawing of the total figure</p></td>
+						<td>二次嘗試繪製圖形<br>且第一次嘗試沒有完整擦拭或僅畫叉覆蓋</td>
+						<td>
+							<label><input type="radio" name="PPS_17" value="10.0"><span class="button">(10.0) 非常嚴重: 有重畫 ≥ 4 次<br></label>
+							<label><input type="radio" name="PPS_17" value="7.75"><span class="button">(7.75) 嚴重: 有重畫 3 次<br></label>
+							<label><input type="radio" name="PPS_17" value="5.5"><span class="button">(5.5) 中度: 有重畫 2 次<br></label>
+							<label><input type="radio" name="PPS_17" value="3.25"><span class="button">(3.25) 輕度: 有重畫 1 次<br></label>
+							<label><input type="radio" name="PPS_17" value="1.0"><span class="button">(1.0) 沒有重畫</label></td>
+						<td><p>【無適切預期性計畫】<br>【強烈自我批評】</p>
+							<ul class="BGfactorIntList">
+								<li>輕度 -> 目前有高焦慮</li>
+							</ul></td></tr>
+				</tbody>
+			</table>
+
+			<p><br><br></p>
+		</section>
+
+		<section class="dataTable">
+			<p class="boxTitle centerText">Other Factors</p>
+			<p class="centerText">此類因子未達統計標準而未納入 Psychopathology Scale<br>但具有解釋受測者行為的臨床價值<br><br></p>
+			<h3>組織因子 factor related to organization</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="19%">因子</td><td width="34%">定義</td><td width="44%">投射性解釋</td></tr>
+					<tr>
+						<td><p>空間使用<br>use of space</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_1" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_1" value="N"><span class="button">正常</label></p></td>
+						<td><p>異常壓縮: 圖形高或寬小於下界<br>異常擴張: 圖形高或寬大於上界</p>
+							<p><br><img src="OthFac_1_pic.png">(單位為英吋)</p></td>
+						<td><p>【行為特質】</p>
+							<ul class="BGfactorIntList">
+								<li>異常壓縮 (越多圖壓縮 則越支持此假設) -> 退縮, 害怕, 內隱敵意</li>
+								<li>異常擴張 (越多圖擴張 則越支持此假設) -> 過度自信, 叛逆, 自我中心</li>
+								<li>異常壓縮及異常擴張皆有 -> 矛盾行為模式 (approach-avoidance)</li></ul></td></tr>
+					<tr>
+						<td><p>邊邊使用<br>use of the margin</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_2" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_2" value="N"><span class="button">正常</label></p></td>
+						<td><p>邊邊使用: 圖形任一部分落在紙張邊緣的 0.5 英吋內<br>異常邊邊使用: ≥ 7 張圖有邊邊使用</p></td>
+						<td><p>【內隱焦慮】</p>
+							<ul class="BGfactorIntList">
+								<li>-> 有內隱焦慮</li>
+								<li>-> 企圖透過外在支持以維持控制 (減低無能感)</li></ul></td></tr>
+					<tr>
+						<td><p>刺激卡片位置移動<br>shift in the position of the stimulus card</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_3" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_3" value="N"><span class="button">正常</label></p></td>
+						<td><p>將刺激卡片近 90 度旋轉<br>(旋轉成變短邊與受測者平行)</p></td>
+						<td><p>【壓抑或潛在的攻擊或對立】<br>(同轉紙的解釋)</p></td></tr>
+				</tbody>
+			</table>
+
+			<p><br></p>
+
+			<h3>尺寸因子 factor related to size (可能與焦慮相關 但焦慮表現多樣 應小心解釋)</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="19%">因子</td><td width="34%">定義</td><td width="44%">投射性解釋</td></tr>
+					<tr>
+						<td><p>尺寸整體增或減<br>overall increase or decrease in size</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_4" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_4" value="N"><span class="button">正常</label></p></td>
+						<td><p>尺寸增或減: 圖形於水平或垂直軸線尺寸增或減 1/4<br>整體尺寸增或減: ≥ 5 個圖形呈現尺寸增或減</p></td>
+						<td><ul class="BGfactorIntList">
+								<li>整體增大<br>-> (感受) 不適, 無能感<br>-> (行為) 代償, 外顯, 武斷</li>
+								<li>整體減小<br>-> (感受) 高焦慮, 疑心<br>-> (行為) 退縮, 被動, 抑制</li>
+								<li>極小 -> 自我功能破碎</li></ul></td></tr>
+					<tr>
+						<td><p>尺寸逐漸增或減<br>progressive increase or decrease in size</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_5" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_5" value="N"><span class="button">正常</label></p></td>
+						<td><p>於至少 6 個圖形呈現有逐步尺寸增大或減小</p></td>
+						<td><ul class="BGfactorIntList">
+								<li>逐步增大<br>-> 易怒, 失控傾向, 衝動行為展現</li>
+								<li>逐步減小<br>-> 傾向於 退縮, 抑制, 憂鬱反應</li>
+								<li>其他解釋: 易身心症狀抱怨, 挫折忍受度低, 自我控制差</li></ul></td></tr>
+					<tr>
+						<td><p>尺寸單獨增或減<br>isolated increase or decrease in size</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_6" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_6" value="N"><span class="button">正常</label></p></td>
+						<td><p>圖形的一部分相較其他部分增大或減小 1/3<br>整個圖形相較其他圖形增大或減小 1/4</p></td>
+						<td><p>【情緒困擾】<br>【內在難以自在展現的性格歷程】</p>
+							<ul class="BGfactorIntList">
+								<li>圖 A 圓形部分改變 -> 與對女性的態度有關<br>圖 A 菱形部分改變 -> 與對男性的態度有關</li>
+								<li>圖 7, 8 部分改變 -> 與性有關議題 (尤其陰莖)</li>
+								<li>青少年圖形尺寸不均 -> 發洩行為, 反社會傾向</li>
+								<li>垂直向尺寸增減 -> 與權威關係衝突有關
+									<br>水平向或側邊尺寸增減 -> 與形成或維持人際關係有關</li></ul></td></tr>
+				</tbody>
+			</table>
+
+			<p><br></p>
+
+			<h3>筆觸移動及作畫因子 factor related to movement and drawing</h3>
+			<table class="PsychopathologyScale" width="97%">
+				<tbody>
+					<tr><td width="19%">因子</td><td width="34%">定義</td><td width="44%">投射性解釋</td></tr>
+					<tr>
+						<td><p>運筆軌跡偏離<br>deviation in direction of movement</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_7" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_7" value="N"><span class="button">正常</label></p></td>
+						<td><p>畫線及曲線時 運筆軌跡偏離預期<br><br>常見軌跡如下: (左撇子可能例外)</p>
+							<ul class="BGfactorDefList">
+								<li>逆時鐘 (尤其繪製封閉圓形時)</li>
+								<li>由上而下</li>
+								<li>由內而外</li></ul></td>
+						<td><p>【人格特質】</p>
+							<ul class="BGfactorIntList">
+								<li>離心軌跡 centrifugal -> 自信, 獨立自主</li>
+								<li>向心軌跡 centripetal -> 自我中心, 對立</li></ul>
+							<p>【人際關係】</p>
+							<ul class="BGfactorIntList">
+								<li>垂直向運筆困難 -> 與權威角色有人際關係困難</li>
+								<li>水平向運筆困難 -> 難維持適切之同儕關係</li></ul>
+							<p>【行為】</p>
+							<ul class="BGfactorIntList">
+								<li>逆時鐘 -> 主動, 外顯對立</li>
+								<li>順時鐘 -> 被動, 對立, 自我中心, 憂鬱</li></ul></td></tr>
+					<tr>
+						<td><p>運筆軌跡不一致<br>inconsistency in direction of movement</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_8" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_8" value="N"><span class="button">正常</label></p></td>
+						<td><p>稍早已建立之慣用運筆軌跡有所改變<br>通常是突然或無法預期的改變<br>如: 於下一張圖或同一張圖時 作風驟變</p></td>
+						<td><ul class="BGfactorIntList">
+								<li>可能精神狀態阻塞 (psychic blocking)</li>
+								<li>作風劇變時的圖可能對其具有特殊或象徵性的意義</li>
+								<li>持續想要發洩強烈的內在衝突</li></ul></td></tr>
+					<tr>
+						<td><p>筆觸品質<br>line quality</p>
+							<p><br>
+								<label><input type="radio" name="OthFac_9" value="Y"><span class="button">異常</label>
+								<label><input type="radio" name="OthFac_9" value="N"><span class="button">正常</label></p></td>
+						<td><p>構成圖形的線的繪製品質異常 樣態包含:</p>
+							<ul class="BGfactorDefList">
+								<li>筆觸過重 (線很深)</li>
+								<li>筆觸過重伴隨協調差</li>
+								<li>筆觸過輕 (線很淺)</li>
+								<li>筆觸過輕伴隨協調差</li>
+								<li>協調差 (如: 不規律, 筆觸不均, 顫抖)</li>
+								<li>素描形式 (品質差)</li>
+							</ul></td>
+						<td><ul class="BGfactorIntList">
+								<li>筆觸過重 -> 焦慮外顯<br>兒童筆觸過重 -> 敵意, 攻擊性</li>
+								<li>筆觸過輕 -> 焦慮內化或被抑制</li>
+								<li>筆觸品質不一 -> 運動控制差, 神經問題, 焦慮</li>
+								<li>素描 -> 感到不適 且有代償企圖</li></ul></td></tr>
+				</tbody>
+			</table>
+
+			<p><br><br></p>
+		
+		</section>
+
+		<section class="buttonSection">
+			<p>
+				<button type="submit" name="submitB" onclick="submitB()">送出</button>
+				<button type="reset" name="resetB" onclick="Reload()">重置</button>
+				<button type="submit" onclick="test1()">測資1</button>
+				<button type="submit" onclick="test2()">測資2</button>
+<!--
+				<button type="submit" onclick="test2()">測資2</button>
+				<button type="submit" onclick="test3()">測資3</button>
+				<button type="submit" onclick="test4()">測資4</button>-->
+			</p>
+		</section>
+
+		<section>
+			<p id="testText"><!--測試文字--> </p>
+		</section>
+		<p><br><br><br><br></p>
+
+
+		<section class="panel-group">
+			<input type="radio" name="panel-radio" id="radio1" class="panel-control" checked>
+			<input type="radio" name="panel-radio" id="radio2" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio3" class="panel-control">
+			<div class="tab-group">
+				<label for="radio1" class="active">Psychopathology Scale</label>
+				<label for="radio2">Configurational Approach</label>
+				<label for="radio3">投射性解釋</label>
+			</div>
+			<div class="content-group">
+				<div class="content content1">
+					<section class="dataTable">
+						<table class="fontSize20">
+							<tr>
+								<td>受測者總分:</td><td id="PsychopathologyScaleScore"></td></tr>
+							<tr>
+								<td>與常模比較:</td><td id="NormCompare"></td></tr>
+						</table>
+
+						<p><br></p>
+
+						<table class="PsychopathologyScale">
+							<tr>
+								<td>常模組別</td><td>受測者來源</td><td>平均數</td><td>標準差</td><td>人數</td></tr>
+							<tr>
+								<td>一般人<br>Normal</td><td></td><td>32.8</td><td>4.9</td><td>140</td></tr>
+							<tr>
+								<td>門診精神官能症<br>Outpatient neurotics</td><td>一般門診的精神官能症病人</td>
+								<td>53.0</td><td>9.5</td><td>150</td></tr>
+							<tr>
+								<td>住院精神官能症<br>Inpatient neurotics</td><td>大部分是嚴重焦慮或憂鬱</td>
+								<td>61.7</td><td>8.7</td><td>55</td></tr>
+							<tr>
+								<td>單極憂鬱症<br>Unipolar depressives</td><td>因非常嚴重之憂鬱症而住院的病人</td>
+								<td>66.2</td><td>6.4</td><td>68</td></tr>
+							<tr>
+								<td>門診思覺失調症<br>Outpatient schizophrenics</td><td>接受心理師或精神科醫師治療之門診思覺失調症病人</td>
+								<td>78.3</td><td>11.8</td><td>60</td></tr>
+							<tr>
+								<td>慢性思覺失調症<br>Chronic schizophrenics</td><td>來自州立精神病醫院 較一般精神病醫院更為貧瘠的精神病病人</td>
+								<td>97.1</td><td>12.1</td><td>155</td></tr>
+							<tr><td>器質性腦損傷<br>Organic brain damage</td><td>依臨床神經學檢查驗證之器質性腦損傷病人</td>
+								<td>101.1</td><td>14.5</td><td>147</td></tr>
+						</table>
+						<p><br></p>
+					</section>
+				</div>
+
+				<div class="content content2">
+					<section class="dataTable">
+						<p class="fontSize20" id="CADescrib"><br>組型分析結果顯示</p>
+
+						<p><br></p>
+
+						<table class="PsychopathologyScale" width="97%">
+							<caption>configurational approach</caption>
+							<thead>
+								<tr>
+									<td></td>
+									<th scope="col">原始分數</th>
+									<th scope="col" colspan=2>器質性腦傷</th>
+									<th scope="col" colspan=2>思覺失調症</th>
+									<th scope="col" colspan=2>單極性憂鬱症</th>
+									<th scope="col" colspan=2>精神官能症</th>
+									<th scope="col" colspan=2>智能障礙</th>
+									<th scope="col" colspan=2>青少年情緒困擾</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">因子</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷">標準</td>
+									<td>權重</td>
+									<td data-label="思覺失調症">標準</td>
+									<td>權重</td>
+									<td data-label="單極性憂鬱症">標準</td>
+									<td>權重</td>
+									<td data-label="精神官能症">標準</td>
+									<td>權重</td>
+									<td data-label="智能障礙">標準</td>
+									<td>權重</td>
+									<td data-label="青少年情緒困擾">標準</td>
+									<td>權重</td>
+								</tr>
+								<tr>
+									<th scope="row">1. 序列</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_1">10</td>
+									<td data-cell="c2_1">2</td>
+									<td data-label="單極性憂鬱症" data-cell="c3_1">4</td>
+									<td data-cell="c3_1">2</td>
+									<td data-label="精神官能症" data-cell="c4_1">4</td>
+									<td data-cell="c4_1">2</td>
+									<td data-label="智能障礙" data-cell="c5_1">7</td>
+									<td data-cell="c5_1">2</td>
+									<td data-label="青少年情緒困擾" data-cell="c6_1">4</td>
+									<td data-cell="c6_1">2</td>
+								</tr>
+								<tr>
+									<th scope="row">2. 首圖位置</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_2">10</td>
+									<td data-cell="c2_2">2</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="c6_2">5</td>
+									<td data-cell="c6_2">1</td>
+								</tr>
+								<tr>
+									<th scope="row">3. 空間使用</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_3">10</td>
+									<td data-cell="c2_3">1</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="c6_3">10</td>
+									<td data-cell="c6_3">2</td>
+								</tr>
+								<tr>
+									<th scope="row">4. 相撞</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_4">8.5</td>
+									<td data-cell="c1_4">2</td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_4">4</td>
+									<td data-cell="c5_4">1</td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">5. 轉紙</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">6. 閉合困難</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_6">7</td>
+									<td data-cell="c1_6">1</td>
+									<td data-label="思覺失調症" data-cell="c2_6">7.75</td>
+									<td data-cell="c2_6">1</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_6">10</td>
+									<td data-cell="c5_6">2</td>
+									<td data-label="青少年情緒困擾" data-cell="c6_6">7.75</td>
+									<td data-cell="c6_6">2</td>
+								</tr>
+								<tr>
+									<th scope="row">7. 交叉困難</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症" data-cell="c3_7">10</td>
+									<td data-cell="c3_7">1</td>
+									<td data-label="精神官能症" data-cell="c4_7">7</td>
+									<td data-cell="c4_7">2</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">8. 曲率困難</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_8">10</td>
+									<td data-cell="c2_8">1</td>
+									<td data-label="單極性憂鬱症" data-cell="c3_8">10</td>
+									<td data-cell="c3_8">2</td>
+									<td data-label="精神官能症" data-cell="c4_8">7</td>
+									<td data-cell="c4_8">1</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">9. 角度改變</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_9">8</td>
+									<td data-cell="c1_9">2</td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症" data-cell="c3_9">10</td>
+									<td data-cell="c3_9">1</td>
+									<td data-label="精神官能症" data-cell="c4_9">6</td>
+									<td data-cell="c4_9">2</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="c6_9">6</td>
+									<td data-cell="c6_9">2</td>
+								</tr>
+								<tr>
+									<th scope="row">10. 知覺旋轉</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_10">10</td>
+									<td data-cell="c1_10">2</td>
+									<td data-label="思覺失調症" data-cell="c2_10">7</td>
+									<td data-cell="c2_10">1</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_10">10</td>
+									<td data-cell="c5_10">2</td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">11. 退化</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_11">7</td>
+									<td data-cell="c2_11">2</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="c6_11">7</td>
+									<td data-cell="c6_11">2</td>
+								</tr>
+								<tr>
+									<th scope="row">12. 簡化</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_12">10</td>
+									<td data-cell="c1_12">2</td>
+									<td data-label="思覺失調症" data-cell="c2_12">7</td>
+									<td data-cell="c2_12">1</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">13. 破碎</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_13">10</td>
+									<td data-cell="c1_13">2</td>
+									<td data-label="思覺失調症" data-cell="c2_13">7</td>
+									<td data-cell="c2_13">1</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_13">10</td>
+									<td data-cell="c5_13">2</td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">14. 重疊困難</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_14">10</td>
+									<td data-cell="c1_14">2</td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_14">5.5</td>
+									<td data-cell="c5_14">2</td>
+									<td data-label="青少年情緒困擾" data-cell="c6_14">5.5</td>
+									<td data-cell="c6_14">2</td>
+								</tr>
+								<tr>
+									<th scope="row">15. 精緻塗鴉</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="c2_15">7</td>
+									<td data-cell="c2_15">2</td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">16. 持續</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_16">7</td>
+									<td data-cell="c1_16">2</td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">17. 重畫</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">空間使用</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症" data-cell="c3_18">4圖壓縮</td>
+									<td data-cell="c3_18">2</td>
+									<td data-label="精神官能症" data-cell="c4_18">嚴重壓縮</td>
+									<td data-cell="c4_18">2</td>
+									<td data-label="智能障礙" data-cell="c5_18">不規律</td>
+									<td data-cell="c5_18">2</td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">邊邊使用</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="c4_19">過度使用</td>
+									<td data-cell="c4_19">2</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">尺寸整體增減</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症"></td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="c5_21">難度漸增</td>
+									<td  data-cell="c5_21">2</td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">尺寸單獨增減</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="c4_23">中度</td>
+									<td data-cell="c4_23">2</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">運筆軌跡不一</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td></td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="c4_25">軌跡不一</td>
+									<td data-cell="c4_25">1</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr class="BackGround_color1">
+									<th scope="row">筆觸品質</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="c1_26">協調差</td>
+									<td data-cell="c1_26">1</td>
+									<td data-label="思覺失調症"></td>
+									<td></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="c4_26">筆觸不均</td>
+									<td data-cell="c4_26">1</td>
+									<td data-label="智能障礙"></td>
+									<td></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">加總權重</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷"></td>
+									<td id="WeiGrp1"></td>
+									<td data-label="思覺失調症"></td>
+									<td id="WeiGrp2"></td>
+									<td data-label="單極性憂鬱症"></td>
+									<td id="WeiGrp3"></td>
+									<td data-label="精神官能症"></td>
+									<td id="WeiGrp4"></td>
+									<td data-label="智能障礙"></td>
+									<td id="WeiGrp5"></td>
+									<td data-label="青少年情緒困擾"></td>
+									<td id="WeiGrp6"></td>
+								</tr>
+								<tr>
+									<th scope="row">切截分數</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="cut_score">≥ 10</td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="cut_score">≥ 7</td>
+									<td></td>
+									<td data-label="單極性憂鬱症" data-cell="cut_score">≥ 6</td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="cut_score">≥ 8</td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="cut_score">≥ 8</td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="cut_score">≥ 9</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">邊緣分數</th>
+									<td data-label="原始分數"></td>
+									<td data-label="器質性腦傷" data-cell="margin_score">7-9</td>
+									<td></td>
+									<td data-label="思覺失調症" data-cell="margin_score">4-6</td>
+									<td></td>
+									<td data-label="單極性憂鬱症" data-cell="margin_score">4-5</td>
+									<td></td>
+									<td data-label="精神官能症" data-cell="margin_score">4-7</td>
+									<td></td>
+									<td data-label="智能障礙" data-cell="margin_score">5-7</td>
+									<td></td>
+									<td data-label="青少年情緒困擾" data-cell="margin_score">7-8</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><br></p>
+					</section>
+				</div>
+
+				<div class="content content3">
+					<section class="dataTable">
+					<p><br>請自行整合以下各項發現，以形成對個人的投射性人格解釋<br></p>
+					<p id="ProjInt"></p>
+				</div>
+			</div>
+		</section>
+
+		<p><br></p>
+
+	</article>
+
+	<footer>
+		Shin心理師 你的臨床小秘書
+	</footer>
+</body>
+
+
+</html>
