@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="DSM5">
+	<meta name="description" content="Diagnostic and Statistical Manual of Mental Disorders, 5ed">
+	<link href="../img/favicon.ico" rel="shortcut icon"/>
+	<link href="../img/favicon.ico" rel="bookmark"/>
+	<title>DSM-5</title>
+	<link rel="stylesheet" type="text/css" href="DSM5.css">
+	<script type="text/javascript" src="DSM5.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div class="BG2 noPrint">
+			<img src="banner3.PNG" class="BG_pic">
+		</div>
+	</header>
+
+	<article>
+		<div class="floatDiv WhiteBack1">
+			<div class="divTry1 radio">
+				<ul><li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child1')">
+					<span class="button">神經發展障礙症</span></label></li>
+						<ul id="Child1" class="Childs">
+							<li>【智能不足】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_1')">
+								<span class="button">智能不足</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_2')">
+								<span class="button">整體發展遲緩</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_3')">
+								<span class="button">非特定的智能不足</span></label></li>
+							</ul>
+							<li>【溝通障礙症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_4')">
+								<span class="button">語言障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_5')">
+								<span class="button">語言發音障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_6')">
+								<span class="button">兒童期初發型語暢障礙症（口吃）</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_7')">
+								<span class="button">社交語用溝通障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_8')">
+								<span class="button">非特定的溝通障礙症</span></label></li>
+							</ul>
+							<li>【自閉症類群障礙症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_9')">
+								<span class="button">自閉症類群障礙症</span></label></li>
+							</ul>
+							<li>【注意力不足/過動症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_10')">
+								<span class="button">注意力不足/過動症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_11')">
+								<span class="button">其他特定的注意力不足/過動症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_12')">
+								<span class="button">非特定的注意力不足/過動症</span></label></li>
+							</ul>
+							<li>【特定的學習障礙症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_13')">
+								<span class="button">特定的學習障礙症</span></label></li>
+							</ul>
+							<li>【動作障礙症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_14')">
+								<span class="button">動作協調發展障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_15')">
+								<span class="button">重覆動作障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_16')">
+								<span class="button">抽搐症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_17')">
+								<span class="button">其他特定的抽搐症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_18')">
+								<span class="button">非特定的抽搐症</span></label></li>
+							</ul>
+							<li>【其他的神經發展障礙症】</li>
+							<ul>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_19')">
+								<span class="button">其他特定的神經發展障礙症</span></label></li>
+								<li><label><input type="radio" name="ChildDisorders" onchange="ShowCriteria('Ch1_20')">
+								<span class="button">非特定的神經發展障礙症</span></label></li>
+							</ul>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child2')">
+					<span class="button">思覺失調類群和其他精神病症</span></label></li>
+						<ul id="Child2" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">思覺失調型（人格）障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">妄想症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">短暫精神病症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">類思覺失調症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">思覺失調症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">情感思覺失調症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的精神病症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的精神病症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一精神障礙症合併的僵直症（特別註明僵直症）</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的僵直症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的僵直症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的思覺失調類群及其他精神病症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的思覺失調類群及其他精神病症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child3')">
+					<span class="button">雙相情緒及其相關障礙症</span></label></li>
+						<ul id="Child3" class="Childs">
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">第一型雙相情緒障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">第二型雙相情緒障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">循環型情緒障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">另一身體病況引起的雙相情緒及其相關障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">其他特定的雙相情緒及其相關障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">非特定的雙相情緒及其相關障礙症</span></label></li>
+							<li><label><input type="radio" name="Ch3Disorders">
+							<span class="button">雙相情緒及其相關障礙症特徵</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child4')">
+					<span class="button">憂鬱症</span></label></li>
+						<ul id="Child4" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">侵擾性情緒失調症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">鬱症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">持續性憂鬱症（輕鬱症）</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">經期前情緒低落症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的憂鬱症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的憂鬱症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的憂鬱症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的憂鬱症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">憂鬱症的特性說明</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child5')">
+					<span class="button">焦慮症</span></label></li>
+						<ul id="Child5" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">分離焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">選擇性不語症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">特定畏懼症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">社交焦慮症（社交畏懼症）</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">恐慌症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">恐慌發作特別註記</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">特定場所畏懼症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">廣泛性焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的焦慮症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child6')">
+					<span class="button">強迫症及相關障礙症</span></label></li>
+						<ul id="Child6" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">強迫症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">身體臆形症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">儲物症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">拔毛症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">摳皮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的強迫症及相關障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的強迫症及相關障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的強迫症及相關障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的強迫症及相關障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child7')">
+					<span class="button">創傷及壓力相關障礙症</span></label></li>
+						<ul id="Child7" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">反應性依附障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">失抑制社會交往症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">創傷後壓力症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">急性壓力症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">適應障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的創傷和壓力相關障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的創傷和壓力相關障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child8')">
+					<span class="button">解離症</span></label></li>
+						<ul id="Child8" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">解離性身份障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">解離性失憶症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">失自我感障礙症/失現實感障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的解離症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的解離症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child9')">
+					<span class="button">身體症狀及相關障礙症</span></label></li>
+						<ul id="Child9" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">身體症狀障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">罹病焦慮症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">轉化症（功能性神經症狀障礙症）</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">受心理因素影響的其他身體病況</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">人為障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的身體症狀及相關障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的身體症狀及相關障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child10')">
+					<span class="button">餵食和飲食障礙症</span></label></li>
+						<ul id="Child10" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">異食症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">反芻症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">迴避/節制型攝食症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">厭食症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">暴食症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">嗜食症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的餵食和飲食障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的餵食和飲食障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child11')">
+					<span class="button">排泄障礙症</span></label></li>
+						<ul id="Child11" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">遺尿症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">遺屎症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的排泄障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的排泄障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child12')">
+					<span class="button">睡醒障礙症</span></label></li>
+						<ul id="Child12" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">失眠症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">嗜睡症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">猝睡症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">阻塞性睡眠呼吸中止呼吸不足</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">中樞性睡眠呼吸中止</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">與睡眠有關的肺泡通氣低下</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">日夜節律睡醒障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非快速動眼睡醒障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">夢魘症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">快速動眼睡眠行為障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">腿部不寧症候群</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的睡眠障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的失眠症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的失眠症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的嗜睡症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的嗜睡症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的睡醒障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的睡醒障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child13')">
+					<span class="button">性功能障礙</span></label></li>
+						<ul id="Child13" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">遲洩</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">勃起障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">女性高潮障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">女性性興趣/興奮障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">骨盆性器疼痛/插入障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">男性性慾低落障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">早洩</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的性功能障礙</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的性功能障礙</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的性功能障礙</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child14')">
+					<span class="button">性別不安</span></label></li>
+						<ul id="Child14" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">性別不安</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的性別不安</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的性別不安</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child15')">
+					<span class="button">侵擾行為、衝動控制及行為規範障礙症</span></label></li>
+						<ul id="Child15" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">對立反抗症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">間歇暴怒障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">行為規範障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">反社會型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">病態縱火症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">病態偷竊症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的侵擾行為、衝動控制及行為規範障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的侵擾行為、衝動控制及行為規範障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child16')">
+					<span class="button">物質相關及成癮障礙症</span></label></li>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child17')">
+					<span class="button">認知類障礙症</span></label></li>
+						<ul id="Child17" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">認知範疇</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">譫妄</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的譫妄</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的譫妄</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">阿茲海默症引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">額顳葉認知障礙症或輕型額顳葉認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">路易氏體認知障礙症或輕型路易氏體認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">血管疾病引起的認知障礙症或輕型血管疾病引起的認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">外傷性腦傷引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">物質/醫藥引發的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">人類免疫缺乏病毒感染引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">普利昂病引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">巴金森氏症引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">亨丁頓病引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">多重病因引起的認知障礙症或輕型認知障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的認知障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child18')">
+					<span class="button">人格障礙症</span></label></li>
+						<ul id="Child18" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">一般人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">妄想型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">孤僻型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">思覺失調型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">反社會型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">邊緣型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">做作型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">自戀型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">畏避型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">依賴型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">強迫型人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">身體病況引起的人格改變</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的人格障礙症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的人格障礙症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child19')">
+					<span class="button">性偏好症</span></label></li>
+						<ul id="Child19" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">窺視症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">暴露症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">摩擦症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">性被虐症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">性施虐症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">戀童症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">戀物症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">異裝症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的性偏好症</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的性偏好症</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child20')">
+					<span class="button">其他精神疾病</span></label></li>
+						<ul id="Child20" class="Childs">
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的特定精神疾病</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">另一身體病況引起的非特定精神疾病</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">其他特定的精神疾病</span></label></li>
+							<li><label><input type="radio" name="ChildDisorders">
+							<span class="button">非特定的精神疾病</span></label></li>
+						</ul>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child21')">
+					<span class="button">醫藥引起的動作障礙症及其他醫藥副作用</span></label></li>
+					<li><label><input type="radio" name="ShowChapter" onchange="ShowChild('Child22')">
+					<span class="button">可能是臨床關注焦點的其他情況</span></label></li></ul>
+			</div>
+
+			<div class="divTry2">
+				<div id="Ch1_1" class="AllDiags">
+					<h3>智能不足 (Intellectual Disabilities)
+						<br>智能發展障礙症；Intellectual Development Disorder</h3>
+					<p>智能不足（智能發展障礙症）是一種在發展階段中發生的障礙症，它包括於概念、社會及實務領域中在智力與適應功能方面的缺損。下列三項準則皆需符合：</p>
+					<ul class="upperAlhpa">
+						<li>智力功能（如，推論、解決問題、計畫、抽象思考、判斷、學業學習、經驗學習）缺損：經由臨床評估及個別準則化智力測驗確認。</li>
+						<li>適應功能缺損：造成個人在獨立與擔當社會責任方面無法達到發展及社會文化的準則。若無持續的支持，此適應的缺損會使個人在多重環境中（如，家庭、學校、工作及社區）的一類或多類日常活動功能（如，溝通、社會參與及獨立生活）受限。</li>
+						<li>智力與適應功能缺損在發展期間發生。</li></ul>
+					<p>註明目前的嚴重度：
+					<ul><li>317 (F70) 輕度<li>
+						<li>318.0 (F71) 中度</li>
+						<li>318.1 (F72) 重度</li>
+						<li>318.2 (F73) 極重度</li></ul></p>
+				</div>
+
+				<div id="Ch1_2" class="AllDiags">
+					<h3>整體發展遲缓 (Global Developmental Delay) 315.8 (F88)</h3>
+					<p>此診斷保留給末滿五歲的幼兒，於臨床嚴重程度無法被有效評估時使用。當患者於數個智力功能領域末達應有之發展程度時，可以此類別診斷之。它適用於無法進行系統性智力功能評估者—-包括因年齡太小而不適用準則化測驗之幼兒；使用此類別一段時間後，需要重新評估。</p>
+				</div>
+
+				<div id="Ch1_3" class="AllDiags">
+					<h3>非特定的智能不足 (Unspecified Intellectual Disability)
+					<br>(智能發展障礙症；Intellectual Developmental Disorder) 319 (F79)</h3>
+					<p>此診斷保留給五歲以上因下列狀況而無法評定嚴重程度者使用—-所在地區無法提供評估程序、有相關的感官或身體障礙（如，目盲、前語期耳聾、動作失能)、有嚴重行爲問題或合併精神障礙者；此類別應僅限於特殊例外情況時使用，且經過一段時間後，需要重新評估。</p>
+				</div>
+
+				<div id="Ch1_4" class="AllDiags">
+					<h3>語言障礙症 (Language Disorder) 315.32 (F80.2)</h3>
+					<ul class="upperAlhpa">
+						<li>由於在語言理解或產出的缺損，造成在不同語言形式（即口語、書寫、手語或其他）的接收及使用上有持續續的困難，包括下列：</li>
+							<ul class="number">
+								<li>字彙不足（於字的了解及使用）。</li>
+								<li>有限的語句結構（於根據文法和語形的規則結合字和句讀以形成句子的能力）。</li>
+								<li>述說障礙（於運用字彙及連結語句說明或描述一個主題或連續事件的能力，或會話的能力）。</li></ul>
+						<li>相較於該年齡層應達的語言能力，有相當大的落差，以致在有效濟通、社會參與、學業成就或職業表現方面造成單類或多類功能的受限。</li>
+						<li>症狀在早期發展階段出現。</li>
+						<li>這些困難無法歸因於聽覺或其他感官障礙、 動作障礙或別種身體或神經病況，且無法 以智能不足（智能發展障礙症）或整體發展遲緩做更好的解釋。</li></ul>
+				</div>
+
+				<div id="Ch1_5" class="AllDiags">
+					<h3>語言發音障礙症 (Speach Sound Disorder) 315.39 (F80.0)</h3>
+				</div>
+
+				<div id="Ch1_6" class="AllDiags">
+					<h3>兒童期初發型語暢障礙症（口吃）
+						<br>[Childhood-Onset Fluency Disorder] (Stuttering) 315.35 (F80.81)</h3>
+				</div>
+
+				<div id="Ch1_7" class="AllDiags">
+					<h3>社交（語用）溝通障礙症
+						<br>[Social (Pragmatic) Communication Disorder] 315.39 (F80.89)</h3>
+				</div>
+				
+				<div id="Ch1_8" class="AllDiags">
+					<h3>非特定的溝通障礙症 (Unspecified Communication Disorder) 307.9 (F80.2)</h3>
+				</div>
+								
+				<div id="Ch1_9" class="AllDiags">
+					<h3>自閉症類群障礙症 (Autism Spectrum Disorder) 299.00 (F84.0)</h3>
+				</div>
+								
+				<div id="Ch1_10" class="AllDiags">
+					<h3>注意力不足/過動症 (Attention-Deficit/Hyperactivity Disorder)</h3>
+				</div>
+												
+				<div id="Ch1_11" class="AllDiags">
+					<h3>其他特定的注意力不足/過動症 (Other Specified Attention-Deficit/Hyperactivity Disorder) 314.01 (F90.8)</h3>
+				</div>
+												
+				<div id="Ch1_12" class="AllDiags">
+					<h3>非特定的注意力不足/過動症 (Unpecified Attention-Deficit/Hyperactivity Disorder) 314.01 (F90.9)</h3>
+				</div>
+												
+				<div id="Ch1_13" class="AllDiags">
+					<h3>特定的學習障礙症 (Specific Learning Disorder)</h3>
+				</div>
+												
+				<div id="Ch1_14" class="AllDiags">
+					<h3>動作協調發展障礙症 (Developmental Coordination Disorder) 315.4 (F82)</h3>
+				</div>
+												
+				<div id="Ch1_15" class="AllDiags">
+					<h3>重覆動作障礙症 (Stereotypic Movement Disorder) 307.3 (F98.4)</h3>
+				</div>
+												
+				<div id="Ch1_16" class="AllDiags">
+					<h3>抽搐症 (Tic Disorders)</h3>
+				</div>
+												
+				<div id="Ch1_17" class="AllDiags">
+					<h3>其他特定的抽搐症 (Other Specified Tic Disorder) 307.20 (F95.8)</h3>
+				</div>
+												
+				<div id="Ch1_18" class="AllDiags">
+					<h3>非特定的抽搐症 (Unspecified Tic Disorder) 307.20 (F95.9)</h3>
+				</div>
+												
+				<div id="Ch1_19" class="AllDiags">
+					<h3>其他特定的神經發展障礙症 (Other Specified Neurodevelopmental Disorders) 315.8 (F88)</h3>
+				</div>
+												
+				<div id="Ch1_20" class="AllDiags">
+					<h3>非特定的神經發展障礙症 (Unspecified Neurodevelopmental Disorders) 315.9 (F89)</h3>
+				</div>
+												
+				<div id="Ch1_21" class="AllDiags">
+					<h3></h3>
+				</div>
+				
+			</div>
+		</div>
+
+
+	</article>
+
+	<footer style="text-align: center;">
+		<br><br><p id="testText">Shin心理師 你的臨床小秘書</p>
+	</footer>
+</body>
+
+
+</html>

@@ -1,0 +1,86 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+li{
+	list-style: none;
+}
+
+.divTry1 ul {
+	padding-left: 0;
+}
+.divTry1 ul ul{
+	padding-left: 7%;
+}
+
+span:hover{
+	background-color: rgba(50,50,50,0.5);
+}
+
+
+.floatDiv {
+	display: flex;
+	align-items: self-start;
+}
+
+
+.divTry1 {
+	float: left;
+	flex: 1;
+	padding: 15px;
+	border: #CCC solid 1px;
+}
+
+
+.radio input[type="radio"] {display: none;}
+.radio input:checked + .button {background: #333; color: #fff;}
+.radio .button {color: #333; text-align: left;}
+
+.Childs {
+	display: none;
+}
+
+
+.divTry2 {
+	float: left;
+	flex: 3;
+	padding: 15px;
+	border: #CCC solid 1px;
+}
+
+
+
+.upperAlhpa li {
+	list-style-type:upper-alpha;
+}
+
+.number li {
+	list-style-type:decimal;
+}
+
+.AllDiags {
+	display: none;
+}
+
+
+
+.BG2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+
+.BG_pic {
+  width: 100%;
+  min-height: 100%;
+  min-width: 900px;
+  opacity: 0.7;
+}
+
+.WhiteBack1{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.5);
+}
