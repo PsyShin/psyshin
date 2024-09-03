@@ -1,0 +1,157 @@
+* {
+  font-family: Microsoft JhengHei;
+}
+
+li{
+	list-style: none;
+}
+
+.divTry1 ul {
+	padding-left: 0;
+}
+.divTry1 ul ul{
+	padding-left: 7%;
+}
+
+span:hover{
+	background-color: rgba(50,50,50,0.5);
+}
+
+
+.DSM5BtnDiv{
+	display: none;
+}
+#DSM5Btn input[type="button"],
+#Ch3_1 input[type="button"],
+#Ch3_2 input[type="button"]{
+	display: none;
+}
+
+#DSM5List, 
+#Ch3_1ManicEpisode, 
+#Ch3_1HypomanicEpisode, 
+#Ch3_1MDEpisode,
+#Ch3_2HypomanicEpisode, 
+#Ch3_2MDEpisode {
+	display: none;
+}
+
+
+.floatDiv {
+	display: flex;
+	align-items: self-start;
+}
+
+
+.divTry1 {
+	float: left;
+	flex: 1;
+	padding: 15px;
+	border: #CCC solid 1px;
+}
+
+
+.radio input[type="radio"], 
+.DSM5BtnDiv input[type="radio"] {display: none;}
+
+.radio input:checked + .button,
+.DSM5BtnDiv input:checked + .button {background: #333; color: #fff;}
+
+.radio .button,
+.DSM5BtnDiv .button {color: #333; text-align: left;}
+
+.Childs {
+	display: none;
+}
+
+
+.divTry2 {
+	float: left;
+	flex: 3;
+	padding: 15px;
+	background-color: #F0F0F0;
+}
+
+
+
+.upperAlhpa li {
+	list-style-type: upper-alpha;
+}
+
+.number li {
+	list-style-type: decimal;
+}
+
+.lowerAlhpa li {
+	list-style-type: lower-alpha;
+}
+
+.romanNum li {
+	list-style-type: lower-roman;
+}
+
+.specifier li {
+	list-style-type: square;
+}
+
+.AllDiags {
+	display: none;
+}
+
+.WhiteBlack {
+	background-color: #333;
+	color: #fff;
+}
+
+td {
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+
+
+
+.BG2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+
+.BG_pic {
+  width: 100%;
+  min-height: 100%;
+  min-width: 900px;
+  opacity: 0.7;
+}
+
+.WhiteBack1{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+	.DSM5BtnDiv{
+		display: block;
+		position: absolute;
+		width: 100%;
+		background-color: #fff;
+		z-index: 10;
+	}
+
+	.divTry1{
+		display: none;
+	}
+
+	#DSM5List {
+		border: rgba(50,50,50,0.3) solid 1px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
