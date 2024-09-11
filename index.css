@@ -10,6 +10,19 @@ a {
   display: block;
   text-decoration: none;
 }
+
+.myMail1 {
+  display: inline;
+  color: black;
+  text-decoration: underline;
+}
+
+.myMail2 {
+  display: inline;
+  color: white;
+  text-decoration: underline;
+}
+
 /* 手機版選單列樣式 */
 .navbar {
   flex-direction: column;
@@ -20,13 +33,13 @@ a {
   z-index: 99;
 }
 
-.hamburger:hover, .DSMopen:hover {
+.hamburger:hover, .BarStyle:hover {
   background-color: #FFF;
   color: #333;
 }
 
 /* 漢堡按鈕  */
-.hamburger, .DSMopen {
+.hamburger, .BarStyle {
   background-color: #333;
   color: #FFF;
   padding: 5px 10px;
@@ -125,4 +138,5 @@ a {
   min-width: 974px;
   opacity: 0.5;
 }
+
 
