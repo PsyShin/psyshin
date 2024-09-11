@@ -1,0 +1,128 @@
+/* 基本 */
+* {
+  font-family: Microsoft JhengHei;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+/* 手機版選單列樣式 */
+.navbar {
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 99;
+}
+
+.hamburger:hover, .DSMopen:hover {
+  background-color: #FFF;
+  color: #333;
+}
+
+/* 漢堡按鈕  */
+.hamburger, .DSMopen {
+  background-color: #333;
+  color: #FFF;
+  padding: 5px 10px;
+  font-size: 15px;
+  border: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px auto;
+  transition: 0.35s;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  animation: hide 0.35s both;
+}
+.navigation.show {
+  display: flex;
+  animation: show 0.35s both;
+}
+
+@keyframes hide {
+  from { 
+    opacity: 1;  
+    display: flex; /*動態顯示*/
+  }
+  to   { 
+    opacity: 0;  
+    display: none;/*動態消失*/ 
+  }
+}
+
+@keyframes show {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+  border-radius: 15px;
+}
+.menu a {
+  color: white;
+  margin: 10px;
+}
+.menu ul a:hover {
+  color: #95CACA;
+}
+
+
+.Content {
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 240, 240, 0.5);
+}
+
+.highLight {
+  padding: 0 5px;
+  background-color: #333;
+  color: #FFF;
+}
+
+.happyVol {
+  width:30%; 
+  position: fixed; 
+  bottom: 0; 
+  right: 0;
+}
+
+
+.BG2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+
+.BG_pic {
+  width: 100%;
+  min-height: 100%;
+  min-width: 974px;
+  opacity: 0.5;
+}
+
