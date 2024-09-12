@@ -19,15 +19,15 @@ h3 {
 
 
 .radio {
-	font-size: 1.4vw;
+	font-size: 2vw;
 }
 
 .radio input[type="radio"] {display: none;}
 
 .radio input:checked + .choose {background: #5B5B5B; color: #fff;}
 
-.radio .itemTitle {display: inline-block; padding: 2px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px; background: #f7f7f7; color: #333; width: 45%; text-align: left;}
-.radio .choose {display: inline-block; padding: 2px; padding-top: 4px; padding-bottom: 4px; background: #f7f7f7; color: #333; width: 8%; text-align: center;}
+.radio .itemTitle {display: inline-block; padding: 2px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px; background: #fff; color: #333; width: 70%; text-align: left;}
+.radio .choose {display: inline-block; padding: 2px; padding-top: 4px; padding-bottom: 4px; background: #f7f7f7; color: #333; width: 12%; text-align: center;}
 
 
 
