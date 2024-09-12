@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="procrastination scale">
+	<meta name="description" content="procrastination scale">
+	<link href="../img/favicon.ico" rel="shortcut icon"/>
+	<link href="../img/favicon.ico" rel="bookmark"/>
+	<title>Procrastination</title>
+	<link rel="stylesheet" type="text/css" href="forAllTesting.css">
+	<script type="text/javascript" src="procrastination.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div class="BG2 noPrint">
+			<img src="../img/BG1.png" class="BG_pic">
+		</div>
+
+		<hgroup>
+			<h1>Procrastination Scale</h1>
+			<h3>來測測看你的拖延表現</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<section class="WhiteBack1 noPrint">
+			<h3>一般人會使用以下的陳述句來形容自己。請判斷您與以下每一個陳述句的符合程度。</h3>
+			<div class="radio">
+				<label><span class="itemTitle">1. 我經常在做我幾天前就想做的事情</span></label>
+				<label><input type="radio" name="Proc1"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc1"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc1"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc1"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc1"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">2. 直到快要交作業前我才會寫它</span></label>
+				<label><input type="radio" name="Proc2"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc2"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc2"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc2"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc2"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">3. 當我看完圖書館借來的書後，不管是否到期，我都會馬上歸還</span></label>
+				<label><input type="radio" name="Proc3"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc3"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc3"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc3"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc3"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">4. 每當早上起床時間一到，我幾乎都馬上起床</span></label>
+				<label><input type="radio" name="Proc4"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc4"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc4"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc4"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc4"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">5. 在我寫完信後，會過個幾天才寄出</span></label>
+				<label><input type="radio" name="Proc5"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc5"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc5"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc5"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc5"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">6. 我一般都是立刻回撥電話</span></label>
+				<label><input type="radio" name="Proc6"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc6"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc6"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc6"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc6"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">7. 即使是很簡單的工作，我也很少在幾天內完成</span></label>
+				<label><input type="radio" name="Proc7"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc7"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc7"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc7"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc7"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">8. 我經常很快速地做出決定</span></label>
+				<label><input type="radio" name="Proc8"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc8"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc8"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc8"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc8"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">9. 我通常會延遲我必須要做的工作</span></label>
+				<label><input type="radio" name="Proc9"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc9"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc9"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc9"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc9"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">10. 我經常需要很匆忙地趕作業才得以準時完成它</span></label>
+				<label><input type="radio" name="Proc10"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc10"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc10"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc10"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc10"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">11. 當準備要外出時，我很少在最後一刻才發現有什麼事情必須去做</span></label>
+				<label><input type="radio" name="Proc11"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc11"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc11"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc11"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc11"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">12. 在為一些有截止期限的事情做準備時，我經常浪費時間做其他事</span></label>
+				<label><input type="radio" name="Proc12"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc12"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc12"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc12"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc12"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">13. 我喜歡提前赴約</span></label>
+				<label><input type="radio" name="Proc13"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc13"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc13"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc13"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc13"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">14. 我經常在作業指派後沒多久就開始做作業</span></label>
+				<label><input type="radio" name="Proc14"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc14"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc14"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc14"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc14"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">15. 我經常比必須完工的時間更早完成工作</span></label>
+				<label><input type="radio" name="Proc15"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc15"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc15"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc15"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc15"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">16. 我總是在最後一刻才去買生日禮物或聖誕禮物</span></label>
+				<label><input type="radio" name="Proc16"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc16"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc16"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc16"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc16"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">17. 即使是必需品，我也經常到最後一刻才買</span></label>
+				<label><input type="radio" name="Proc17"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc17"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc17"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc17"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc17"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">18. 我經常能完成我一天中計畫好要做的所有事</span></label>
+				<label><input type="radio" name="Proc18"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc18"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc18"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc18"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc18"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">19. 我一直在說「我明天會做」</span></label>
+				<label><input type="radio" name="Proc19"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc19"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc19"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc19"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc19"><span class="choose">非常符合</span></label>
+			</div>
+
+			<div class="radio">
+				<label><span class="itemTitle">20. 在晚上休息之前，我通常會先安頓好所有必須做的事情</span></label>
+				<label><input type="radio" name="Proc20"><span class="choose">非常不符合</span></label>
+				<label><input type="radio" name="Proc20"><span class="choose">不符合</span></label>
+				<label><input type="radio" name="Proc20"><span class="choose">普通</span></label>
+				<label><input type="radio" name="Proc20"><span class="choose">符合</span></label>
+				<label><input type="radio" name="Proc20"><span class="choose">非常符合</span></label>
+			</div>
+		</section>
+
+<!--
+
+上方20題的計分方式如下
+===
+1, 2, 5, 7, 9, 10, 12, 16, 17, 19 題
+非常不符合 = 1分
+不符合 = 2分
+普通 = 3分
+符合 = 4分
+非常符合 = 5分
+
+===
+3, 4, 6, 8, 11, 13, 14, 15, 18, 20 題
+非常不符合 = 5分
+不符合 = 4分
+普通 = 3分
+符合 = 2分
+非常符合 = 1分
+
+===
+最後將每一題的分數加總並記下來
+
+-->
+
+		<br><br>
+		<div class="CenterSec noPrint">
+			<input type="button" value="送出" onclick="SubmitBtn()">
+<!--
+			<input type="button" value="列印" onclick="PrintBtn()">
+-->
+			<input type="button" value="Test" onclick="TestBtn()">
+		</div>
+
+		<br>
+
+		<section class="CentAlig">
+			<p id="Score" class="fontSize20"></p>
+		</section>
+
+		<div class="CentAlig" id="RadarDiv">
+			<canvas id="RadarChart" style="padding: 10px; background-color: #fff"></canvas>
+		</div>
+
+		<br>
+
+
+		<div class="CentAlig" style="background-color: #fff; display: none;" id="InterTable">
+			<div>
+				<p class="fontSize20"><br>找找看你的分數在哪裡？<br>(下為344人常模樣本)</p>
+				<img src="../img/ProcDistByMed.png" width="80%">
+			</div>
+
+			<br><br>
+
+			<table width="100%">
+				<tr><td colspan="2">各向度解釋</td></tr>
+				<tr class="WhiteBlack"><td>向度</td>
+					<td>解釋</td></tr>
+				<tr><td>Delay</td>
+					<td>事情絕不會第一時間處理，一定先放著一陣子，以為跟酒一樣越放越香，直到快臭酸才想處理。</td></tr>
+				<tr><td>Poor Time Management</td>
+					<td>時間管理很差，應該向羅志祥學習。</td></tr>
+				<tr><td>Until Deadline</td>
+					<td>總是死到臨頭才開始要做，不見棺材不掉淚類型，越過死線只是家常便飯。</td></tr>
+				<tr><td>Slow</td>
+					<td>慢慢來比較快，但其實沒有，慢慢來就是拖。</td></tr>
+			</table>
+		</div>
+
+
+
+
+	</article>
+
+	<footer style="text-align: center;">
+		<br><br>Shin心理師 你的臨床小秘書
+	</footer>
+</body>
+
+
+</html>
