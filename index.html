@@ -46,14 +46,27 @@
 
 	<article>
 		<div class="Content">
-			<h2>心理小秘書</h2>
-			<p>心理小秘書協助您常見的心理測驗的計分及解釋
-				<br>建議您以電腦及 Google Chrome 瀏覽器使用
-				<br>若用手機 建議橫放手機</p>
-			<p>若您發現 Bug 請與 <a class="myMail1" href="mailto:chenpatrick94@gmail.com">chenpatrick94@gmail.com</a> 聯繫</p>
-			<div class="highLight"><p>若您想贊助程式開發 請立即聯繫 <a class="myMail2" href="mailto:chenpatrick94@gmail.com">chenpatrick94@gmail.com</a></p></div>
-			<p style="text-align: right;">Shin心理師<br>Since 2024.9</p>
+			<div class="DivAlig GreyBack">
+				<h2>心理小秘書</h2>
+				<p>心理小秘書協助您常見的心理測驗的計分及解釋
+					<br>建議您以電腦及 Google Chrome 瀏覽器使用
+					<br>若用手機 建議橫放手機</p>
+				<p>若您發現 Bug 請與 <a class="myMail1" href="mailto:chenpatrick94@gmail.com">chenpatrick94@gmail.com</a> 聯繫</p>
+				<div class="highLight"><p>若您想贊助程式開發 請立即聯繫 <a class="myMail2" href="mailto:chenpatrick94@gmail.com">chenpatrick94@gmail.com</a></p></div>
+				<p style="text-align: right;">Shin心理師<br>Since 2024.9</p>
+			</div>
+
+			<div class="DivAlig" id="BSRSBtnDisp1">
+				<button id="BSRSBtn" class="BarStyle">
+					心<br>情<br>溫<br>度<br>計
+				</button>
+			</div>
+
+			<div class="DivAlig" id="BSRSBtnDisp2">
+				<button id="BSRSBtn2" class="BarStyle">心情溫度計</button>
+			</div>
 		</div>
+
 
 		<div>
 			<img src="img/volley.GIF" class="happyVol">
@@ -61,6 +74,81 @@
 	</article>
 
 </body>
+
+
+<dialog id="BSRS_Dialog">
+	<p>心情溫度計 (Brief Symptom Rating Scale, BSRS)</p>
+	<p>請您仔細回想<strong>「在最近一星期中（包含今天）」</strong>，這些問題使您感到困擾或苦惱的程度，然後圈選一個您認為最能代表您感覺的答案。</p>
+
+	<div class="radio">
+		<label><span class="itemTitle0"></span></label>
+		<label><input type="radio" name="BSRS0"><span class="choose">完全沒有</span></label>
+		<label><input type="radio" name="BSRS0"><span class="choose">輕微</span></label>
+		<label><input type="radio" name="BSRS0"><span class="choose">中等程度</span></label>
+		<label><input type="radio" name="BSRS0"><span class="choose">厲害</span></label>
+		<label><input type="radio" name="BSRS0"><span class="choose">非常厲害</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">1. 睡眠困擾，譬如難以入睡、易醒或早醒</span></label>
+		<label><input type="radio" name="BSRS1"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS1"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS1"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS1"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS1"><span class="choose">4</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">2. 感覺緊張不安</span></label>
+		<label><input type="radio" name="BSRS2"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS2"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS2"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS2"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS2"><span class="choose">4</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">3. 覺得容易動怒</span></label>
+		<label><input type="radio" name="BSRS3"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS3"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS3"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS3"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS3"><span class="choose">4</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">4. 感覺憂鬱、心情低落</span></label>
+		<label><input type="radio" name="BSRS4"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS4"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS4"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS4"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS4"><span class="choose">4</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">5. 覺得比不上別人</span></label>
+		<label><input type="radio" name="BSRS5"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS5"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS5"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS5"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS5"><span class="choose">4</span></label>
+	</div>
+
+	<div class="radio">
+		<label><span class="itemTitle">*. 有自殺的想法</span></label>
+		<label><input type="radio" name="BSRS6"><span class="choose">0</span></label>
+		<label><input type="radio" name="BSRS6"><span class="choose">1</span></label>
+		<label><input type="radio" name="BSRS6"><span class="choose">2</span></label>
+		<label><input type="radio" name="BSRS6"><span class="choose">3</span></label>
+		<label><input type="radio" name="BSRS6"><span class="choose">4</span></label>
+	</div>
+
+	<p id="BSRS_result">得分:<br>說明:</p>
+
+	<button id="BSRS_closeBtn" class="BarStyle">關閉</button>
+	<button id="BSRS_OKBtn" class="BarStyle">算分</button>
+
+</dialog>
 
 
 </html>
