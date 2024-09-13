@@ -102,12 +102,34 @@ a {
 
 .Content {
   position: absolute;
-  padding: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(240, 240, 240, 0.5);
 }
+
+.DivAlig {
+  display: inline-block;
+  float: left;
+}
+
+.GreyBack {
+  background-color: rgba(240, 240, 240, 0.5);
+  padding: 10px;
+}
+
+.BlackBack {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #333;
+  color: #FFF;
+}
+
+.BlackBack:hover {
+  background-color: #FFF;
+  color: #333;
+}
+
+
 
 .highLight {
   padding: 0 5px;
@@ -139,4 +161,41 @@ a {
   opacity: 0.5;
 }
 
+
+
+/* Dialog */
+#BSRS_Dialog {
+  max-width: 560px;
+  border: none;
+  box-shadow: 0 2px 6px #ccc;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.radio input[type="radio"] {display: none;}
+.radio input:checked + .choose {background: #5B5B5B; color: #fff;}
+.radio .itemTitle {display: inline-block; padding: 2px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px; background: #fff; color: #333; width: 55%; text-align: left;}
+.radio .itemTitle0 {display: inline-block; padding: 2px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px; width: 55%; text-align: left;}
+.radio .choose {display: inline-block; padding: 2px; padding-top: 4px; padding-bottom: 4px; background: #f7f7f7; color: #333; width: 5%; text-align: center;}
+
+#BSRS_closeBtn {
+  float: left;
+}
+
+#BSRS_OKBtn {
+  float: right;
+}
+
+#BSRSBtnDisp2{
+  display: none;
+}
+
+@media screen and (max-width:990px) {
+  #BSRSBtnDisp1 {
+    display: none;
+  }
+  #BSRSBtnDisp2{
+    display: block;
+  }
+}
 
