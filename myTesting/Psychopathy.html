@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Psychopathy Checklist">
+	<meta name="description" content="Psychopathy Checklist">
+	<link href="../img/favicon.ico" rel="shortcut icon"/>
+	<link href="../img/favicon.ico" rel="bookmark"/>
+	<title>Psychopathy Checklist</title>
+	<link rel="stylesheet" type="text/css" href="forAllTesting.css">
+	<script type="text/javascript" src="Psychopathy.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div class="BG2 noPrint">
+			<img src="../img/BG1.png" class="BG_pic">
+		</div>
+
+		<hgroup class="myBtn">
+			<h1>Psychopathy Checklist</h1>
+			<h3>這是一個檢測心理病態的檢核表</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<section class="WhiteBack1 noPrint">
+			<h3>應整合半結構式晤談、個案病史、各類資料，以評估以下每項與受評者的符合程度，並以3點量尺評分。</h3>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL2"></span></label>
+				<label><span class="choose">不符合</span></label>
+				<label><span class="choose">普通</span></label>
+				<label><span class="choose">符合</span></label>
+			</div>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">1. 口若懸河 且/或 有表面魅力。
+					<br>(Glibness and/or superficial charm.)</span></label>
+				<label><input type="radio" name="PCL1"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL1"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL1"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">2. 誇大的自我價值感。
+					<br>(Grandiose sense of self-worth.)</span></label>
+				<label><input type="radio" name="PCL2"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL2"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL2"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">3. 需要刺激且容易感到無聊。
+					<br>(Need for stimulation and/proneness to boredom.)</span></label>
+				<label><input type="radio" name="PCL3"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL3"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL3"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">4. 慣性撒謊。
+					<br>(Pathological lying.)</span></label>
+				<label><input type="radio" name="PCL4"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL4"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL4"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">5. 奸巧 且/或 善操弄人的。
+					<br>(Conning and/or manipulative.)</span></label>
+				<label><input type="radio" name="PCL5"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL5"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL5"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">6. 缺乏懊悔感或罪惡感。
+					<br>(Lack of remorse or guilt.)</span></label>
+				<label><input type="radio" name="PCL6"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL6"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL6"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">7. 表淺的情感。
+					<br>(Shallow affect.)</span></label>
+				<label><input type="radio" name="PCL7"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL7"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL7"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">8. 冷酷 且/或 缺乏同理。
+					<br>(Callous and/or lack of empathy.)</span></label>
+				<label><input type="radio" name="PCL8"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL8"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL8"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">9. 寄生於他人的生活型態。
+					<br>(Parasitic lifestyle.)</span></label>
+				<label><input type="radio" name="PCL9"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL9"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL9"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">10. 行為控制差。
+					<br>(Poor behavior controls.)</span></label>
+				<label><input type="radio" name="PCL10"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL10"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL10"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">11. 淫亂的性行為。
+					<br>(Promiscuous sexual behavior.)</span></label>
+				<label><input type="radio" name="PCL11"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL11"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL11"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">12. 早年就有行為問題。
+					<br>(Early behavior problems.)</span></label>
+				<label><input type="radio" name="PCL12"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL12"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL12"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">13. 缺乏實際、長遠的目標。
+					<br>(Lack of realistic, long-term goals.)</span></label>
+				<label><input type="radio" name="PCL13"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL13"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL13"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">14. 衝動。
+					<br>(Impulsivity.)</span></label>
+				<label><input type="radio" name="PCL14"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL14"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL14"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">15. 缺乏責任感。
+					<br>(Irresponsibility.)</span></label>
+				<label><input type="radio" name="PCL15"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL15"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL15"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">16. 難為自己的行為負責。
+					<br>(Failure to accept responsibility for own actions.)</span></label>
+				<label><input type="radio" name="PCL16"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL16"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL16"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">17. 許多段短期的伴侶關係。
+					<br>(Many short-term marital relationships.)</span></label>
+				<label><input type="radio" name="PCL17"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL17"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL17"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">18. 有青少年違規紀錄。
+					<br>(Juvenile delinquency.)</span></label>
+				<label><input type="radio" name="PCL18"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL18"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL18"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">19. 曾被撤銷假釋。
+					<br>(Revocation of conditional release.)</span></label>
+				<label><input type="radio" name="PCL19"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL19"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL19"><span class="choose">2</span></label>
+			</div>
+
+			<br>
+
+			<div class="radio2">
+				<label><span class="itemTitle_PCL">20. 具犯罪的多樣性。
+					<br>(Criminal versatility.)</span></label>
+				<label><input type="radio" name="PCL20"><span class="choose">0</span></label>
+				<label><input type="radio" name="PCL20"><span class="choose">1</span></label>
+				<label><input type="radio" name="PCL20"><span class="choose">2</span></label>
+			</div>
+		</section>
+
+
+		<br><br>
+		<div class="CenterSec noPrint myBtn">
+			<input class="fontSize20" type="button" value="送出" onclick="SubmitBtn()">
+<!--
+			<input type="button" value="列印" onclick="PrintBtn()">
+-->
+			<input class="fontSize20" type="button" value="測資" onclick="TestBtn()">
+		</div>
+
+		<br>
+
+		<section class="CentAlig">
+			<p id="Score" class="fontSize20"></p>
+		</section>
+
+
+		<div class="CentAlig" style="background-color: #fff; display: none;" id="InterTable">
+			<table width="100%" class="fontSize14">
+				<tr><td colspan=4>結果摘要</td></tr>
+				<tr class="WhiteBlack">
+					<td width="40%"></td>
+					<td>親密</td>
+					<td>激情</td>
+					<td>承諾</td></tr>
+				<tr><td id="NameInTable"></td>
+					<td name="ScoreTable"></td>
+					<td name="ScoreTable"></td>
+					<td name="ScoreTable"></td></tr>
+				<tr><td id="ResultInTable" colspan=4></tr>
+				<tr class="WhiteBlack">
+					<td colspan=4>常模</td></tr>
+				<tr>
+					<td>明顯高於平均</td>
+					<td>129</td>
+					<td>123</td>
+					<td>131</td>
+				</tr>
+				<tr>
+					<td>高於平均</td>
+					<td>120</td>
+					<td>110</td>
+					<td>120</td>
+				</tr>
+				<tr>
+					<td>平均</td>
+					<td>111</td>
+					<td>98</td>
+					<td>108</td>
+				</tr>
+				<tr>
+					<td>低於平均</td>
+					<td>102</td>
+					<td>85</td>
+					<td>96</td>
+				</tr>
+				<tr>
+					<td>明顯低於平均</td>
+					<td>93</td>
+					<td>73</td>
+					<td>85</td>
+				</tr>
+			</table>
+		</div>
+
+		<br>
+
+		<div class="CentAlig" id="BarDiv" style="display: none;">
+			<canvas id="BarChart" style="padding: 10px; background-color: #fff"></canvas>
+		</div>
+		
+		<br>
+
+	</article>
+
+	<footer style="text-align: center;">
+		<br><br>Shin心理師 你的臨床小秘書
+	</footer>
+</body>
+
+
+</html>
