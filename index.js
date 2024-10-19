@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password = '';
         password=prompt('這裡是管制區，要跟管理員索取密碼才能放行哦！\n輸入密碼:','');
         if (password != null) {
-            window.open(password + '/' + password + ".html");
+            window.open('myTesting/' + password + ".html");
         };
     });
 
