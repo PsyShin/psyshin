@@ -18,11 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password = '';
         password=prompt('這裡是管制區，要跟管理員索取密碼才能放行哦！\n輸入密碼:','');
         if (password != null) {
-	    if (password == 'DSM5' | password == 'DSM5TR') {
-		window.open(password + '/' + password + '.html');
-	    }else{
-            	window.open('myTesting/' + password + ".html");
-	    }
+	    window.open(password + '/' + password + '.html');
         };
     });
 
