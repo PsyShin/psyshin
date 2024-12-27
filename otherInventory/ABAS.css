@@ -1,0 +1,244 @@
+* {
+  font-family: Microsoft JhengHei;
+  -webkit-print-color-adjust:exact
+}
+
+input, select {
+	font-size: 16px;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+p {
+	font-size: 1.2vw;
+}
+
+.inputDiv {
+	display: flex;
+	align-items: self-start;
+}
+
+.inputDiv section {
+	padding: 20px;
+	flex: 1;
+}
+
+.checkBox {
+	display: flex;
+	align-items: self-start;
+}
+
+.checkBox section{
+	flex: 1;
+}
+
+
+
+.checkBox2 {
+	display: flex;
+	align-items: self-start;
+}
+
+.checkBox2_child1{
+	flex: 1;
+}
+
+.checkBox2_child2{
+	flex: 2;
+}
+
+
+
+.dataTable, .buttonSection {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+	font-size: 1.2vw;
+}
+
+.conBtn {
+	background-color: #333;
+	color: #FFF;
+	padding: 5px 10px;
+	font-size: 1.1vw;
+	border: none;
+}
+
+.conBtn:hover {
+	background-color: #FFF;
+	color: #333;
+}
+
+.CenterSec {
+	text-align: center;
+}
+
+table {
+	border: 1px solid;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+th, td {
+	border: 1px solid #CCC;
+	padding: 5px;
+	text-align: center;
+}
+
+.noBorder, .noBorder th, .noBorder td, table input {
+	border: 0px solid;
+}
+
+
+.noBorder input {
+	border: 1px;
+	border-bottom-style: solid;
+}
+
+#SubstituteBox, #SubstituteBox td{
+	border: 0px;
+}
+
+.ABAS_null {
+	color: #000000;
+	background-color: #000000;
+}
+
+
+.ABAS_Blue1 {
+	color: #FFFFFF;
+	background-color: #0066CC;
+}
+
+.ABAS_Blue2 {
+	background-color: #84C1FF;
+}
+
+.ABAS_Blue3 {
+	background-color: #C4E1FF;
+}
+
+
+
+.doPrint{
+	display: none;
+}
+
+
+
+
+.panel-control {
+	position:absolute;
+	opacity:0;
+}
+.tab-group label {
+	display:inline-block;
+	padding: 10px 30px;
+	border:1px solid #ccc;
+	border-bottom:none;
+	background-color: #D0D0D0;
+	bottom:-1px;
+	position:relative;
+}
+.content-group {
+	background-color: #FFF;
+	border:1px solid #ccc;
+	padding: 20px;
+}
+.content{
+	display:none;
+}
+
+#radio1:checked ~ .tab-group [for="radio1"],
+#radio2:checked ~ .tab-group [for="radio2"]{background-color: #fff;}
+
+#radio1:checked ~ .content-group .content1,
+#radio2:checked ~ .content-group .content2 {display:block}
+
+
+input[type="button"] {border: none; background-color: rgba(255,255,255,0.7);}
+input[type="button"]:hover {background: #5B5B5B; color: #fff;}
+
+
+
+
+
+.BG2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+
+.BG_pic {
+  width: 100%;
+  min-height: 100%;
+  min-width: 900px;
+  opacity: 0.3;
+}
+
+.WhiteBack1{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+@media print{
+	*, input[name="BasicInfo"]{
+		font-size: 9pt;
+	}
+
+	h1{
+		font-size: 15pt;
+	}
+	
+	th, td {
+	border: 0.1px solid #CCC;
+	padding: 2px;
+	}
+
+	.doPrint{
+		display: block;
+	}
+
+	.panel-control {
+		display: none;
+	}
+	.tab-group label {
+		display: none;
+	}
+
+	.content{
+		display: block;
+	}
+
+	.noPrint{
+		display: none;
+	}
+
+	.breakBefore {
+		break-before: page;
+	}
+
+}
+
+@page{
+	size: A4;
+	margin: 0;
+}
