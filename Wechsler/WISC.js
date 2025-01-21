@@ -155,7 +155,9 @@ function submitB(){
 
 	if(!confirm("請再次確認原始分數是否輸入有誤\n不確定的話，請先按下【取消】並再次確認分數輸入\n一旦按下【確定】就不能再改囉！\n要改要重置全部重來哦！白打囉！很恐怖哦！\n\nShin 秘書的資工能力不支援事後修改：）")) return null;
 	document.getElementById("GOGOBtn").disabled = "disabled";
-
+	document.getElementById("GOGOBtn").style['background-color'] = '#FFF';
+	document.getElementById("GOGOBtn").style['color'] = '#BEBEBE';
+	
 
 //page1
 	var SubRawText = document.querySelectorAll('[data-label="RawScore"]');
