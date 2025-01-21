@@ -301,7 +301,7 @@ function submitB(){
 	}
 	// IndDiff2
 	for(let i=0; i<AllIndDiff_cv2Text.length; i++) {
-		if(!IndDiff2[i]) continue;
+		if(!IndDiff2[i] & IndDiff2[i]!=0) continue;
 		AllIndDiff_cv2Text[i].innerHTML = IndDiffCV[clAge[0].value-6][1][1][i];
 		if(Math.abs(IndDiff2[i]) > IndDiffCV[clAge[0].value-6][1][1][i]){
 			AllIndDiff_sw2Text[i].innerHTML = "是";
@@ -657,7 +657,7 @@ function AgeCalBtn(){
 		ClientAge[1] -= 1;
 	}
 
-	if(ClientAge[1] < 1){
+	if(ClientAge[1] < 0){
 		ClientAge[1] += 12;
 		ClientAge[0] -= 1;
 	}
