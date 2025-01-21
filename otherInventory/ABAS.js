@@ -77,7 +77,7 @@ function AgeCalBtn(){
 		ClientAge[1] -= 1;
 	}
 
-	if(ClientAge[1] < 1){
+	if(ClientAge[1] < 0){
 		ClientAge[1] += 12;
 		ClientAge[0] -= 1;
 	}
