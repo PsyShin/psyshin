@@ -665,7 +665,9 @@ function Summary1(){
 	}
 
 	document.getElementById("GOGOBtn").disabled = "disabled"; // disable Btn
-
+	document.getElementById("GOGOBtn").style['background-color'] = '#FFF';
+	document.getElementById("GOGOBtn").style['color'] = '#BEBEBE';
+	
 	for(let j=1; j<(myR+1); j++){
 		aTempResp = "";
 		for(let i=0; i<12; i++) {
