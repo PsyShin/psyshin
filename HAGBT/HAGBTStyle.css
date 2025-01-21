@@ -37,6 +37,19 @@ input, select {
 	text-align: center;
 }
 
+.conBtn {
+	background-color: #333;
+	color: #FFF;
+	padding: 5px 10px;
+	font-size: 1.1vw;
+	border: none;
+}
+
+.conBtn:hover {
+	background-color: #FFF;
+	color: #333;
+}
+
 .PsychopathologyScale {
 	border: 1px solid;
 }
