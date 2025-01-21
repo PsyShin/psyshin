@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="psychology, clinical, testing">
+	<meta name="description" content="羅夏克計分頁面">
+	<link href="../img/favicon.ico" rel="shortcut icon"/>
+	<link href="../img/favicon.ico" rel="bookmark"/>
+	<title>Rorschach</title>
+	<link rel="stylesheet" type="text/css" href="Rorschach.css">
+	<script type="text/javascript" src="Rorschach.js"></script>
+</head>
+
+
+
+<dialog id="DetDia">
+	<p>請依照順序輸入決定因子</p>
+	<table><tr>
+		<td>決定因子有: </td>
+		<td id="myDet_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td>Movement</td>
+			<td><input name="DetBtn" id="MaBtn" type="button" onclick="showBtnName_Det('Ma')" value="Ma"></td>
+			<td><input name="DetBtn" id="MpBtn" type="button" onclick="showBtnName_Det('Mp')" value="Mp"></td>
+			<td><input name="DetBtn" id="MapBtn" type="button" onclick="showBtnName_Det('Map')" value="Map"></td></tr>
+		<tr><td></td>
+			<td><input name="DetBtn" id="FMaBtn" type="button" onclick="showBtnName_Det('FMa')" value="FMa"></td>
+			<td><input name="DetBtn" id="FMpBtn" type="button" onclick="showBtnName_Det('FMp')" value="FMp"></td>
+			<td><input name="DetBtn" id="FMapBtn" type="button" onclick="showBtnName_Det('FMap')" value="FMap"></td></tr>
+		<tr><td></td>
+			<td><input name="DetBtn" id="maBtn" type="button" onclick="showBtnName_Det('ma')" value="ma"></td>
+			<td><input name="DetBtn" id="mpBtn" type="button" onclick="showBtnName_Det('mp')" value="mp"></td>
+			<td><input name="DetBtn" id="mapBtn" type="button" onclick="showBtnName_Det('map')" value="map"></td></tr>
+		<tr><td>Chromatic Color</td>
+			<td><input name="DetBtn" id="FCBtn" type="button" onclick="showBtnName_Det('FC')" value="FC"></td>
+			<td><input name="DetBtn" id="CFBtn" type="button" onclick="showBtnName_Det('CF')" value="CF"></td>
+			<td><input name="DetBtn" id="CBtn" type="button" onclick="showBtnName_Det('C')" value="C"></td>
+			<td><input name="DetBtn" id="CnBtn" type="button" onclick="showBtnName_Det('Cn')" value="Cn"></td></tr>
+		<tr><td>AChromatic Color</td>
+			<td><input name="DetBtn" id="FC'Btn" type="button" onclick="showBtnName_Det('FC\'')" value="FC'"></td>
+			<td><input name="DetBtn" id="C'FBtn" type="button" onclick="showBtnName_Det('C\'F')" value="C'F"></td>
+			<td><input name="DetBtn" id="C'Btn" type="button" onclick="showBtnName_Det('C\'')" value="C'"></td></tr>
+		<tr><td>Shading-Texture</td>
+			<td><input name="DetBtn" id="FTBtn" type="button" onclick="showBtnName_Det('FT')" value="FT"></td>
+			<td><input name="DetBtn" id="TFBtn" type="button" onclick="showBtnName_Det('TF')" value="TF"></td>
+			<td><input name="DetBtn" id="TBtn" type="button" onclick="showBtnName_Det('T')" value="T"></td></tr>
+		<tr><td>Shading-Dimension</td>
+			<td><input name="DetBtn" id="FVBtn" type="button" onclick="showBtnName_Det('FV')" value="FV"></td>
+			<td><input name="DetBtn" id="VFBtn" type="button" onclick="showBtnName_Det('VF')" value="VF"></td>
+			<td><input name="DetBtn" id="VBtn" type="button" onclick="showBtnName_Det('V')" value="V"></td></tr>
+		<tr><td>Shading-Diffuse</td>
+			<td><input name="DetBtn" id="FYBtn" type="button" onclick="showBtnName_Det('FY')" value="FY"></td>
+			<td><input name="DetBtn" id="YFBtn" type="button" onclick="showBtnName_Det('YF')" value="YF"></td>
+			<td><input name="DetBtn" id="YBtn" type="button" onclick="showBtnName_Det('Y')" value="Y"></td></tr>
+		<tr><td>Reflection</td>
+			<td><input name="DetBtn" id="FrBtn" type="button" onclick="showBtnName_Det('Fr')" value="Fr"></td>
+			<td><input name="DetBtn" id="rFBtn" type="button" onclick="showBtnName_Det('rF')" value="rF"></td></tr>
+		<tr><td>Form Dimension</td>
+			<td><input name="DetBtn" id="FDBtn" type="button" onclick="showBtnName_Det('FD')" value="FD"></td></tr>
+		<tr><td>Form</td>
+			<td><input name="DetBtn" id="FBtn" type="button" onclick="showBtnName_Det('F')" value="F"></td></tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="DetDiaConf()">
+	<input type="button" value="重置" onclick="DetDiaRest()">
+</dialog>
+
+<dialog id="ConDia">
+	<p>請依照順序輸入內容</p>
+	<table><tr>
+		<td>內容有: </td>
+		<td id="myCon_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td><input name="ConBtn" id="HBtn" type="button" onclick="showBtnName_Con('H')" value="H"></td>
+			<td><input name="ConBtn" id="(H)Btn" type="button" onclick="showBtnName_Con('(H)')" value="(H)"></td>
+			<td><input name="ConBtn" id="HdBtn" type="button" onclick="showBtnName_Con('Hd')" value="Hd"></td>
+			<td><input name="ConBtn" id="(Hd)Btn" type="button" onclick="showBtnName_Con('(Hd)')" value="(Hd)"></td>
+			<td><input name="ConBtn" id="HxBtn" type="button" onclick="showBtnName_Con('Hx')" value="Hx"></td></tr>
+		<tr><td><input name="ConBtn" id="ABtn" type="button" onclick="showBtnName_Con('A')" value="A"></td>
+			<td><input name="ConBtn" id="(A)Btn" type="button" onclick="showBtnName_Con('(A)')" value="(A)"></td>
+			<td><input name="ConBtn" id="AdBtn" type="button" onclick="showBtnName_Con('Ad')" value="Ad"></td>
+			<td><input name="ConBtn" id="(Ad)Btn" type="button" onclick="showBtnName_Con('(Ad)')" value="(Ad)"></td></tr>
+		<tr><td><input name="ConBtn" id="AnBtn" type="button" onclick="showBtnName_Con('An')" value="An"></td>
+			<td><input name="ConBtn" id="ArtBtn" type="button" onclick="showBtnName_Con('Art')" value="Art"></td>
+			<td><input name="ConBtn" id="AyBtn" type="button" onclick="showBtnName_Con('Ay')" value="Ay"></td>
+			<td><input name="ConBtn" id="BlBtn" type="button" onclick="showBtnName_Con('Bl')" value="Bl"></td>
+			<td><input name="ConBtn" id="CgBtn" type="button" onclick="showBtnName_Con('Cg')" value="Cg"></td></tr>
+		<tr><td><input name="ConBtn" id="ExBtn" type="button" onclick="showBtnName_Con('Ex')" value="Ex"></td>
+			<td><input name="ConBtn" id="FiBtn" type="button" onclick="showBtnName_Con('Fi')" value="Fi"></td>
+			<td><input name="ConBtn" id="FdBtn" type="button" onclick="showBtnName_Con('Fd')" value="Fd"></td>
+			<td><input name="ConBtn" id="GeBtn" type="button" onclick="showBtnName_Con('Ge')" value="Ge"></td>
+			<td><input name="ConBtn" id="HhBtn" type="button" onclick="showBtnName_Con('Hh')" value="Hh"></td></tr>
+		<tr><td><input name="ConBtn" id="ClBtn" type="button" onclick="showBtnName_Con('Cl')" value="Cl"></td>
+			<td><input name="ConBtn" id="BtBtn" type="button" onclick="showBtnName_Con('Bt')" value="Bt"></td>
+			<td><input name="ConBtn" id="LsBtn" type="button" onclick="showBtnName_Con('Ls')" value="Ls"></td>
+			<td><input name="ConBtn" id="NaBtn" type="button" onclick="showBtnName_Con('Na')" value="Na"></td></tr>
+		<tr><td><input name="ConBtn" id="ScBtn" type="button" onclick="showBtnName_Con('Sc')" value="Sc"></td>
+			<td><input name="ConBtn" id="SxBtn" type="button" onclick="showBtnName_Con('Sx')" value="Sx"></td>
+			<td><input name="ConBtn" id="XyBtn" type="button" onclick="showBtnName_Con('Xy')" value="Xy"></td>
+			<td><input name="ConBtn" id="IdBtn" type="button" onclick="showBtnName_Con('Id')" value="Id"></td></tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="ConDiaConf()">
+	<input type="button" value="重置" onclick="ConDiaRest()">
+</dialog>
+
+<dialog id="SSDia">
+	<p>請依照順序輸入 Special Score</p>
+	<table><tr>
+		<td>Special Score 有: </td>
+		<td id="mySS_Dia"></td>
+	</tr></table>
+	<table>
+		<tr><td></td></tr>
+		<tr><td colspan=6>不尋常的語言表達</td>
+		<tr><td><input name="SSBtn" id="DV1Btn" type="button" onclick="showBtnName_SS('DV1')" value="DV1"></td>
+			<td><input name="SSBtn" id="INC1Btn" type="button" onclick="showBtnName_SS('INC1')" value="INC1"></td>
+			<td><input name="SSBtn" id="DR1Btn" type="button" onclick="showBtnName_SS('DR1')" value="DR1"></td>
+			<td><input name="SSBtn" id="FAB1Btn" type="button" onclick="showBtnName_SS('FAB1')" value="FAB1"></td>
+			<td><input name="SSBtn" id="ALOGBtn" type="button" onclick="showBtnName_SS('ALOG')" value="ALOG"></td>
+			<td><input name="SSBtn" id="CONBtn" type="button" onclick="showBtnName_SS('CON')" value="CON"></td></tr>
+		<tr><td><input name="SSBtn" id="DV2Btn" type="button" onclick="showBtnName_SS('DV2')" value="DV2"></td>
+			<td><input name="SSBtn" id="INC2Btn" type="button" onclick="showBtnName_SS('INC2')" value="INC2"></td>
+			<td><input name="SSBtn" id="DR2Btn" type="button" onclick="showBtnName_SS('DR2')" value="DR2"></td>
+			<td><input name="SSBtn" id="FAB2Btn" type="button" onclick="showBtnName_SS('FAB2')" value="FAB2"></td></tr>
+		<tr><td colspan=6>其他</td></tr>
+		<tr><td><input name="SSBtn" id="ABBtn" type="button" onclick="showBtnName_SS('AB')" value="AB"></td>
+			<td><input name="SSBtn" id="AGBtn" type="button" onclick="showBtnName_SS('AG')" value="AG"></td>
+			<td><input name="SSBtn" id="COPBtn" type="button" onclick="showBtnName_SS('COP')" value="COP"></td>
+			<td><input name="SSBtn" id="CPBtn" type="button" onclick="showBtnName_SS('CP')" value="CP"></td>
+			<td><input type="button" onclick="showBtnName_SS('GHR')" value="GHR" disabled="disabled"></td>
+			<td><input type="button" onclick="showBtnName_SS('PHR')" value="PHR" disabled="disabled"></td></tr>
+		<tr><td><input name="SSBtn" id="MORBtn" type="button" onclick="showBtnName_SS('MOR')" value="MOR"></td>
+			<td><input name="SSBtn" id="PERBtn" type="button" onclick="showBtnName_SS('PER')" value="PER"></td>
+			<td><input name="SSBtn" id="PSVBtn" type="button" onclick="showBtnName_SS('PSV')" value="PSV"></td>
+			<td><input name="SSBtn" id="noneBtn" type="button" onclick="SSNone()" value="無"></td>
+		</tr>
+	</table>
+	<br>
+	<input type="button" value="確定" onclick="SSDiaConf()">
+	<input type="button" value="重置" onclick="SSDiaRest()">
+</dialog>
+
+
+
+<body>
+	<header>
+		<div class="BG2 noPrint">
+			<img src="../img/BG5.png" class="BG_pic">
+		</div>
+
+		<hgroup>
+			<h1 class="noPrint">羅夏克墨跡測驗 (Rorschach inkblot test)</h1>
+			<h3 class="noPrint">結果僅供參考，盡信秘書不如無秘書
+				<br>強烈建議使用電腦並選用 google chrome 瀏覽器</h3>
+		</hgroup>
+	</header>
+
+	<article>
+		<section class="dataTable noPrint WhiteBack1">
+			<p class="boxTitle">關於羅夏克墨跡測驗...</p>
+			<p>Shin心理小秘書參照 Exner 解釋系統進行計分及解釋</p>
+			<p>呵呵</p>
+		</section>
+
+		<br class="noPrint">
+
+		<section class="dataTable noPrint WhiteBack1">
+			<h3>Sequence of Scores (請依序輸入受測者逐個反應的編碼)</h3>
+			<table class="Cards" width="97%" id="RespTable">
+				<tbody>
+					<tr class="whiteText3">
+						<td>Card</td>
+						<td>Resp.No.</td>
+						<td>Location</td>
+						<td>DQ</td>
+						<td>Loc.No.</td>
+						<td>Determinants</td>
+						<td>FQ</td>
+						<td>(2)</td>
+						<td>contents</td>
+						<td>P</td>
+						<td>Z-Score</td>
+						<td>Special Score</td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr><td colspan=13></td></tr>
+					<tr><td colspan=13 class="whiteText3">新增反應</td></tr>
+					<tr><td>Card</td>
+						<td>第幾個</td>
+						<td>Location</td>
+						<td>DQ</td>
+						<td>位置編號</td>
+						<td>決定因子</td>
+						<td>FQ</td>
+						<td>(2)</td>
+						<td>內容</td>
+						<td>P</td>
+						<td>Z-Score</td>
+						<td>Special Score</td>
+						<td></td></tr>
+					<tr>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="Card I">Card I</option>
+							<option value="Card II">Card II</option>
+							<option value="Card III">Card III</option>
+							<option value="Card IV">Card IV</option>
+							<option value="Card V">Card V</option>
+							<option value="Card VI">Card VI</option>
+							<option value="Card VII">Card VII</option>
+							<option value="Card VIII">Card VIII</option>
+							<option value="Card IX">Card IX</option>
+							<option value="Card X">Card X</option></select></td>
+						<td><input type="number" max=999 min=0 name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="W">W</option>
+							<option value="D">D</option>
+							<option value="Dd">Dd</option>
+							<option value="S">S</option>
+							<option value="WS">WS</option>
+							<option value="DS">DS</option>
+							<option value="DdS">DdS</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value="+">+</option>
+							<option value="o">o</option>
+							<option value="v/+">v/+</option>
+							<option value="v">v</option></select></td>
+						<td><input type="number" max=999 min=0 name="Resp"></td>
+						<td><input id="RespDet" type="button" onclick="openDetDia()" value="選擇" name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="+">+</option>
+							<option value="o">o</option>
+							<option value="u">u</option>
+							<option value="-">-</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="(2)">(2)</option></select></td>
+						<td><input id="RespCon" type="button" onclick="openConDia()" value="選擇" name="Resp"></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="P">P</option></select></td>
+						<td><select name="Resp">
+							<option disabled selected value>選擇</option>
+							<option value=" ">無</option>
+							<option value="ZW">ZW</option>
+							<option value="ZA">ZA</option>
+							<option value="ZD">ZD</option>
+							<option value="ZS">ZS</option>
+							<option disabled value=1>1</option>
+							<option disabled value=2>2</option>
+							<option disabled value=2.5>2.5</option>
+							<option disabled value=3>3</option>
+							<option disabled value=3.5>3.5</option>
+							<option disabled value=4>4</option>
+							<option disabled value=4.5>4.5</option>
+							<option disabled value=5>5</option>
+							<option disabled value=5.5>5.5</option>
+							<option disabled value=6>6</option>
+							<option disabled value=6.5>6.5</option>
+						</select></td>
+						<td><input id="RespSS" type="button" onclick="openSSDia()" value="選擇" name="Resp"></td>
+						<td><input type="button" onclick="addResp()" value="新增"></td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<p><br></p>		
+		</section>
+
+
+		<section class="buttonSection noPrint">
+			<p>
+				<button class="conBtn" onclick="test1()">測資1</button>
+				<button class="conBtn" onclick="test2()">測資2</button>
+				<button class="conBtn" onclick="test4()">測資p531</button>
+				<button class="conBtn" onclick="Reload()">重置</button>
+				<button class="conBtn" onclick="Summary1()" id="GOGOBtn">GOGO</button>
+				<button class="conBtn" onclick="printOut()">列印</button>
+			</p>
+<!--
+			<p>
+				<input type="button" value="測資1" onclick="test1()">
+				<input type="button" value="測資2" onclick="test2()">
+				<input type="button" value="測資p531" onclick="test4()">
+				<input type="button" value="重置" onclick="Reload()">
+				<input type="button" value="GOGO" onclick="Summary1()" id="GOGOBtn">
+				<input type="button" value="列印" onclick="printOut()">
+			</p>
+-->
+			<p>測資源自 Exner (2002)</p>
+			<p id="hihi"></p>
+		</section>
+
+		<section class="noPrint">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</section>
+
+		<section  class="noPrint WhiteBack1">
+			<h1>各項指標及參考解釋</h1>
+			<p>
+				<button class="conBtn" id="StrSum_Show_Name" onclick="StrSum_Show_fun()">顯示 Structural Summary</button>
+				<button class="conBtn" id="CoreSec_Show_Name" onclick="CoreSec_Show_fun()">顯示 Core Section & Special Indices</button>
+
+			</p>
+
+<!--
+			<p>
+				<input type="button" id="StrSum_Show_Name" onclick="StrSum_Show_fun()" value="顯示 Structural Summary">
+				<input type="button" id="CoreSec_Show_Name" onclick="CoreSec_Show_fun()" value="顯示 Core Section & Special Indices">
+			</p>
+-->
+
+			<div class="forParent">
+				<p id="ParentBlends"></p>
+				<p id="ParentResp"></p>
+			</div>
+		</section>
+
+
+		<section  class="noPrint">
+			<div id="StrSum_Show">
+				<br>
+				<section class="dataTable WhiteBack2">
+					<h3>Structural Summary</h3>
+					<table class="Cards">
+						<tbody>
+							<tr class="BG_col1"><td colspan=14>Location Features</td></tr>
+							<tr><td colspan=3>Organization Activity</td>
+								<td rowspan=3 class="BG_col2"></td>
+								<td colspan=5>Location</td>
+								<td rowspan=3 class="BG_col2"></td>
+								<td colspan=4>Development Quality</td></tr>
+							<tr><td>Zf</td>
+								<td>ZSum</td>
+								<td>ZEst</td>
+								<td>W</td>
+								<td>D</td>
+								<td>W+D</td>
+								<td>Dd</td>
+								<td>S</td>
+								<td>+</td>
+								<td>o</td>
+								<td>v/+</td>
+								<td>v</td></tr>
+							<tr><td name="StrSum_Z"></td>
+								<td name="StrSum_Z"></td>
+								<td name="StrSum_Z"></td>
+								<td name="StrSum_Loc"></td>
+								<td name="StrSum_Loc"></td>
+								<td name="StrSum_Loc"></td>
+								<td name="StrSum_Loc"></td>
+								<td name="StrSum_Loc"></td>
+								<td name="StrSum_DQ"></td>
+								<td name="StrSum_DQ"></td>
+								<td name="StrSum_DQ"></td>
+								<td name="StrSum_DQ"></td></tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<table class="Cards">
+						<tbody>
+							<tr class="BG_col1">
+								<td colspan=6>Form Quality</td></tr>
+							<tr><td></td>
+								<td>+</td>
+								<td>o</td>
+								<td>u</td>
+								<td>-</td>
+								<td>none</td></tr>
+							<tr><td>FQx</td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+							<tr><td>MQual</td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td></tr>
+							<tr><td>W+D</td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td>
+								<td name="StrSum_FQ"></td></tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<table class="Cards">
+						<tbody>
+							<tr class="BG_col1"><td colspan=25>Determinants - Single & Blends</td></tr>
+							<tr><td>M</td><td>FM</td><td>m</td>
+								<td>FC</td><td>CF</td><td>C</td><td>Cn</td>
+								<td>FC'</td><td>C'F</td><td>C'</td>
+								<td>FT</td><td>TF</td><td>T</td>
+								<td>FV</td><td>VF</td><td>V</td>
+								<td>FY</td><td>YF</td><td>Y</td>
+								<td>Fr</td><td>rF</td>
+								<td>FD</td>
+								<td>F</td>
+								<td rowspan=2></td>
+								<td>(2)</td></tr>
+							<tr><td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td>
+								<td name="StrSum_Det"></td><td name="StrSum_Det"></td></tr>
+						</tbody>
+					</table>
+
+					<table class="Cards" id="BleTable">
+						<tbody>
+							<tr id="DetBle"><td class="BG_col1">Determinants - Blends</td></tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<table class="Cards">
+						<tbody>
+							<tr class="BG_col1"><td colspan=27>Contents</td></tr>
+							<tr><td>H</td><td>(H)</td><td>Hd</td><td>(Hd)</td><td>Hx</td>
+								<td>A</td><td>(A)</td><td>Ad</td><td>(Ad)</td>
+								<td>An</td><td>Art</td><td>Ay</td><td>Bl</td><td>Cg</td>
+								<td>Ex</td><td>Fi</td><td>Fd</td><td>Ge</td><td>Hh</td>
+								<td>Cl</td><td>Sc</td><td>Sx</td><td>Xy</td><td>Id</td>
+								<td>Bt</td><td>Ls</td><td>Na</td></tr>
+							<tr><td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td><td name="StrSum_Con"></td>
+								<td name="StrSum_Con"></td></tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<table class="Cards">
+						<tbody>
+							<tr class="BG_col1"><td colspan=20>Special Score</td></tr>
+							<tr><td>DV1</td><td>DV2</td>
+								<td>INC1</td><td>INC2</td>
+								<td>DR1</td><td>DR2</td>
+								<td>FAB1</td><td>FAB2</td>
+								<td>ALOG</td><td>CON</td>
+								<td rowspan=2 class="BG_col2"></td><td>AB</td><td>AG</td>
+								<td>COP</td><td>CP</td>
+								<td>GHR</td><td>PHR</td>
+								<td>MOR</td><td>PER</td><td>PSV</td></tr>
+							<tr><td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td><td name="StrSum_SS"></td>
+								<td name="StrSum_SS"></td></tr>
+						</tbody>
+					</table>
+
+					<table class="Cards">
+						<tr><td>Raw Sum6</td><td name="StrSum_Sum6"></td></tr>
+						<tr><td>Wgtd Sum6</td><td name="StrSum_Sum6"></td></tr>
+					</table>
+				</section>
+				<br>
+			</div>
+
+			<div id="CoreSec_Show">
+				<br>
+				<section class="dataTable WhiteBack2">
+					<br>
+					<div class="floatLeft">
+					<div>
+					<table class="Cards">
+						<tr><td colspan=8 class="BG_col1">Core Section</td></tr>
+						<tr><td>R</td><td name="RPD_1"></td>
+							<td class="BG_col2"></td>
+							<td>L</td><td name="RPD_1"></td>
+							<td class="BG_col2"></td></tr>
+						<tr><td colspan=8 class="BG_col1"></td></tr>
+						<tr><td>EB</td><td name="RPD_1"></td>
+							<td rowspan=3 class="BG_col2"></td>
+							<td>EA</td><td name="RPD_1"></td>
+							<td rowspan=3 class="BG_col2"></td>
+							<td>EBPer</td><td name="RPD_1"></td></tr>
+						<tr><td>eb</td><td name="RPD_1"></td>
+							<td>es</td><td name="RPD_1"></td>
+							<td>D</td><td name="RPD_1"></td></tr>
+						<tr><td colspan=2></td>
+							<td>Adj es</td><td name="RPD_1"></td>
+							<td>Adj D</td><td name="RPD_1"></tr>
+						<tr><td colspan=8 class="BG_col1"></td></tr>
+						<tr><td>FM</td><td name="RPD_1"></td>
+							<td rowspan=2 class="BG_col2"></td>
+							<td>SumC'</td><td name="RPD_1"></td>
+							<td rowspan=2 class="BG_col2"></td>
+							<td>SumT</td><td name="RPD_1"></td></tr>
+						<tr><td>m</td><td name="RPD_1"></td>
+							<td>SumV</td><td name="RPD_1"></td>
+							<td>SumY</td><td name="RPD_1"></td></tr>
+					</table>
+					</div>
+
+
+					<div class="floatLeft_child">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=11>Special Indices</td></tr>
+						<tr><td>PTI</td><td class="BG_col2" rowspan=2></td>
+							<td>DEPI</td><td class="BG_col2" rowspan=2></td>
+							<td>CDI</td><td class="BG_col2" rowspan=2></td>
+							<td>S-CON</td><td class="BG_col2" rowspan=2></td>
+							<td>HVI</td><td class="BG_col2" rowspan=2></td>
+							<td>OBS</td></tr>
+						<tr><td name="RPD_8"></td><td name="RPD_8"></td><td name="RPD_8"></td>
+							<td name="RPD_8"></td><td name="RPD_8"></td><td name="RPD_8"></td></tr>
+					</table>
+					</div>
+					</div>
+				</section>
+				<br>
+			</div>
+
+			<br>
+		</section>
+
+
+		<section class="doPrint">
+			<h1 class="fontSize16">STRUCTURAL SUMMARY</h1>
+
+			<table width=100% class="lineH_1">
+				<tr class="darkLine"><td colspan=23></td></tr>
+				<tr class="darkLine"><td colspan=23></td></tr>
+				<tr><td colspan=23></td></tr>
+				<tr class="subTitle"><td colspan=3 rowspan=2 width=15%>Location Features</td>
+					<td colspan=4 rowspan=20 width=15%></td>
+					<td colspan=5 width=25%>Determinants</td>
+					<td width=5% rowspan=29></td>
+					<td colspan=3 width=15% rowspan=2>Contents</td>
+					<td width=5% rowspan=29></td>
+					<td colspan=6 width=15% rowspan=2>Approach</td></tr>
+				<tr class="subTitle"><td>Blends</td>
+					<td rowspan=28></td>
+					<td colspan=3>Single + Blends</td></tr>
+				<tr><td>Zf</td>
+					<td>=</td>
+					<td name="Zscore"></td>
+					<td name="BlendsCol"></td>
+					<td>M</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>H</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>I</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>ZSum</td>
+					<td>=</td>
+					<td name="Zscore"></td>
+					<td name="BlendsCol"></td>
+					<td>FM</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>(H)</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>II</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>ZEst</td>
+					<td>=</td>
+					<td name="Zscore"></td>
+					<td name="BlendsCol"></td>
+					<td>m</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Hd</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>III</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td colspan=3></td>
+					<td name="BlendsCol"></td>
+					<td>FC</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>(Hd)</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>IV</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>W</td>
+					<td>=</td>
+					<td name="LocCol"></td>
+					<td name="BlendsCol"></td>
+					<td>CF</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Hx</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>V</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>D</td>
+					<td>=</td>
+					<td name="LocCol"></td>
+					<td name="BlendsCol"></td>
+					<td>C</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>A</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>VI</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>W+D</td>
+					<td>=</td>
+					<td name="LocCol"></td>
+					<td name="BlendsCol"></td>
+					<td>Cn</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>(A)</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>VII</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>Dd</td>
+					<td>=</td>
+					<td name="LocCol"></td>
+					<td name="BlendsCol"></td>
+					<td>FC'</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Ad</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>VIII</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td>S</td>
+					<td>=</td>
+					<td name="LocCol"></td>
+					<td name="BlendsCol"></td>
+					<td>C'F</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>(Ad)</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>IX</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td colspan=3 rowspan=2></td>
+					<td name="BlendsCol"></td>
+					<td>C'</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>An</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>X</td>
+					<td name="AppCol" colspan=5></td></tr>
+				<tr><td name="BlendsCol"></td>
+					<td>FT</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Art</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=6></td></tr>
+				<tr><td colspan=3 width=15% class="subTitle">Develop. Qual.</td>
+					<td name="BlendsCol"></td>
+					<td>TF</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Ay</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=6 width=15% class="subTitle">Special Score</td></tr>
+				<tr><td>+</td>
+					<td>=</td>
+					<td name="DQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>T</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Bl</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=2></td>
+					<td colspan=2>Lv1</td>
+					<td colspan=2>Lv2</td></tr>
+				<tr><td>o</td>
+					<td>=</td>
+					<td name="DQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>FV</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Cg</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>DV</td>
+					<td>=</td>
+					<td name="SSCol" width=3%></td>
+					<td>x1</td>
+					<td name="SSCol" width=3%></td>
+					<td>x2</td></tr>
+				<tr><td>v/+</td>
+					<td>=</td>
+					<td name="DQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>VF</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Ex</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>INC</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>x2</td>
+					<td name="SSCol"></td>
+					<td>x4</td></tr>
+				<tr><td>v</td>
+					<td>=</td>
+					<td name="DQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>V</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Fi</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>DR</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>x3</td>
+					<td name="SSCol"></td>
+					<td>x6</td></tr>
+				<tr><td colspan=3 rowspan=2></td>
+					<td name="BlendsCol"></td>
+					<td>FY</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Fd</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>FAB</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>x4</td>
+					<td name="SSCol"></td>
+					<td>x7</td></tr>
+				<tr><td name="BlendsCol"></td>
+					<td>YF</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Ge</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>ALOG</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>x5</td>
+					<td colspan=2></td></tr>
+				<tr><td colspan=7 class="subTitle">Form Quality</td>
+					<td name="BlendsCol"></td>
+					<td>Y</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Hh</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>CON</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>x7</td>
+					<td colspan=2></td></tr>
+				<tr><td></td>
+					<td colspan=2>FQx</td>
+					<td colspan=2>MQual</td>
+					<td colspan=2>W+D</td>
+					<td name="BlendsCol"></td>
+					<td>Fr</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Cl</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=4>Raw Sum6</td>
+					<td>=</td>
+					<td name="Sum6Col"></td></tr>
+				<tr><td>+</td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>rF</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Sc</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=4>Wgtd Sum6</td>
+					<td>=</td>
+					<td name="Sum6Col"></td></tr>
+				<tr><td>o</td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>FD</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Sx</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=6></td></tr>
+				<tr><td>u</td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>F</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Xy</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>AB</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>AG</td>
+					<td>=</td>
+					<td name="SSCol"></td></tr>
+				<tr><td>-</td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td name="BlendsCol"></td>
+					<td colspan=3 rowspan=2></td>
+					<td>Id</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>COP</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>CP</td>
+					<td>=</td>
+					<td name="SSCol"></td></tr>
+				<tr><td>none</td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td>=</td>
+					<td name="FQCol"></td>
+					<td name="BlendsCol"></td>
+					<td>Bt</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>GHR</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>PHR</td>
+					<td>=</td>
+					<td name="SSCol"></td></tr>
+				<tr><td colspan=7 rowspan=2></td>
+					<td name="BlendsCol"></td>
+					<td>(2)</td>
+					<td>=</td>
+					<td name="DetCol"></td>
+					<td>Ls</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td>MOR</td>
+					<td>=</td>
+					<td name="SSCol"></td>
+					<td>PER</td>
+					<td>=</td>
+					<td name="SSCol"></td></tr>
+				<tr><td name="BlendsCol"></td>
+					<td colspan=3></td>
+					<td>Na</td>
+					<td>=</td>
+					<td name="ConCol"></td>
+					<td colspan=3></td>
+					<td>PSV</td>
+					<td>=</td>
+					<td name="SSCol"></td></tr>
+				<tr><td colspan=21></td></tr>
+				<tr class="darkLine"><td colspan=23></td></tr>
+				<tr class="darkLine"><td colspan=23></td></tr>
+			</table>
+
+			<h3 class="fontSize16">RATIOS, PERCENTAGES, AND DERIVATIONS</h3>
+
+			<table width="100%" class="lineH_1">
+				<tr><td colspan=19></td></tr>
+				<tr><td width=5%>R</td>
+					<td width=2%>=</td>
+					<td name="CoreCol"></td>
+					<td></td>
+					<td width=5%>L</td>
+					<td width=2%>=</td>
+					<td name="CoreCol"></td>
+					<td></td>
+					<td width=5%></td>
+					<td width=2%></td>
+					<td></td>
+					<td width=10% rowspan=9></td>
+					<td width=10%>FC:CF+C</td>
+					<td width=2%>=</td>
+					<td name="AffCol"></td>
+					<td width=10% rowspan=10></td>
+					<td width=10%>COP</td>
+					<td width=2%>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td colspan=11 class="lineInCore"></td>
+					<td>Pure C</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>AG</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td>EB</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td rowspan=3></td>
+					<td>EA</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td rowspan=3></td>
+					<td>EBPer</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>SumC':WSumC</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>GHR:PHR</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td>eb</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>es</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>D</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>Afr</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>a:p</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td colspan=3></td>
+					<td>Adj es</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>Adj D</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>S</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>Food</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td colspan=11 class="lineInCore"></td>
+					<td>Blends:R</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>SumT</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td>FM</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td rowspan=2></td>
+					<td>SumC'</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td rowspan=2></td>
+					<td>SumT</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>CP</td>
+					<td>=</td>
+					<td name="AffCol"></td>
+					<td>Human Cont</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td>m</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>SumV</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td>SumY</td>
+					<td>=</td>
+					<td name="CoreCol"></td>
+					<td colspan=3 rowspan=2></td>
+					<td>Pure H</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td colspan=15 rowspan=2></td>
+					<td>PER</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+				<tr><td>Iso Indx</td>
+					<td>=</td>
+					<td name="IntPerCol"></td></tr>
+			</table>
+			<br>
+			<table width=100% class="lineH_1">
+				<tr><td>a:p</td>
+					<td>=</td>
+					<td name="IdeCol" width=4%></td>
+					<td>Sum6</td>
+					<td>=</td>
+					<td name="IdeCol2" width=4%></td>
+					<td rowspan=7 colspan=2 width=6%></td>
+					<td>XA%</td>
+					<td>=</td>
+					<td name="MedCol" width=4%></td>
+					<td rowspan=7 width=6%></td>
+					<td>Zf</td>
+					<td>=</td>
+					<td name="InfProCol" width=4%></td>
+					<td rowspan=7 width=6%></td>
+					<td>3r+(2)/R</td>
+					<td>=</td>
+					<td name="SelPerCol" width=4%></td></tr>
+				<tr><td>Ma:Mp</td>
+					<td>=</td>
+					<td name="IdeCol"></td>
+					<td>Lv2</td>
+					<td>=</td>
+					<td name="IdeCol2"></td>
+					<td>WDA%</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>W:D:Dd</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>Fr+rF</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td>2AB+Art+Ay</td>
+					<td>=</td>
+					<td name="IdeCol"></td>
+					<td>WSum6</td>
+					<td>=</td>
+					<td name="IdeCol2"></td>
+					<td>X-%</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>W:M</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>SumV</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td>MOR</td>
+					<td>=</td>
+					<td name="IdeCol"></td>
+					<td>M-</td>
+					<td>=</td>
+					<td name="IdeCol2"></td>
+					<td>S-</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>Zd</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>FD</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td colspan=3 rowspan=3></td>
+					<td>Mnone</td>
+					<td>=</td>
+					<td name="IdeCol2"></td>
+					<td>P</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>PSV</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>An+Xy</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td colspan=3 rowspan=2></td>
+					<td>X+%</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>DQ+</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>MOR</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td>Xu%</td>
+					<td>=</td>
+					<td name="MedCol"></td>
+					<td>DQv</td>
+					<td>=</td>
+					<td name="InfProCol"></td>
+					<td>H:(H)+Hd+(Hd)</td>
+					<td>=</td>
+					<td name="SelPerCol"></td></tr>
+				<tr><td colspan=19></td></tr>
+				<tr><td colspan=19 class="darkLine"></td></tr>
+				<tr><td colspan=19></td></tr>
+			</table>
+
+			<table width=100% class="lineH_1">
+				<tr><td width=3%></td><td>PTI</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=5%></td><td>DEPI</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=5%></td><td>CDI</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=5%></td><td>S-CON</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=5%></td><td>HVI</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=5%></td><td>OBS</td>
+					<td>=</td><td name="SpeIndCol"></td>
+					<td width=3%></td></tr>
+				<tr><td colspan=25></td></tr>
+				<tr><td colspan=25></td></tr>
+				<tr><td colspan=25 class="darkLine"></td></tr>
+				<tr><td colspan=25 class="darkLine"></td></tr>
+			</table>
+
+
+			<p class="posBottom">Shin心理師 你的臨床小秘書</p>
+			<p></p>
+
+			<h1 class="breakBefore fontSize16">Sequence of Scores</h1>
+			<table width=100% id="SeqScoTable" class="lineH_2">
+				<tr><td colspan=10 class="darkLine"></td></tr>
+				<tr><td colspan=10 class="darkLine"></td></tr>
+				<tr><td colspan=10></td></tr>
+				<tr><td>Card</td>
+					<td>Resp. No.</td>
+					<td>Location & DQ</td>
+					<td>Loc. No.</td>
+					<td>Determinant(s) & FQ</td>
+					<td>(2)</td>
+					<td>Content(s)</td>
+					<td>Pop</td>
+					<td>Z-Score</td>
+					<td>Special Scores</td></tr>
+				<tr><td colspan=10></td></tr>
+				<tr><td colspan=10 class="darkLine"></td></tr>
+				<tr><td colspan=10 class="darkLine"></td></tr>
+				<tr id="SeqSco"><td colspan=10></td></tr>
+				<tr><td colspan=10></td></tr>
+				<tr><td colspan=10 class="darkLine"></td></tr>
+				<tr><td colspan=10 class="darkLine"></td></tr>
+			</table>
+		</section>
+
+
+		<section class="dataTable breakBefore WhiteBack1">
+			<h3>Interpretaion</h3>
+			<table><tr><td>建議解釋順序: </td><td id="IntOrd"></td></tr></table>
+		</section>
+
+		<br>
+
+
+<!--解釋籤頁-->
+		<section class="panel-group">
+			<input type="radio" name="panel-radio" id="radio1" class="panel-control" checked>
+			<input type="radio" name="panel-radio" id="radio2" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio3" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio4" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio5" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio6" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio7" class="panel-control">
+			<input type="radio" name="panel-radio" id="radio8" class="panel-control">
+
+			<div class="tab-group">
+				<label for="radio1" class="active">控制與壓力忍受</label>
+				<label for="radio2">情境相關壓力</label>
+				<label for="radio3">訊息處理</label>
+				<label for="radio4">認知中介</label>
+				<label for="radio5">意念</label>
+				<label for="radio6">情感</label>
+				<label for="radio7">自我知覺</label>
+				<label for="radio8">人際知覺</label>
+			</div>
+
+			<div class="content-group">
+				<div class="content content1">
+					<table class="Cards" id="ConStr_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Controls and Stress Tolerance</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: AdjD and CDI (對於控制及壓力忍受的初步訊息)</td></tr>
+						<tr><td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: EA (EA 為可得資源的指標, 透過 EA 評判 AdjD 的可信度)</td></tr>
+						<tr><td colspan=3>EA 的平均範圍: 7-11</td></tr>
+						<tr><td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: EB & L (評判 EA & AdjD 可信度)</td></tr>
+						<tr><td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: Adj es (評判 EA & AdjD 可信度)</td></tr>
+						<tr><td colspan=3>Adj es 的平均範圍: 5-9</td></tr>
+						<tr><td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td>
+							<td name="ConStr_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: eb (審視 Adj es 中與壓力無關的因素，因其可能造成 AdjD 有誤)</td></tr>
+					</table>
+				</div>
+
+				<div class="content content2">
+					<section id="SitStr_Section">
+						<table class="Cards breakBefore" id="SitStr_Table">
+							<tr><td colspan=3 class="whiteText3"><strong>Situationally Related Stress</strong></td></tr>
+							<tr class="whiteText1"><td>Finding</td>
+								<td>判准</td>
+								<td>解釋</td></tr>
+							<tr id="SitStr_Table_S1"><td colspan=3 class="whiteText2">Step 1: D, EA, es, Adj es, history (從 EA - es & EA - Adj es 間的差異甄別 D 分數是否偽陽性)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr><td colspan=3 class="whiteText2">Step 2: AdjD - D (作為壓力量的初步估計)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr><td colspan=3 class="whiteText2">Step 3: m & SumY (關注情境壓力對個體的思考或感受的影響)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr><td colspan=3 class="whiteText2">Step 4: Adj D, D, SumT, SumV (考慮 T & V 反應是否與情境壓力有關)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr id="SitStr_Table_S5"><td colspan=3 class="whiteText2">Step 5: D (關注刺激過載及衝動的可能性)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr><td colspan=3 class="whiteText2">Step 6: Blends with m or Y (關注因情境壓力造成刺激需求增加而衍生的心理複雜度攀升)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+							<tr><td colspan=3 class="whiteText2">Step 7: Color-Shading Blends (情境壓力可能造成與感受有關的混淆或矛盾)</td></tr>
+							<tr><td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td>
+								<td name="SitStr_Int"></td></tr>
+						</table>
+					</section>
+				</div>
+
+				<div class="content content3 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=13>Processing Section</td></tr>
+						<tr><td>Zf</td><td class="BG_col2" rowspan=2></td>
+							<td>W:D:Dd</td><td class="BG_col2" rowspan=2></td>
+							<td>W:M</td><td class="BG_col2" rowspan=2></td>
+							<td>Zd</td><td class="BG_col2" rowspan=2></td>
+							<td>PSV</td><td class="BG_col2" rowspan=2></td>
+							<td>DQ+</td><td class="BG_col2" rowspan=2></td>
+							<td>DQv</td></tr>
+						<tr><td name="RPD_5"></td><td name="RPD_5"></td><td name="RPD_5"></td>
+							<td name="RPD_5"></td><td name="RPD_5"></td>
+							<td name="RPD_5"></td><td name="RPD_5"></td></tr>
+					</table>
+
+					<br>
+
+					<table class="Cards" id="InfPro_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Information Processing</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: Zf (投注於訊息處理的心力)</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: W:D:Dd (心力的投入與策略的使用)</td></tr>
+						<tr id="InfPro_Table_S2"><td colspan=3>W:D 的預期比例為 1:1.3 - 1:1.6</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: Location Sequencing (確認 Step1, Step2 中的發現 & 心力投入及處理策略的規律性)</td></tr>
+						<tr><td colspan=3>於 Card I, IV, V 給出 W 反應是比較不耗費心力的<br>當大部分 W 反應出現於此三卡，則顯示個體較節省心力，否則投入更多心力</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr class="whiteText1"><td rowspan=11></td>
+							<td>Card</td>
+							<td>反應位置</td></tr>
+						<tr class="whiteText2"><td>Card I</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card II</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card III</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr class="whiteText2"><td>Card IV</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr class="whiteText2"><td>Card V</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card VI</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card VII</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card VIII</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card IX</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td>Card X</td>
+							<td name="InfPro_S3_LocByCard"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: W:M (成就導向 反應個體心力投注與可得資源間的一致性)</td></tr>
+						<tr><td colspan=3>W:M 的預期比例為: extra: 1.2:1-3:1; intro: 0.75:1-1.5:1; ambit: 1.2:1-2:1</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: Zd (訊息處理時掃視刺激的效率)</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: PSV (訊息處理效率的問題)</td></tr>
+						<tr><td colspan=3>within Card PSV: 與先前反應幾乎一致的反應，有相同位置、DQ、決定因子、FQ、內容編碼、Z<br>(需自行判斷受測者的 PSV 有幾個屬於 within Card PSV，並依此選擇 Finding1 or Finding2 or no Finding)</td></tr>
+						<tr id="InfPro_Table_S6"><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7: DQ (訊息處理的品質)</td></tr>
+						<tr><td colspan=3>DQ+ 的預期範圍為: extra: 5-8; intro: 7-10; ambit: 5-8</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 8: DQ Sequencing (藉由 DQ 的分佈評估訊息處理的適切性與品質)</td></tr>
+						<tr><td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td>
+							<td name="InfPro_Int"></td></tr>
+						<tr class="whiteText1"><td rowspan=11></td>
+							<td>Card</td>
+							<td>發展品質</td></tr>
+						<tr><td>Card I</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr class="whiteText2"><td>Card II</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr class="whiteText2"><td>Card III</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr><td>Card IV</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr><td>Card V</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr><td>Card VI</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr class="whiteText2"><td>Card VII</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr class="whiteText2"><td>Card VIII</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr><td>Card IX</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+						<tr class="whiteText2"><td>Card X</td>
+							<td name="InfPro_S8_DQByCard"></td></tr>
+					</table>
+				</div>
+
+				<div class="content content4 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=13>Mediation Section</td></tr>
+						<tr><td>XA%</td><td class="BG_col2" rowspan=2></td>
+							<td>WDA%</td><td class="BG_col2" rowspan=2></td>
+							<td>X-%</td><td class="BG_col2" rowspan=2></td>
+							<td>S-</td><td class="BG_col2" rowspan=2></td>
+							<td>P</td><td class="BG_col2" rowspan=2></td>
+							<td>X+%</td><td class="BG_col2" rowspan=2></td>
+							<td>Xu%</td></tr>
+						<tr><td name="RPD_4"></td><td name="RPD_4"></td><td name="RPD_4"></td>
+							<td name="RPD_4"></td><td name="RPD_4"></td><td name="RPD_4"></td>
+							<td name="RPD_4"></td></tr>
+					</table>
+
+					<br>
+
+					<table class="Cards" id="CogMed_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Cognitive Mediation</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: XA% & WDA% (形狀使用的適切性，即情境下行為反應的適切性)</td></tr>
+						<tr><td colspan=3>XA% = sum(FQ+, FQo, FQu)/R<br>WDA% = sum(FQ+, FQo, FQu on W or D)/(W+D)</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: FQnone (忽略邊界對刺激轉譯的影響)</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: X-%, FQ- freq., S- freq. (minus 反應是轉譯時扭曲或無視現實刺激，可能受出個人內在層面的投射影像)</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+						<tr class="whiteText1">
+							<td colspan=3>Step 3a: Homogeneity (FQ- 的同質性分析)</td></tr>
+						<tr id="CogMed_Table_S3a"><td colspan=3 id="Step3aText"></td></tr>
+						<tr id="CogMed_Table_S3b" class="whiteText1">
+							<td colspan=3>Step 3b: Minus Disotortion Leves (逐一審視 FQ- 偏離現實的程度)</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: Populars (情境中，當預期或被社會廣納的行為的線索很容易被辨認時，個體做出明顯常規反應的傾向) (P.S. 該做啥時就做啥)</td></tr>
+						<tr><td colspan=3>Popular 的預期範圍為: (if R < 17) 4 - 6; (if R 介於 17 - 28) 5 - 7; (if R > 28) 6 - 9</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: FQ+ freq. (過度闡述，智力功能佳或受良好教育者傾向給出 1 - 3 個 FQ+)</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: X+% & Xu% (比較適切 FQ 反應中，是較傾向遵循常規，或是較傾向個人反應)</td></tr>
+						<tr><td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td>
+							<td name="CogMed_Int"></td></tr>
+					</table>
+				</div>
+
+				<div class="content content5 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=17>Ideation Section</td></tr>
+						<tr><td>a:p</td><td class="BG_col2" rowspan=2></td>
+							<td>Ma:Mp</td><td class="BG_col2" rowspan=2></td>
+							<td>2AB+Art+Ay</td><td class="BG_col2" rowspan=2></td>
+							<td>MOR</td><td class="BG_col2" rowspan=2></td>
+							<td>Sum6</td><td class="BG_col2" rowspan=2></td>
+							<td>Lvl-2</td><td class="BG_col2" rowspan=2></td>
+							<td>WSum6</td><td class="BG_col2" rowspan=2></td>
+							<td>M-</td><td class="BG_col2" rowspan=2></td>
+							<td>M none</td></tr>
+						<tr><td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td>
+							<td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td>
+							<td name="RPD_2"></td><td name="RPD_2"></td><td name="RPD_2"></td></tr>
+					</table>
+
+					<br>
+
+					<table class="Cards" id="Ide_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Ideation</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: EB & Lambda (因應風格於意念思考活動)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: EBPer (於決策時，因應風格影響的廣泛程度，即風格的彈性)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: a:p (態度與價值觀的彈性，及其對概念思考的影響)</td></tr>
+						<tr><td colspan=3>a + p ≥ 4 才解釋此步驟</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr id="Ide_Table_S4"><td colspan=3 class="whiteText2">Step 4: HVI, OBS, MOR (可能影響概念形成的心智結構或態度)</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: Left-eb (sum of FM & m) (意識未關注到的周圍的心智活動，FM 與內在需求經驗有關，m 與外在環境要求有關，可能入侵並干擾概念思考)</td></tr>
+						<tr><td colspan=3>FM 的預期範圍為: 3 - 5<br>m 的預期範圍為: 0 - 2 且低於 FM</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: Ma:Mp (投入幻想思考以迴避現實的傾向)</td></tr>
+						<tr><td colspan=3>(僅 M > 1 才解釋此步驟)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7: Intellectualization Index (理智化 (概念思考) 地應對情緒，使感受被弱化或中性化的一種否認的防衛方式)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 8: Sum6 & WSum6 (思考清晰度及怪異度)</td></tr>
+						<tr><td colspan=3>Mild (DV1, INC1, DR1): 認知上粗心的，顯示思考較不清晰。<br>DV1: 短暫認知管理不善，扭曲的語言使用或特殊的表達方式造成溝通不清楚; <br>INC1: 概念上的區辨失敗或固化的推理，但不怪異; <br>DR1: 猶豫不決或企圖防衛地抽離手邊作業，可能判斷力差，過多則顯示對意念的衝動控制不佳
+							<br><br>Serious (DV2, FAB1, INC2, ALOG): <br>DV2: 更嚴重的認知管理缺陷，有些成見侵入概念運思; <br>INC2: 不僅區辨失敗，而且怪異，並反映非常牽強的邏輯，常見於思考受成見嚴重影響或明顯忽視現實者; <br>FAB1: 不成熟的意念形式，概念連結鬆散，不合理的整合，思考很不清晰; <br>ALOG: 錯誤的因果關係被牽強的推論，且被輕易的創造並維持，顯示判斷力不佳及不成熟的思考
+							<br><br>Severe (DR2, FAB2, CONTAM): <br>DR2: 更為嚴重的意念衝動控制問題，持續朝向目標的能力受損; <br>FAB2: 概念化歷程嚴重扭曲崩壞且怪異，因無法控制意念活動而呈現全然忽視現實、嚴重判斷缺陷、或不堪重負; <br>CONTAM: 最為嚴重的意念組織混亂，結合極為牽強推理的概念化歷程，呈現明顯脫離現實的思考形式</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 9: Quality of 6 Special Scores (主觀評估特殊分數)</td></tr>
+						<tr id="Ide_Table_S9"><td colspan=3>當 Step 8 有異常發現，需進一步判斷以下 3 項
+							<br>(1) 反映文化現象、教育有限、持續的字詞選擇傾向的程度
+							<br>(2) 回應中呈現思考不清晰或判斷錯誤的程度
+							<br>(3) CONTAM、ALOG、Level 2 中的怪異特徵反映病態思考的程度</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 10: FQ of M (M 反應表徵概念思考，其形狀品質則可用以評估此思考的清晰度)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 11: Quality of M (更進一步評估思考的品質及清晰度)</td></tr>
+						<tr><td name="Ide_Int"></td>
+							<td name="Ide_Int"></td>
+							<td name="Ide_Int"></td></tr>
+					</table>
+				</div>
+
+				<div class="content content6 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=13>Affect Section</td></tr>
+						<tr><td>FC:CF+C</td><td class="BG_col2" rowspan=2></td>
+							<td>Pure C</td><td class="BG_col2" rowspan=2></td>
+							<td>SumC':WSumC</td><td class="BG_col2" rowspan=2></td>
+							<td>Afr</td><td class="BG_col2" rowspan=2></td>
+							<td>S</td><td class="BG_col2" rowspan=2></td>
+							<td>Blends:R</td><td class="BG_col2" rowspan=2></td>
+							<td>CP</td></tr>
+						<tr><td name="RPD_3"></td><td name="RPD_3"></td><td name="RPD_3"></td>
+							<td name="RPD_3"></td><td name="RPD_3"></td>
+							<td name="RPD_3"></td><td name="RPD_3"></td></tr>
+					</table>
+
+					<br>
+
+					<table class="Cards" id="Aff_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Affect</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: DEPI & CDI (判斷情緒困擾及可能來源)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: EB & Lambda (EB 判斷因應風格, L 判別是否受更廣泛的迴避風格影響解釋)</td>
+						<tr><td colspan=3>introversive style: EA ≤ 10 時，EB 左 ≥ EB 右 + 2；EA > 10 時，EB 左 > EB 右 + 2<br>extratensive style: EA ≤ 10 時，EB 右 ≥ EB 左 + 2；EA > 10 時，EB 右 > EB 左 + 2<br>ambitent style: 不屬於以上任一種風格時<br>avoidant style: 若 L > 0.99, 則除上述三種風格外 應再加上迴避風格 (如: introversive-avoidant style)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: EBPer (因應風格的廣泛性或彈性，L < 1 且非不一致的因應風格時才解釋)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: R-eb & related  (不尋常的痛苦經驗)</td></tr>
+						<tr><td colspan=3>一般情況下: SumT ≤ 1, SumC' ≤ 2, SumV = 0, SumY ≤ 2</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: SumC':WSumC (對於情緒表達過度壓抑)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: Affective Ratio (對情緒刺激的興趣及接近性)</td></tr>
+						<tr><td colspan=3>Afr 的平均範圍: extra: 0.6 - 0.89; intro: 0.53 - 0.78; ambi:  0.53 - 0.83; avoid: 0.45 - 0.65</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7: Intellectualization Index <br>(理智化的運用: 以理智思考的方式減弱或中性化情緒刺激及經驗的影響，是一種用以否認或取消感受的虛假理智活動，使減少情緒被直接或切實地面對的機會)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 8: Color Projection (以不尋常的否認形式來應對不愉悅的情緒經驗)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 9: FC:CF+C (對情緒表達的調節; FC 情緒調節較穩定, CF & C 對情緒表達較無約束)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 10: Pure C (判斷 Pure C 是否表徵了不成熟/原始 或 為情緒調節議題)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 11: Space responses (消極、對抗、憤怒)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 12: Blends, Lambda & EB (心理複雜度)</td></tr>
+						<tr><td colspan=3>Blends 佔總反應數的比例的平均範圍: intro: 13 - 26%; extra: 19 - 33%; ambit: 16 - 36%; avoid: 8 - 14%</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 13: m & Y Blends (考慮與情境壓力相關的心理複雜度)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 14: Blend complexity (不尋常的心理複雜度)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr id="Aff_Table_S15"><td colspan=3 class="whiteText2">Step 15: Color-shading blends (不確定、混淆、甚至矛盾的感受)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 16: Shading blends (非常痛苦的情緒經驗)</td></tr>
+						<tr><td name="Aff_Int"></td>
+							<td name="Aff_Int"></td>
+							<td name="Aff_Int"></td></tr>
+					</table>
+				</div>
+
+				<div class="content content7 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=13>Self Perception Section</td></tr>
+						<tr><td>3r+(2)/R</td><td class="BG_col2" rowspan=2></td>
+							<td>Fr+rF</td><td class="BG_col2" rowspan=2></td>
+							<td>SumV</td><td class="BG_col2" rowspan=2></td>
+							<td>FD</td><td class="BG_col2" rowspan=2></td>
+							<td>An+Xy</td><td class="BG_col2" rowspan=2></td>
+							<td>MOR</td><td class="BG_col2" rowspan=2></td>
+							<td>H:(H)+Hd+(Hd)</td></tr>
+						<tr><td name="RPD_7"></td><td name="RPD_7"></td><td name="RPD_7"></td>
+							<td name="RPD_7"></td><td name="RPD_7"></td>
+							<td name="RPD_7"></td><td name="RPD_7"></td></tr>
+					</table>
+
+					<br>
+
+					<table class="Cards" id="SelPer_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Self-Perception</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr id="SelPer_Table_S1"><td colspan=3 class="whiteText2">Step 1: OBS & HVI (強迫及過度警覺特質與自我知覺的關聯)</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: Reflections (自戀般的人格特質，高度重視自我的一種傾向)</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: Egocentricity Index (自我關注 self-concern 及自尊 self-esteem)</td></tr>
+						<tr><td colspan=3>Egocentricity Index 的預期範圍為: 0.33 - 0.45</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: FD & Vista (自我審視之內省行為，FD: 正向的內省傾向 (反省); V: 負相的內省傾向 (罪惡懊悔))</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: An + Xy (不尋常的身體關注)</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: MOR (自我意象涵蓋了負面或有缺陷的特徵)</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7: Human Content (個體對自我的印象)</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7a: H:(Hd)+Hd+(Hd) (自我意象基於現實及完整的程度)</td></tr>
+						<tr><td colspan=3>當 Human Content ≥ 3 時才解釋 7a 此步驟</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr id="SelPer_Table_S7b"><td colspan=3 class="whiteText2">Step 7b: Response with Human Content (回顧所有包含人類內容的反應，以進一步分析自我意象)</td></tr>
+						<tr><td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td>
+							<td name="SelPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 8: search for projections (找出並解釋可能帶有投射的反應)</td></tr>
+						<tr><td colspan=3>可能出現投射的反應有: FQ-, MOR, M, Human Content, Fm & m<br>宜分群尋找是否有投射材料，進一步解釋其對自我知覺的影響，若無投射可跳過此步驟。</td></tr>
+					</table>
+				</div>
+
+				<div class="content content8 breakBefore">
+					<table class="Cards">
+						<tr><td class="BG_col1" colspan=21>Interpersonal Section</td></tr>
+						<tr><td>COP</td><td class="BG_col2" rowspan=2></td>
+							<td>AG</td><td class="BG_col2" rowspan=2></td>
+							<td>GHR:PHR</td><td class="BG_col2" rowspan=2></td>
+							<td>a:p</td><td class="BG_col2" rowspan=2></td>
+							<td>Food</td><td class="BG_col2" rowspan=2></td>
+							<td>SumT</td><td class="BG_col2" rowspan=2></td>
+							<td>Human Cont</td><td class="BG_col2" rowspan=2></td>
+							<td>Pure H</td><td class="BG_col2" rowspan=2></td>
+							<td>PER</td><td class="BG_col2" rowspan=2></td>
+							<td>Isolation Index</td></tr>
+						<tr><td name="RPD_6"></td><td name="RPD_6"></td>
+							<td name="RPD_6"></td><td name="RPD_6"></td>
+							<td name="RPD_6"></td><td name="RPD_6"></td>
+							<td name="RPD_6"></td><td name="RPD_6"></td>
+							<td name="RPD_6"></td><td name="RPD_6"></td></tr>
+					</table>
+
+					<br>
+					
+					<table class="Cards" id="IntPer_Table">
+						<tr><td colspan=3 class="whiteText3"><strong>Interpersonal Perception</strong></td></tr>
+						<tr class="whiteText1"><td>Finding</td>
+							<td>判准</td>
+							<td>解釋</td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 1: CDI (社交的不成熟及能力不足指標)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 2: HVI (過度警覺特質對人際關係的影響)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 3: a:p (在關係中傾向採被動角色的程度)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 4: Fd (是否有依賴傾向，而這可能影響人際關係)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 5: SumT (親密需求及對親密情緒關係的開放度)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 6: Human Content & Pure H (人際興趣)</td></tr>
+						<tr><td colspan=3>Human Content 的預期範圍為:
+							<br>intro: 4 - 6; ambit: 2 - 4; extra: 2 - 4; avoid: 2 - 5 (for R ≤ 16)
+							<br>intro: 5 - 8; ambit: 4 - 7; extra: 3 - 6; avoid: 4 - 7 (for 17 ≤ R ≤ 27)
+							<br>intro: 7 - 11; ambit: 5 - 9; extra: 4 - 7; avoid: 5 - 9 (for R > 27)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 7: GHR:PHR (人際行為及其效果)</td></tr>
+						<tr><td colspan=3>GHR: 通常表徵有效的且具適應性的人際行為。
+							<br>PHR: 通常表徵較為無效且不具適應性的行為，可能有較多人際衝突或挫敗。</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 8: COP & AG (人際交流)</td></tr>
+						<tr><td colspan=3>COP: 通常表徵個體預期正向的人際交流。
+							<br>AG: 通常表徵個體預期具攻擊性或競爭性的人際交流。</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 9: PER (自我再保證、迴避來自施測者的挑戰)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr><td colspan=3 class="whiteText2">Step 10: Isolation Index (人際疏離)</td></tr>
+						<tr><td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td>
+							<td name="IntPer_Int"></td></tr>
+						<tr id="IntPer_Table_S11"><td colspan=3 class="whiteText2">Step 11: contents of M & FM with pairs (澄清或擴張先前發現)</td></tr>
+					</table>
+				</div>
+			</div>
+		</section>
+
+
+		<br><br><br>
+
+
+		<section class="noPrint">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</section>
+
+		<section class="noPrint">
+			<p id="testText1"></p>	
+			<p id="testText2"><!--測試文字--> </p>
+		</section>
+
+
+
+
+		</section>
+
+	</article>
+
+	<footer>
+		<p>Shin心理師 你的臨床小秘書</p>
+	</footer>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+<!--
+
+<dialog id="DetDialog2">
+	<form>
+		<p>請選擇此反應中包含的所有決定因子</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>Movement</td>
+					<td><input type="radio" name="Det2M" value="Ma" data-label="AllDet">Ma</td>
+					<td><input type="radio" name="Det2M" value="Mp" data-label="AllDet">Mp</td>
+					<td><input type="radio" name="Det2M" value="Ma-p" data-label="AllDet">Ma-p</td></tr>
+				<tr><td></td>
+					<td><input type="radio" name="Det2FM" value="FMa" data-label="AllDet">FMa</td>
+					<td><input type="radio" name="Det2FM" value="FMp" data-label="AllDet">FMp</td>
+					<td><input type="radio" name="Det2FM" value="FMa-p" data-label="AllDet">FMa-p</td></tr>
+				<tr><td></td>
+					<td><input type="radio" name="Det2m" value="ma" data-label="AllDet">ma</td>
+					<td><input type="radio" name="Det2m" value="mp" data-label="AllDet">mp</td>
+					<td><input type="radio" name="Det2m" value="ma-p" data-label="AllDet">ma-p</td></tr>
+				<tr>
+					<td>Chromatic Color</td>
+					<td><input type="radio" name="Det3" value="FC" data-label="AllDet">FC</td>
+					<td><input type="radio" name="Det3" value="CF" data-label="AllDet">CF</td>
+					<td><input type="radio" name="Det3" value="C" data-label="AllDet">C</td>
+					<td><input type="radio" name="Det3" value="Cn" data-label="AllDet">Cn</td></tr>
+				<tr>
+					<td>Achromatic Color</td>
+					<td><input type="radio" name="Det4" value="FC'" data-label="AllDet">FC'</td>
+					<td><input type="radio" name="Det4" value="C'F" data-label="AllDet">C'F</td>
+					<td><input type="radio" name="Det4" value="C'" data-label="AllDet">C'</td></tr>
+				<tr>
+					<td>Shading-Texture</td>
+					<td><input type="radio" name="Det5" value="FT" data-label="AllDet">FT</td>
+					<td><input type="radio" name="Det5" value="TF" data-label="AllDet">TF</td>
+					<td><input type="radio" name="Det5" value="T" data-label="AllDet">T</td></tr>
+				<tr>
+					<td>Shading-Dimension</td>
+					<td><input type="radio" name="Det6" value="FV" data-label="AllDet">FV</td>
+					<td><input type="radio" name="Det6" value="VF" data-label="AllDet">VF</td>
+					<td><input type="radio" name="Det6" value="V" data-label="AllDet">V</td></tr>
+				<tr>
+					<td>Shading-Diffuse</td>
+					<td><input type="radio" name="Det7" value="FY" data-label="AllDet">FY</td>
+					<td><input type="radio" name="Det7" value="YF" data-label="AllDet">YF</td>
+					<td><input type="radio" name="Det7" value="Y" data-label="AllDet">Y</td></tr>
+				<tr>
+					<td>Reflection</td>
+					<td><input type="radio" name="Det9" value="Fr" data-label="AllDet">Fr</td>
+					<td><input type="radio" name="Det9" value="rF" data-label="AllDet">rF</td></tr>
+				<tr>
+					<td>Form Dimension</td>
+					<td><input type="radio" name="Det8" value="FD" data-label="AllDet">FD</td></tr>
+				<tr>
+					<td>Form</td>
+					<td><input type="radio" name="Det1" value="F" data-label="AllDet">F</td></tr>
+			</tbody>
+		</table>
+		<p><br></p>
+		<input type="button" onclick="confDetWin()" value="確定">
+		<input type="button" onclick="resDetWin()" value="重置">
+	</form>
+</dialog>
+
+
+
+
+
+<dialog id="SSDialog">
+	<form>
+		<p>請選擇此反應中包含的所有特殊分數</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="DV1" data-label="AllSS">DV1</td>
+					<td><input type="checkbox" name="SpeSco" value="DV2" data-label="AllSS">DV2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="INC1" data-label="AllSS">INC1</td>
+					<td><input type="checkbox" name="SpeSco" value="INC2" data-label="AllSS">INC2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="DR1" data-label="AllSS">DR1</td>
+					<td><input type="checkbox" name="SpeSco" value="DR2" data-label="AllSS">DR2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="FAB1" data-label="AllSS">FAB1</td>
+					<td><input type="checkbox" name="SpeSco" value="FAB2" data-label="AllSS">FAB2</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="ALOG" data-label="AllSS">ALOG</td>
+					<td><input type="checkbox" name="SpeSco" value="CON" data-label="AllSS">CON</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="AB" data-label="AllSS">AB</td>
+					<td><input type="checkbox" name="SpeSco" value="AG" data-label="AllSS">AG</td>
+					<td><input type="checkbox" name="SpeSco" value="COP" data-label="AllSS">COP</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="CP" data-label="AllSS">CP</td>
+					<td><input type="checkbox" name="SpeSco" value="GHR" data-label="AllSS">GHR</td>
+					<td><input type="checkbox" name="SpeSco" value="PHR" data-label="AllSS">PHR</td></tr>
+				<tr>
+					<td><input type="checkbox" name="SpeSco" value="MOR" data-label="AllSS">MOR</td>
+					<td><input type="checkbox" name="SpeSco" value="PER" data-label="AllSS">PER</td>
+					<td><input type="checkbox" name="SpeSco" value="PSV" data-label="AllSS">PSV</td></tr>
+				<tr><td><input type="checkbox" name="SpeSco" value=" " data-label="AllSS">無</td></tr>
+			</tbody>
+		</table>
+
+		<p><br></p>
+		<input type="button" onclick="confSSWin()" value="確定">
+		<input type="button" onclick="resSSWin()" value="重置">
+	</form>
+</dialog>
+
+
+<dialog id="ConDialog">
+	<form>
+		<p>請選擇此反應中包含的所有內容</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="H" data-label="AllCon">H</td>
+					<td><input type="checkbox" name="Cont" value="(H)" data-label="AllCon">(H)</td>
+					<td><input type="checkbox" name="Cont" value="Hd" data-label="AllCon">Hd</td>
+					<td><input type="checkbox" name="Cont" value="(Hd)" data-label="AllCon">(Hd)</td>
+					<td><input type="checkbox" name="Cont" value="Hx" data-label="AllCon">Hx</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="A" data-label="AllCon">A</td>
+					<td><input type="checkbox" name="Cont" value="(A)" data-label="AllCon">(A)</td>
+					<td><input type="checkbox" name="Cont" value="Ad" data-label="AllCon">Ad</td>
+					<td><input type="checkbox" name="Cont" value="(Ad)" data-label="AllCon">(Ad)</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="An" data-label="AllCon">An</td>
+					<td><input type="checkbox" name="Cont" value="Art" data-label="AllCon">Art</td>
+					<td><input type="checkbox" name="Cont" value="Ay" data-label="AllCon">Ay</td>
+					<td><input type="checkbox" name="Cont" value="Bl" data-label="AllCon">Bl</td>
+					<td><input type="checkbox" name="Cont" value="Cg" data-label="AllCon">Cg</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="Ex" data-label="AllCon">Ex</td>
+					<td><input type="checkbox" name="Cont" value="Fi" data-label="AllCon">Fi</td>
+					<td><input type="checkbox" name="Cont" value="Fd" data-label="AllCon">Fd</td>
+					<td><input type="checkbox" name="Cont" value="Ge" data-label="AllCon">Ge</td>
+					<td><input type="checkbox" name="Cont" value="Hh" data-label="AllCon">Hh</td></tr>
+				<tr>
+					<td><input type="checkbox" name="Cont" value="Cl" data-label="AllCon">Cl</td>
+					<td><input type="checkbox" name="Cont" value="Sc" data-label="AllCon">Sc</td>
+					<td><input type="checkbox" name="Cont" value="Sx" data-label="AllCon">Sx</td>
+					<td><input type="checkbox" name="Cont" value="Xy" data-label="AllCon">Xy</td>
+					<td><input type="checkbox" name="Cont" value="Id" data-label="AllCon">Id</td></tr>
+				<tr>
+					<td><input type="radio" name="Cont" value="Bt" data-label="AllCon">Bt</td>
+					<td><input type="radio" name="Cont" value="Ls" data-label="AllCon">Ls</td>
+					<td><input type="radio" name="Cont" value="Na" data-label="AllCon">Na</td></tr>
+			</tbody>
+		</table>
+
+		<p><br></p>
+		<input type="button" onclick="confConWin()" value="確定">
+		<input type="button" onclick="resConWin()" value="重置">
+	</form>
+</dialog>
+
+-->
