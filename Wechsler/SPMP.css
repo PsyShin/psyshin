@@ -1,0 +1,187 @@
+* {
+  font-family: Microsoft JhengHei;
+  -webkit-print-color-adjust:exact
+}
+
+input, select {
+	font-size: 16px;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+
+.inputDiv {
+	display: flex;
+	align-items: self-start;
+}
+
+.inputDiv section {
+	padding: 20px;
+	flex: 1;
+}
+
+.checkBox {
+	display: flex;
+	align-items: self-start;
+}
+
+.checkBox section{
+	flex: 1;
+}
+
+
+
+.dataTable, .buttonSection {
+	border: #CCC solid 1px;
+	padding-left: 30px;
+	padding-bottom: 15px;
+}
+
+.dataTable p:not(.boxTitle) {
+	margin: 0 auto;
+}
+
+.boxTitle {
+	color: #333;
+	display: block;
+	line-height: 10px;
+}
+
+.conBtn {
+	background-color: #333;
+	color: #FFF;
+	padding: 5px 10px;
+	border: none;
+}
+
+.conBtn:hover {
+	background-color: #FFF;
+	color: #333;
+}
+
+.CenterSec {
+	text-align: center;
+}
+
+table {
+	border: 1px solid;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+th, td {
+	border: 1px solid #CCC;
+	padding: 5px;
+	text-align: center;
+}
+
+.noBorder, .noBorder2 td, .noBorder2, .noBorder th, .noBorder td, .noBorder input, table input {
+	border: 0px solid;
+}
+
+.noBorder2 input {
+	border: 1px;
+	border-bottom-style: solid;
+}
+
+#SubstituteBox, #SubstituteBox td{
+	border: 0px;
+}
+
+
+.SPM_Blue1 {
+	color: #FFFFFF;
+	background-color: #5151A2;
+}
+
+.SPM_Blue2 {
+	background-color: #D8D8EB;
+}
+
+.SPM_Blue3 {
+	background-color: #D8D8EB;
+}
+
+
+
+.doPrint{
+	display: none;
+}
+
+
+
+
+
+.BG2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+
+.BG_pic {
+  width: 100%;
+  min-height: 100%;
+  min-width: 900px;
+  opacity: 0.3;
+}
+
+.WhiteBack1{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.WhiteBack2{
+	padding: 10px;
+	background-color: rgba(255,255,255);
+}
+
+
+
+@media print{
+	*, input[name="BasicInfo"]{
+		font-size: 9pt;
+	}
+
+	h1{
+		font-size: 15pt;
+	}
+	
+	th, td {
+	border: 0.1px solid #CCC;
+	padding: 2px;
+	}
+
+	.noPrint{
+		display: none;
+	}
+
+	.doPrint{
+		display: block;
+	}
+
+	.panel-control {
+		display: none;
+	}
+	.tab-group label {
+		display: none;
+	}
+
+	.content{
+		display: block;
+	}
+
+	.breakBefore {
+		break-before: page;
+	}
+
+}
+
+@page{
+	size: A4;
+	margin: 0;
+}
